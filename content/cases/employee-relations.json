@@ -1,0 +1,58 @@
+{
+  "order": 5,
+  "slug": "employee-relations",
+  "category": "Data Manager · UX/UI",
+  "title": "Employee Relations Manager",
+  "cardSummary": "A mobile and web platform that gives employees one place to access company information, manage schedules, and stay connected.",
+  "sub": "A mobile and web platform that gives employees one place to access company information, manage schedules, and stay connected.",
+  "meta": ["Mobile UI", "Stakeholder Alignment", "Design Systems"],
+  "cover": {
+    "image": "/assets/images/project-employee.webp",
+    "alt": "Employee Relations Manager platform interface"
+  },
+  "sections": [
+    {
+      "heading": "Challenge",
+      "paragraphs": [
+        "A large number of stakeholders with different priorities made alignment slow, and there was no direct access to end users early on, which limited how well assumptions could be validated. The product still needed several business-critical modules: work schedules, an internal chatbot, salary calculations, and reporting."
+      ],
+      "list": []
+    },
+    {
+      "heading": "Process",
+      "paragraphs": [
+        "Low-fidelity prototypes went to stakeholders for feedback first. Narrowing the number of decision-makers over time sped up iteration and sharpened discussion. Once core workflows were validated, I moved into visual design and reusable components. User testing wasn't available up front, but the first release generated real employee feedback that shaped later refinements — and pushed the team toward a more user-centered process going forward."
+      ],
+      "list": []
+    },
+    {
+      "heading": "Work Schedules",
+      "paragraphs": [
+        "Employees get instant access to their hours and daily status. Managers get more: visibility into subordinate schedules, and the ability to edit shifts, hours and attendance directly in the system."
+      ],
+      "list": []
+    },
+    {
+      "heading": "Chatbot",
+      "paragraphs": ["An internal chatbot simplifies access to company information through a deliberately simple flow:"],
+      "list": [
+        "Select a topic of interest",
+        "Choose a predefined question or category",
+        "Get the answer, or submit a new question"
+      ]
+    },
+    {
+      "heading": "Salary Calculator & Reports",
+      "paragraphs": [
+        "A dedicated module helps employees understand their earnings and bonus calculations — entering relevant data, calculating expected payments, reviewing bonuses, and tracking changes over time."
+      ],
+      "list": []
+    }
+  ],
+  "gallery": [
+    "/assets/images/gallery/employee-1.webp",
+    "/assets/images/gallery/employee-2.webp",
+    "/assets/images/gallery/employee-3.webp"
+  ],
+  "result": "The platform unified essential employee services into one ecosystem — better access to information, more transparency, and simpler everyday interactions between employees and the company."
+}

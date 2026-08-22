@@ -1,0 +1,57 @@
+{
+  "heroEyebrow": "UX/UI & Product Design — 05 Yrs",
+  "heroLine1": "VITALY",
+  "heroLine2": "BOGDEL",
+  "heroSub": "I design interfaces for insurance, fintech, logistics and e-commerce products — the kind of complexity most people never see, made simple to use.",
+  "ctaPrimary": "See the work",
+  "ctaSecondary": "Get in touch",
+  "metaExperience": "5+ years",
+  "metaShipped": "6 products",
+  "metaFocus": "Fintech · Systems · Enterprise UX",
+  "portraitImage": "/assets/images/hero-portrait-alt.webp",
+  "portraitAlt": "Portrait of Vitaly Bogdel",
+  "portraitCaption": "Based remote · Open to work",
+  "skills": [
+    "Figma",
+    "Design Systems",
+    "User Research",
+    "Prototyping",
+    "UX Writing",
+    "Design Ops",
+    "Fintech UX",
+    "Interaction Design"
+  ],
+  "workEyebrow": "Selected Work",
+  "workHeading": "Things I've shipped.",
+  "aboutEyebrow": "About",
+  "aboutHeading": "Crafting systems that hold up under real use.",
+  "aboutParagraphs": [
+    "I'm Vitaly, a UX/UI and product designer who cares more about whether something works than whether it looks clever. Most of my work sits in domains people don't love thinking about — insurance, logistics, currency, HR — which is exactly why the interface has to do the thinking for them.",
+    "I blend strategy, research and craft to take a product from a messy problem to something people trust on the first try."
+  ],
+  "capabilities": [
+    {
+      "title": "Visual Systems",
+      "text": "I build interfaces that hold together: reusable components, clear hierarchy, and typography that makes a product feel considered before anyone reads a word."
+    },
+    {
+      "title": "Product Thinking",
+      "text": "I turn ambiguous problems into shippable products — balancing user needs, business goals and engineering constraints into one direction."
+    },
+    {
+      "title": "User Experience",
+      "text": "Good UX disappears. I use research and prototyping to make interactions feel obvious, whether it's a trading app or an internal ops tool."
+    },
+    {
+      "title": "Research & Iteration",
+      "text": "I test assumptions against real behavior, not opinions, and keep refining after launch — not just before it."
+    }
+  ],
+  "contactEyebrow": "Contact",
+  "contactHeadingLine1": "Let's build something",
+  "contactHeadingLine2": "worth using.",
+  "contactSub": "Have an idea, project or role in mind? Tell me about it — I read every message myself.",
+  "email": "bogdelvitaly@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/vitaly-bogdel-211036164/",
+  "instagram": "https://www.instagram.com/vitaly_bogdel/"
+}

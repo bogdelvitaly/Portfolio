@@ -1,0 +1,64 @@
+{
+  "order": 3,
+  "slug": "logistic-service",
+  "category": "Logistics · UX/UI Design",
+  "title": "Logistic Service",
+  "cardSummary": "A scalable logistics management system designed for clarity and operational efficiency across mobile and web.",
+  "sub": "A scalable logistics management system designed for usability, clarity and operational efficiency across mobile and web.",
+  "meta": ["Low-Fi Prototyping", "User Research", "Usability Testing"],
+  "cover": {
+    "image": "/assets/images/project-logistic.webp",
+    "alt": "Logistic Service dashboard interface"
+  },
+  "sections": [
+    {
+      "heading": "Process",
+      "paragraphs": [
+        "The work began with requirement analysis translated into early prototypes, focused on defining core structures — navigation, system controls, and status visualization — to build a functional, scalable foundation from day one."
+      ],
+      "list": []
+    },
+    {
+      "heading": "Design System",
+      "paragraphs": [
+        "A modular system of reusable, interconnected components kept the platform consistent while staying flexible across different contexts and workflows — from micro-interactions to complex system-level flows."
+      ],
+      "list": []
+    },
+    {
+      "heading": "Loadboard",
+      "paragraphs": [
+        "A core module built for fast scanning and analysis of freight loads. The interface emphasizes clarity, filtering, and customization, letting users build personalized dashboards around their own operational needs."
+      ],
+      "list": []
+    },
+    {
+      "heading": "User Management",
+      "paragraphs": [
+        "An administrative module for managing platform users, access levels and permissions — structured role definitions and activity tracking that keep the system accountable and secure."
+      ],
+      "list": []
+    },
+    {
+      "heading": "Shipper / Customer Profile",
+      "paragraphs": [
+        "A structured customer management system for shipping profiles — billing data, preferences, contacts, credit limits and account ownership — with streamlined onboarding so sales teams can start a relationship with minimal data and reach first shipment faster."
+      ],
+      "list": []
+    },
+    {
+      "heading": "Carrier Profile",
+      "paragraphs": [
+        "A dedicated interface for carrier and vendor data — compliance, billing and relationship information — keeping key operational data accessible across different brokerage workflows."
+      ],
+      "list": []
+    }
+  ],
+  "gallery": [
+    "/assets/images/gallery/logistic-1.webp",
+    "/assets/images/gallery/logistic-2.webp",
+    "/assets/images/gallery/logistic-3.webp",
+    "/assets/images/gallery/logistic-4.webp"
+  ],
+  "result": "The final system gives logistics teams a scalable foundation — improving clarity, operational speed and usability across every user role, from dispatch to enterprise account management."
+}

@@ -1,0 +1,42 @@
+{
+  "order": 1,
+  "slug": "risk-calculation",
+  "category": "Insurance · UX/UI Design",
+  "title": "Risk Calculation",
+  "cardSummary": "An application that calculates insurance risk from a handful of inputs, built for the managers who help people get insured — not for actuaries.",
+  "sub": "A web application that turns insurance risk assessment into a handful of inputs — built for the managers who help people get insured, not for actuaries.",
+  "meta": ["UI/UX Design", "Visual Direction", "Interaction Design"],
+  "cover": {
+    "image": "/assets/images/project-insurance.webp",
+    "alt": "Risk calculation dashboard on laptop and phone"
+  },
+  "sections": [
+    {
+      "heading": "Wireframes",
+      "paragraphs": [
+        "We collected the requirements and started developing prototypes on top of them — first the controls, general navigation, and status displays, then a first draft of the risk-identification map. Visual interactions and a UI kit followed."
+      ],
+      "list": []
+    },
+    {
+      "heading": "Prototype",
+      "paragraphs": [
+        "The prototype started as a structural outline. Once the client approved it, I moved to detailed prototypes built from realistic components — some elements were simplified, others rethought completely."
+      ],
+      "list": []
+    },
+    {
+      "heading": "Visual Design",
+      "paragraphs": [
+        "Risk needed to be readable at a glance, so color carries meaning throughout: you can tell which risk group something belongs to without reading a label. A UI kit followed — colors, type, components and their states, documented for reuse."
+      ],
+      "list": []
+    }
+  ],
+  "gallery": [
+    "/assets/images/gallery/risk-1.webp",
+    "/assets/images/gallery/risk-2.webp",
+    "/assets/images/gallery/risk-3.webp"
+  ],
+  "result": "Managers can now process a client's risk profile in under 2 minutes — down from around 10. That difference shows up directly in how many contracts they can close in a day."
+}

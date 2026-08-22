@@ -1,0 +1,52 @@
+{
+  "order": 4,
+  "slug": "time2pack",
+  "category": "Product Design · UX/UI Design",
+  "title": "Time2pack",
+  "cardSummary": "An all-in-one travel companion for planning trips, building packing lists, and keeping every travel detail in one place.",
+  "sub": "An all-in-one travel companion that helps people plan trips, build packing lists, and keep every travel detail in one place.",
+  "meta": ["Product Strategy", "UX Research", "Prototyping", "Mobile"],
+  "cover": {
+    "image": "/assets/images/project-time2pack.webp",
+    "alt": "Time2pack travel planning app interface"
+  },
+  "sections": [
+    {
+      "heading": "Challenge",
+      "paragraphs": [
+        "Travelers juggle multiple apps, notes and spreadsheets to prepare for a trip. Packing lists go stale, documents scatter across services, and flight information is hard to track in one place. The challenge was combining these workflows into one lightweight, accessible, enjoyable product."
+      ],
+      "list": []
+    },
+    {
+      "heading": "Solution",
+      "paragraphs": ["The app brings together the core travel scenarios in a single flow:"],
+      "list": [
+        "Smart, customizable packing lists",
+        "Packing progress tracking",
+        "Flight tracking with real-time alerts",
+        "Weather forecasts for travel dates",
+        "Travel documents and ticket storage",
+        "Notes, photos, and offline access to trip information"
+      ]
+    },
+    {
+      "heading": "Design Approach",
+      "paragraphs": ["Information is grouped around the trip itself, keeping navigation intuitive and cognitive load low. Particular attention went to:"],
+      "list": [
+        "Fast onboarding with no mandatory registration",
+        "Clear information hierarchy",
+        "Editable, reusable packing templates",
+        "Visual progress tracking while packing",
+        "Offline access for reliability while traveling",
+        "No ads, no unnecessary complexity"
+      ]
+    }
+  ],
+  "gallery": [
+    "/assets/images/gallery/time2pack-1.webp",
+    "/assets/images/gallery/time2pack-2.webp",
+    "/assets/images/gallery/time2pack-3.webp"
+  ],
+  "result": "Time2Pack grew into a travel companion used by tens of thousands of people worldwide, with regular updates that keep improving how they plan and pack."
+}

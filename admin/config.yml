@@ -1,0 +1,104 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# After a save, Netlify runs `node build.js` (configured in Netlify's build
+# settings) to regenerate index.html and work/*.html from these files.
+publish_mode: simple
+
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+collections:
+  - name: "site"
+    label: "Site Settings"
+    files:
+      - file: "content/site.json"
+        label: "Homepage & Global Content"
+        name: "site"
+        fields:
+          - { label: "Hero eyebrow (small line above the name)", name: "heroEyebrow", widget: "string" }
+          - { label: "Hero name — line 1", name: "heroLine1", widget: "string" }
+          - { label: "Hero name — line 2", name: "heroLine2", widget: "string" }
+          - { label: "Hero subtitle", name: "heroSub", widget: "text" }
+          - { label: "Primary button label", name: "ctaPrimary", widget: "string" }
+          - { label: "Secondary button label", name: "ctaSecondary", widget: "string" }
+          - { label: "Stat — Experience", name: "metaExperience", widget: "string" }
+          - { label: "Stat — Shipped", name: "metaShipped", widget: "string" }
+          - { label: "Stat — Focus", name: "metaFocus", widget: "string" }
+          - { label: "Portrait photo", name: "portraitImage", widget: "image" }
+          - { label: "Portrait alt text", name: "portraitAlt", widget: "string" }
+          - { label: "Portrait caption", name: "portraitCaption", widget: "string" }
+          - label: "Skills marquee"
+            name: "skills"
+            widget: "list"
+            summary: "{{fields.skill}}"
+            field: { label: "Skill", name: "skill", widget: "string" }
+          - { label: "Work section eyebrow", name: "workEyebrow", widget: "string" }
+          - { label: "Work section heading", name: "workHeading", widget: "string" }
+          - { label: "About eyebrow", name: "aboutEyebrow", widget: "string" }
+          - { label: "About heading", name: "aboutHeading", widget: "string" }
+          - label: "About paragraphs"
+            name: "aboutParagraphs"
+            widget: "list"
+            field: { label: "Paragraph", name: "paragraph", widget: "text" }
+          - label: "Capabilities (the 4 cards in About)"
+            name: "capabilities"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - { label: "Contact eyebrow", name: "contactEyebrow", widget: "string" }
+          - { label: "Contact heading — line 1", name: "contactHeadingLine1", widget: "string" }
+          - { label: "Contact heading — line 2", name: "contactHeadingLine2", widget: "string" }
+          - { label: "Contact subtitle", name: "contactSub", widget: "text" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "LinkedIn URL", name: "linkedin", widget: "string" }
+          - { label: "Instagram URL", name: "instagram", widget: "string" }
+
+  - name: "cases"
+    label: "Case Studies"
+    folder: "content/cases"
+    create: true
+    slug: "{{fields.slug}}"
+    summary: "{{order}} — {{title}}"
+    identifier_field: "title"
+    fields:
+      - { label: "Order (controls position on homepage, 1 = first/featured)", name: "order", widget: "number", value_type: "int" }
+      - { label: "URL slug (letters, numbers, dashes only — e.g. risk-calculation)", name: "slug", widget: "string", pattern: ["^[a-z0-9-]+$", "Lowercase letters, numbers and dashes only"] }
+      - { label: "Category tag (e.g. Insurance · UX/UI Design)", name: "category", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Homepage card summary (short, shown on the Work grid)", name: "cardSummary", widget: "text" }
+      - { label: "Case intro (shown at the top of the case study page)", name: "sub", widget: "text" }
+      - label: "Role tags (small pills under the intro)"
+        name: "meta"
+        widget: "list"
+        field: { label: "Tag", name: "tag", widget: "string" }
+      - label: "Cover image"
+        name: "cover"
+        widget: "object"
+        fields:
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Alt text (describe the image for accessibility)", name: "alt", widget: "string" }
+      - label: "Body sections"
+        name: "sections"
+        widget: "list"
+        summary: "{{fields.heading}}"
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - label: "Paragraphs"
+            name: "paragraphs"
+            widget: "list"
+            field: { label: "Paragraph", name: "paragraph", widget: "text" }
+          - label: "Bullet list (optional)"
+            name: "list"
+            widget: "list"
+            required: false
+            field: { label: "Item", name: "item", widget: "string" }
+      - label: "Gallery images (optional)"
+        name: "gallery"
+        widget: "list"
+        required: false
+        field: { label: "Image", name: "image", widget: "image" }
+      - { label: "Result / outcome (optional — leave blank to hide this block)", name: "result", widget: "text", required: false }

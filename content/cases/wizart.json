@@ -1,0 +1,63 @@
+{
+  "order": 2,
+  "slug": "wizart",
+  "category": "E-Commerce · Product Design",
+  "title": "Wizart.ai",
+  "cardSummary": "An ecosystem for material visualization and 3D content, helping shoppers see a product in their own space before they buy it.",
+  "sub": "A product ecosystem for visualizing interior finishing materials — paints, wallpaper, flooring — across mobile, web and enterprise tools.",
+  "meta": ["UI/UX Design", "Analytics", "Design Systems", "Mobile"],
+  "cover": {
+    "image": "/assets/images/project-wizart.webp",
+    "alt": "Wizart.ai material visualization on a phone"
+  },
+  "sections": [
+    {
+      "heading": "Product Ecosystem",
+      "paragraphs": ["The platform includes several interconnected services:"],
+      "list": [
+        "Mobile Visualizer for real-time material visualization",
+        "PIM system (Product Information Management)",
+        "Vision API for integration and recognition tasks",
+        "Material Cloud for centralized asset management"
+      ]
+    },
+    {
+      "heading": "User Research & CustDev",
+      "paragraphs": [
+        "Ongoing research through surveys and in-store observations in construction retail environments validated hypotheses and shaped new product directions based on real purchasing behavior."
+      ],
+      "list": []
+    },
+    {
+      "heading": "Analytics-Driven Design",
+      "paragraphs": ["Product decisions were guided by data, not opinion. Key metrics included:"],
+      "list": [
+        "Total users, sessions, and renders",
+        "Usage of custom vs. predefined interiors",
+        "Conversion funnel: product selection → cart → checkout",
+        "Most frequently used materials and products",
+        "Behavioral insights gathered via Microsoft Clarity"
+      ]
+    },
+    {
+      "heading": "Design System",
+      "paragraphs": [
+        "A structured system built on atomic design principles kept the product scalable and consistent — reusable navigation, forms, tables and controls, shared across every product in the ecosystem."
+      ],
+      "list": []
+    },
+    {
+      "heading": "Marketing & Print",
+      "paragraphs": [
+        "Beyond the digital product, I designed brochures, catalogs, flyers, books and exhibition stands — refined through continuous feedback loops with the client."
+      ],
+      "list": []
+    }
+  ],
+  "gallery": [
+    "/assets/images/gallery/wizart-1.webp",
+    "/assets/images/gallery/wizart-2.webp",
+    "/assets/images/gallery/wizart-3.webp"
+  ],
+  "result": ""
+}

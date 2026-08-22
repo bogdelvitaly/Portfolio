@@ -1,0 +1,42 @@
+{
+  "order": 6,
+  "slug": "bitcoin-de",
+  "category": "Currency · UX/UI Design",
+  "title": "Bitcoin DE",
+  "cardSummary": "An Android cryptocurrency trading experience built to make a volatile market feel steady and legible.",
+  "sub": "An Android cryptocurrency trading experience built to make a volatile market feel steady and legible.",
+  "meta": ["Interaction Design", "Visual Design", "Android"],
+  "cover": {
+    "image": "/assets/images/project-bitcoin.webp",
+    "alt": "Bitcoin DE Android trading app interface"
+  },
+  "sections": [
+    {
+      "heading": "Challenge",
+      "paragraphs": [
+        "Bitcoin.de needed a convenient, trustworthy Android app for cryptocurrency trading — one that supported essential financial workflows while staying approachable for users at any experience level. Key features:"
+      ],
+      "list": [
+        "Buying and selling cryptocurrencies",
+        "Portfolio and balance management",
+        "Price alerts and market monitoring",
+        "Clear transaction and notification flows"
+      ]
+    },
+    {
+      "heading": "Design Approach",
+      "paragraphs": ["The experience was built around three principles: simplicity, trust, and efficiency."],
+      "list": [
+        "Clear information hierarchy for financial data",
+        "Intuitive trading and transaction flows",
+        "Android-native navigation patterns",
+        "Readable portfolio and balance views",
+        "Transparent states and confirmations for critical actions"
+      ]
+    }
+  ],
+  "gallery": [
+    "/assets/images/gallery/bitcoin-1.webp"
+  ],
+  "result": "The updated Android app expanded Bitcoin.de's ecosystem and attracted more than 10,000 users — giving them a clearer, more convenient way to manage their crypto."
+}
