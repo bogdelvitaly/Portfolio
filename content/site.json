@@ -1,16 +1,6 @@
 {
-  "heroEyebrow": "UX/UI & Product Design — 05 Yrs",
-  "heroLine1": "VITALY",
-  "heroLine2": "BOGDEL",
-  "heroSub": "I design interfaces for insurance, fintech, logistics and e-commerce products — the kind of complexity most people never see, made simple to use.",
-  "ctaPrimary": "See the work",
-  "ctaSecondary": "Get in touch",
-  "metaExperience": "5+ years",
-  "metaShipped": "6 products",
-  "metaFocus": "Fintech · Systems · Enterprise UX",
+  "contactSub": "Have an idea, project or role in mind? Tell me about it — I read every message myself.",
   "portraitImage": "/assets/images/hero-portrait-alt.webp",
-  "portraitAlt": "Portrait of Vitaly Bogdel",
-  "portraitCaption": "Based remote · Open to work",
   "skills": [
     "Figma",
     "Design Systems",
@@ -21,14 +11,25 @@
     "Fintech UX",
     "Interaction Design"
   ],
-  "workEyebrow": "Selected Work",
+  "heroLine1": "VITALY",
+  "ctaSecondary": "Get in touch",
+  "heroLine2": "BOGDEL",
+  "heroSub": "I design interfaces for insurance, fintech, logistics and e-commerce products — the kind of complexity most people never see, made simple to use.",
+  "contactEyebrow": "Contact",
+  "portraitCaption": "Based remote · Open to work",
+  "portraitAlt": "Portrait of Vitaly Bogdel",
+  "metaShipped": "6 products",
+  "metaExperience": "7+ years",
+  "heroEyebrow": "UX/UI & Product Design — 05 Yrs",
   "workHeading": "Things I've shipped.",
-  "aboutEyebrow": "About",
-  "aboutHeading": "Crafting systems that hold up under real use.",
   "aboutParagraphs": [
     "I'm Vitaly, a UX/UI and product designer who cares more about whether something works than whether it looks clever. Most of my work sits in domains people don't love thinking about — insurance, logistics, currency, HR — which is exactly why the interface has to do the thinking for them.",
     "I blend strategy, research and craft to take a product from a messy problem to something people trust on the first try."
   ],
+  "ctaPrimary": "See the work",
+  "instagram": "https://www.instagram.com/vitaly_bogdel/",
+  "metaFocus": "Fintech · Systems · Enterprise UX",
+  "aboutHeading": "Crafting systems that hold up under real use.",
   "capabilities": [
     {
       "title": "Visual Systems",
@@ -47,11 +48,10 @@
       "text": "I test assumptions against real behavior, not opinions, and keep refining after launch — not just before it."
     }
   ],
-  "contactEyebrow": "Contact",
+  "workEyebrow": "Selected Work",
   "contactHeadingLine1": "Let's build something",
   "contactHeadingLine2": "worth using.",
-  "contactSub": "Have an idea, project or role in mind? Tell me about it — I read every message myself.",
+  "aboutEyebrow": "About",
   "email": "bogdelvitaly@gmail.com",
-  "linkedin": "https://www.linkedin.com/in/vitaly-bogdel-211036164/",
-  "instagram": "https://www.instagram.com/vitaly_bogdel/"
+  "linkedin": "https://www.linkedin.com/in/vitaly-bogdel-211036164/"
 }
