@@ -143,6 +143,13 @@ ${header('')}
 
   <!-- HERO -->
   <section class="hero" id="top">
+    <div class="hero-glow" aria-hidden="true">
+      <div class="hero-glow-base"></div>
+      <div class="hero-glow-ray"></div>
+      <div class="hero-glow-ray"></div>
+      <div class="hero-glow-ray"></div>
+      <div class="hero-glow-dots"></div>
+    </div>
     <div class="wrap hero-grid">
       <div class="hero-copy">
         <p class="eyebrow" data-reveal>${esc(site.heroEyebrow)}</p>
