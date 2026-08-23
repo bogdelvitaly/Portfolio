@@ -239,6 +239,37 @@ h3 {
   border-bottom-color: var(--border);
 }
 
+@media (min-width: 900px) {
+  /* Desktop: header floats transparently over the hero until the page
+     scrolls, then fades in the same blurred bar mobile always shows.
+     Fixed positioning pulls it out of flow, so `main` reserves the height
+     it would have occupied and `.hero` cancels that reservation to bleed
+     up underneath it. */
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+    backdrop-filter: none;
+    border-bottom-color: transparent;
+    transition: border-color var(--dur-med) var(--ease-out), background var(--dur-med) var(--ease-out), backdrop-filter var(--dur-med) var(--ease-out);
+  }
+
+  .site-header[data-scrolled="true"] {
+    background: rgba(11, 12, 14, 0.7);
+    backdrop-filter: blur(14px);
+  }
+
+  main {
+    padding-top: 76px;
+  }
+
+  .hero {
+    margin-top: -76px;
+  }
+}
+
 .header-inner {
   display: flex;
   align-items: center;
