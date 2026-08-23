@@ -810,15 +810,6 @@ section {
   transform: scale(1.045);
 }
 
-.work-index {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  color: var(--ember-1);
-  letter-spacing: 0.05em;
-  margin-bottom: var(--space-2);
-}
-
 .work-tag {
   font-family: var(--font-mono);
   font-size: 0.8rem;
@@ -903,7 +894,7 @@ section {
   display: block;
   font-family: var(--font-mono);
   font-size: 0.78rem;
-  color: var(--text-dim);
+  color: var(--ember-1);
   margin-bottom: var(--space-2);
 }
 

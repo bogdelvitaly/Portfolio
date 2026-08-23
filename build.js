@@ -92,13 +92,11 @@ function footer() {
 
 function renderWorkCard(c, i) {
   const isFeature = i === 0;
-  const indexLabel = `${String(c.order).padStart(2, '0')} / ${String(cases.length).padStart(2, '0')}`;
   return `        <a class="work-card${isFeature ? ' work-card--feature' : ''}" data-reveal href="work/${c.slug}.html" aria-label="View case study: ${esc(c.title)}">
           <div class="work-media">
             <img src="${c.cover.image}" alt="${esc(c.cover.alt)}" width="1400" height="933" loading="lazy">
           </div>
           <div class="work-info">
-            <span class="work-index">${indexLabel}</span>
             <p class="work-tag">${esc(c.category)}</p>
             <h3>${esc(c.title)}</h3>
             <p>${esc(c.cardSummary)}</p>
