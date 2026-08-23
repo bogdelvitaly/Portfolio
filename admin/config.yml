@@ -60,6 +60,8 @@ collections:
   - name: "cases"
     label: "Case Studies"
     folder: "content/cases"
+    extension: "json"
+    format: "json"
     create: true
     slug: "{{fields.slug}}"
     summary: "{{order}} — {{title}}"
