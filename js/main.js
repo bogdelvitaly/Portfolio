@@ -70,6 +70,80 @@
     });
   }
 
+  /* ---------- Custom cursor + hero dot-grid spotlight ---------- */
+  /* Fine-pointer desktops only — touch devices never get `cursor:none`,
+     and reduced-motion users keep the native cursor entirely. */
+  if (!reduceMotion && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    var cursorDot = document.createElement("div");
+    cursorDot.className = "cursor-dot";
+    var cursorRing = document.createElement("div");
+    cursorRing.className = "cursor-ring";
+    document.body.appendChild(cursorDot);
+    document.body.appendChild(cursorRing);
+    document.documentElement.classList.add("has-custom-cursor");
+
+    var curX = 0;
+    var curY = 0;
+    var ringX = 0;
+    var ringY = 0;
+    var ringStarted = false;
+
+    window.addEventListener("pointermove", function (e) {
+      curX = e.clientX;
+      curY = e.clientY;
+      cursorDot.style.transform = "translate(" + curX + "px, " + curY + "px) translate(-50%, -50%)";
+      if (!ringStarted) {
+        ringX = curX;
+        ringY = curY;
+        ringStarted = true;
+        cursorRing.style.transform = "translate(" + ringX + "px, " + ringY + "px) translate(-50%, -50%)";
+      }
+    });
+
+    (function tickCursorRing() {
+      ringX += (curX - ringX) * 0.18;
+      ringY += (curY - ringY) * 0.18;
+      cursorRing.style.transform = "translate(" + ringX + "px, " + ringY + "px) translate(-50%, -50%)";
+      requestAnimationFrame(tickCursorRing);
+    })();
+
+    document.addEventListener("mouseout", function (e) {
+      if (!e.relatedTarget) {
+        cursorDot.style.opacity = "0";
+        cursorRing.style.opacity = "0";
+      }
+    });
+    document.addEventListener("mouseover", function () {
+      cursorDot.style.opacity = "";
+      cursorRing.style.opacity = "";
+    });
+
+    document.querySelectorAll("a, button").forEach(function (el) {
+      el.addEventListener("mouseenter", function () {
+        cursorDot.setAttribute("data-hover", "true");
+        cursorRing.setAttribute("data-hover", "true");
+      });
+      el.addEventListener("mouseleave", function () {
+        cursorDot.removeAttribute("data-hover");
+        cursorRing.removeAttribute("data-hover");
+      });
+    });
+
+    var spotlight = document.querySelector("[data-spotlight]");
+    var spotlightHost = document.querySelector(".hero");
+    if (spotlight && spotlightHost) {
+      spotlightHost.addEventListener("pointermove", function (e) {
+        var rect = spotlightHost.getBoundingClientRect();
+        spotlight.style.setProperty("--sx", e.clientX - rect.left + "px");
+        spotlight.style.setProperty("--sy", e.clientY - rect.top + "px");
+        spotlight.classList.add("is-active");
+      });
+      spotlightHost.addEventListener("pointerleave", function () {
+        spotlight.classList.remove("is-active");
+      });
+    }
+  }
+
   /* ---------- Animation: GSAP if available, else plain IntersectionObserver ---------- */
   var hasGSAP = typeof window.gsap !== "undefined";
 
