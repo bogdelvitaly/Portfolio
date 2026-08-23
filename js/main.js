@@ -130,16 +130,36 @@
     });
 
     var spotlight = document.querySelector("[data-spotlight]");
+    var orb = document.querySelector("[data-orb]");
     var spotlightHost = document.querySelector(".hero");
     if (spotlight && spotlightHost) {
+      var orbIdleTimer = null;
+
       spotlightHost.addEventListener("pointermove", function (e) {
         var rect = spotlightHost.getBoundingClientRect();
-        spotlight.style.setProperty("--sx", e.clientX - rect.left + "px");
-        spotlight.style.setProperty("--sy", e.clientY - rect.top + "px");
+        var x = e.clientX - rect.left;
+        var y = e.clientY - rect.top;
+
+        spotlight.style.setProperty("--sx", x + "px");
+        spotlight.style.setProperty("--sy", y + "px");
         spotlight.classList.add("is-active");
+
+        if (orb) {
+          orb.style.transform = "translate(" + x + "px, " + y + "px) translate(-50%, -50%)";
+          orb.classList.add("is-active");
+          orb.classList.remove("is-idle");
+          clearTimeout(orbIdleTimer);
+          orbIdleTimer = setTimeout(function () {
+            orb.classList.add("is-idle");
+          }, 150);
+        }
       });
       spotlightHost.addEventListener("pointerleave", function () {
         spotlight.classList.remove("is-active");
+        if (orb) {
+          orb.classList.remove("is-active");
+          clearTimeout(orbIdleTimer);
+        }
       });
     }
   }

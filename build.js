@@ -153,6 +153,7 @@ ${header('')}
       <div class="hero-glow-ray"></div>
       <div class="hero-glow-dots"></div>
       <div class="hero-glow-spotlight" data-spotlight></div>
+      <div class="hero-glow-orb" data-orb></div>
     </div>
     <div class="wrap hero-grid">
       <div class="hero-copy">

@@ -551,6 +551,31 @@ h3 {
   opacity: 0.5;
 }
 
+/* Soft ambient light behind the cursor, independent of the dot mask above —
+   the "bulb" to the dot-spotlight's "beam". Grows a little when the cursor
+   sits still, eases back when it moves. Kept faint on purpose. */
+.hero-glow-orb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 138, 76, 0.14) 0%, transparent 70%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--dur-med) var(--ease-out), width var(--dur-slow) var(--ease-out), height var(--dur-slow) var(--ease-out);
+}
+
+.hero-glow-orb.is-active {
+  opacity: 1;
+}
+
+.hero-glow-orb.is-idle {
+  width: 340px;
+  height: 340px;
+}
+
 
 .hero-grid {
   display: grid;
