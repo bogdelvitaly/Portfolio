@@ -128,6 +128,57 @@
         }
       );
     });
+
+    /* ---------- Hero pin + zoom-out, covered by Work scrolling over it ----------
+       Desktop only: the pin/cover distance is one viewport tall, which only
+       lines up with the hero's actual height when hero-copy and the portrait
+       sit side by side. On mobile they stack into a much taller block, so
+       the same distance would leave a gap before Work catches up to it. */
+    var heroViewport = document.querySelector(".hero-viewport");
+    var workSection = document.querySelector(".work");
+    if (heroViewport && workSection) {
+      var heroPinMM = gsap.matchMedia();
+      heroPinMM.add("(min-width: 900px)", function () {
+        var pinEnd = function () {
+          return "+=" + window.innerHeight;
+        };
+
+        // Work is pulled up to start exactly where the pin begins, so it
+        // slides over the hero as it shrinks instead of appearing after a
+        // blank spacer. Applied via JS (not CSS) so reduced-motion / no-JS
+        // visitors, and mobile, keep plain, non-overlapping document flow.
+        workSection.style.marginTop = "-100dvh";
+
+        gsap.to(heroViewport, {
+          scale: 0.82,
+          ease: "none",
+          scrollTrigger: {
+            trigger: heroViewport,
+            start: "top top",
+            end: pinEnd,
+            pin: true,
+            scrub: true,
+            invalidateOnRefresh: true,
+          },
+        });
+
+        return function () {
+          workSection.style.marginTop = "";
+        };
+      });
+    }
+
+    // Web fonts (and late-loading images) swap in after ScrollTrigger's
+    // first measurement, shifting every section's real position — recompute
+    // once things settle so pinning/reveal points land correctly.
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(function () {
+        ScrollTrigger.refresh();
+      });
+    }
+    window.addEventListener("load", function () {
+      ScrollTrigger.refresh();
+    });
   } else {
     var io = new IntersectionObserver(
       function (entries) {

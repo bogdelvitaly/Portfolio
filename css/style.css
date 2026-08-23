@@ -400,6 +400,7 @@ h3 {
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
+  will-change: transform;
 }
 
 @media (max-width: 899px) {
@@ -675,6 +676,9 @@ section {
 
 .work {
   padding-block: var(--space-9);
+  position: relative;
+  z-index: 3;
+  background: var(--bg);
 }
 
 .work-list {
