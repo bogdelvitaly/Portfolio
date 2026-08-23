@@ -141,6 +141,9 @@ ${header('')}
 
 <main id="main">
 
+  <!-- HERO + MARQUEE fill the first screen; normal scroll continues after -->
+  <div class="hero-viewport">
+
   <!-- HERO -->
   <section class="hero" id="top">
     <div class="hero-glow" aria-hidden="true">
@@ -193,6 +196,8 @@ ${header('')}
       </div>
     </div>
   </section>
+
+  </div>
 
   <!-- WORK -->
   <section class="work" id="work">

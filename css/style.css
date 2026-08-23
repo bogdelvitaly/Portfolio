@@ -243,8 +243,8 @@ h3 {
   /* Desktop: header floats transparently over the hero until the page
      scrolls, then fades in the same blurred bar mobile always shows.
      Fixed positioning pulls it out of flow, so `main` reserves the height
-     it would have occupied and `.hero` cancels that reservation to bleed
-     up underneath it. */
+     it would have occupied and `.hero-viewport` cancels that reservation
+     to bleed up underneath it. */
   .site-header {
     position: fixed;
     top: 0;
@@ -265,7 +265,7 @@ h3 {
     padding-top: 76px;
   }
 
-  .hero {
+  .hero-viewport {
     margin-top: -76px;
   }
 }
@@ -392,6 +392,34 @@ h3 {
 }
 
 /* ---------- Hero ---------- */
+/* Hero + marquee together fill exactly one screen on load (min-height, not
+   height, so content that genuinely needs more room on a very short
+   viewport pushes the box taller instead of getting clipped). Scrolling
+   past it is then completely normal — no snapping or scroll-jacking. */
+.hero-viewport {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+@media (max-width: 899px) {
+  .hero-viewport {
+    min-height: calc(100dvh - 76px);
+  }
+}
+
+.hero-viewport .hero {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-6);
+}
+
+.hero-viewport .marquee-section {
+  flex: 0 0 auto;
+}
+
 .hero {
   position: relative;
   z-index: 2;
