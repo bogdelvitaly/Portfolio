@@ -1,3 +1,6 @@
 node_modules/
 .DS_Store
 Thumbs.db
+
+# full-resolution source of the hero photo (6.5 MB) — the site uses the generated WebP files
+assets/hero/image_Hero.png
