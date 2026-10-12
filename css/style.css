@@ -1,6 +1,6 @@
 /* ---------- Tokens ---------- */
-/* UI scale: above 1920px wide the interface is scaled up 1.75x (same as a 175% browser zoom).
-   --u replaces 1px everywhere, rem follows the root font-size; vw/vh sizes are untouched, exactly like real zoom. */
+/* UI scale unit: --u stands for 1px and rem follows the root font-size, both driven by --ui (1 by default).
+   js/scale.js lowers --ui on Windows displays with scaling (125 %, 150 % …) so the site keeps its size; browser zoom still works. */
 :root {
   --ui: 1;
   --u: calc(var(--ui) * 1px);
@@ -24,7 +24,6 @@
   --pad: clamp(calc(20 * var(--u)), 4vw, calc(76 * var(--u)));
 }
 
-@media (min-width: 1921px) { :root { --ui: 1.75; } }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { background: var(--bg); color: var(--text); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; font-size: calc(var(--ui) * 100%); scroll-padding-top: 0; }

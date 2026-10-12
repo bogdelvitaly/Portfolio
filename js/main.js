@@ -2,7 +2,7 @@
   "use strict";
 
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  // UI scale from the CSS (1, or 1.75 above 1920px wide): pixel constants below are multiplied by it
+  // UI scale from the CSS (--ui, 1 unless Windows display scaling is being cancelled): pixel constants below are multiplied by it
   var ui = function () { return parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--ui")) || 1; };
   var $ = function (s, c) { return (c || document).querySelector(s); };
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
