@@ -5,6 +5,9 @@ const fs = require("fs");
 const path = require("path");
 
 const root = __dirname;
+// Absolute address of the published site: social networks need full URLs for link previews.
+// Change it if the site moves to its own domain.
+const SITE_URL = "https://vitaly-portfolio.netlify.app";
 const casesDir = path.join(root, "content", "cases");
 const outDir = path.join(root, "work");
 
@@ -62,6 +65,17 @@ function page(c, i) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${esc(c.title)} — Vitaly Bogdel</title>
   <meta name="description" content="${esc(c.sub)}">
+  <link rel="canonical" href="${SITE_URL}/work/${esc(c.slug)}.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Vitaly Bogdel">
+  <meta property="og:title" content="${esc(c.title)} — Vitaly Bogdel">
+  <meta property="og:description" content="${esc(c.sub)}">
+  <meta property="og:url" content="${SITE_URL}/work/${esc(c.slug)}.html">
+  <meta property="og:image" content="${SITE_URL}/assets/og/${esc(c.slug)}.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="${esc(c.cover.alt || c.title)}">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#070707">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23070707'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='700' fill='%23f26b0f' text-anchor='middle'%3EVB%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
