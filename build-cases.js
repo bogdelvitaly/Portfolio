@@ -93,11 +93,13 @@ ${result}
 
     <section class="case-next">
       <p class="case-eyebrow" data-reveal>More cases</p>
-      <div class="case-more">
-${others.map((o) => `        <a class="case-more-card" href="${esc(o.slug)}.html" data-reveal>
-          <span class="case-more-img"><img src="${esc(rel(o.cover.image))}" alt="" loading="lazy"><span class="case-more-open" aria-hidden="true">View case ${arrow}</span></span>
-          <span class="case-more-cat">${esc(o.category)}</span>
-          <span class="case-more-title">${esc(o.title)}</span>
+      <div class="case-next-list">
+${others.map((o) => `        <a class="case-next-card" href="${esc(o.slug)}.html" data-reveal>
+          <span class="case-next-text">
+            <span class="case-next-cat">${esc(o.category)}</span>
+            <span class="case-next-title">${esc(o.title)}</span>
+          </span>
+          <span class="case-next-btn">View case ${arrow}</span>
         </a>`).join("\n")}
       </div>
     </section>
