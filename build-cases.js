@@ -82,6 +82,7 @@ function page(c, i) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Host+Grotesk:wght@300;400;500&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/scale.js"></script>
 </head>
 <body class="case-page" id="top">
   <header class="site-header" data-header>
