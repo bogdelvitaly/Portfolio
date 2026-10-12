@@ -360,27 +360,31 @@ ul, ol { list-style: none; }
 .case-result p { max-width: 40em; font-size: clamp(1.1rem, 1.6vw, 1.7rem); line-height: 1.5; }
 
 .case-next { padding: clamp(calc(80 * var(--u)), 14vh, calc(160 * var(--u))) var(--pad); }
-.case-next-card {
-  position: relative; isolation: isolate; overflow: hidden; display: flex; align-items: center; justify-content: space-between; gap: calc(24 * var(--u));
-  padding: clamp(calc(24 * var(--u)), 3vw, calc(56 * var(--u))); border: calc(1 * var(--u)) solid rgba(255, 255, 255, 0.14); border-radius: clamp(calc(20 * var(--u)), 2.4vw, calc(36 * var(--u))); transition: border-color 0.5s ease;
+.case-more { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(calc(14 * var(--u)), 2vw, calc(32 * var(--u))); margin-top: clamp(calc(20 * var(--u)), 4vh, calc(40 * var(--u))); }
+.case-more-card { display: block; border-radius: clamp(calc(14 * var(--u)), 1.6vw, calc(24 * var(--u))); }
+.case-more-card:focus-visible { outline: calc(2 * var(--u)) solid var(--o1); outline-offset: calc(6 * var(--u)); }
+.case-more-img {
+  position: relative; display: block; overflow: hidden; aspect-ratio: 16 / 10; background: #141414;
+  border: calc(1 * var(--u)) solid rgba(255, 255, 255, 0.08); border-radius: inherit;
 }
-/* same soft orange fill as the capability cards */
-.case-next-card::before {
-  content: ""; position: absolute; inset: 0; z-index: -1; background: var(--grad);
-  -webkit-mask-image: radial-gradient(circle farthest-corner at 50% 50%, #000 calc(var(--fill-r) - 45%), transparent var(--fill-r));
-  mask-image: radial-gradient(circle farthest-corner at 50% 50%, #000 calc(var(--fill-r) - 45%), transparent var(--fill-r));
-  transition: --fill-r 1s cubic-bezier(0.3, 0.6, 0.2, 1);
+.case-more-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.case-more-card:hover .case-more-img img { transform: scale(1.05); }
+.case-more-open {
+  position: absolute; right: clamp(calc(10 * var(--u)), 1.1vw, calc(18 * var(--u))); bottom: clamp(calc(10 * var(--u)), 1.1vw, calc(18 * var(--u)));
+  display: inline-flex; align-items: center; gap: 0.5em; padding: 0.6em 1.1em; border-radius: calc(999 * var(--u));
+  background: var(--o1); color: #fff; font-size: 0.85rem; opacity: 0; transform: translateY(calc(8 * var(--u)));
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
-.case-next-card:hover { border-color: transparent; }
-.case-next-card:hover::before { --fill-r: 145%; }
-.case-next-cat { display: block; margin-bottom: 0.6em; color: var(--muted); font-size: 0.95rem; }
-.case-next-card:hover .case-next-cat { color: #fff; }
-.case-next-title { display: block; font-weight: 300; font-size: clamp(2rem, 4.4vw, 5rem); line-height: 1.05; letter-spacing: -0.02em; }
-.case-next-btn { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 0.6em; padding: 0.9em 1.5em; border: calc(1 * var(--u)) solid rgba(255, 255, 255, 0.3); border-radius: calc(999 * var(--u)); white-space: nowrap; }
-.case-next-btn svg { width: 1.1em; height: 1.1em; }
+.case-more-open svg { width: 1em; height: 1em; }
+.case-more-card:hover .case-more-open, .case-more-card:focus-visible .case-more-open { opacity: 1; transform: none; }
+.case-more-cat { display: block; margin: 1.1em 0 0.4em; color: var(--muted); font-size: 0.95rem; }
+.case-more-title { display: block; font-weight: 300; font-size: clamp(1.5rem, 2.3vw, 2.8rem); line-height: 1.1; letter-spacing: -0.02em; transition: color 0.3s ease; }
+.case-more-card:hover .case-more-title { color: var(--o1); }
+/* touch screens have no hover, so the pill is always shown */
+@media (hover: none) { .case-more-open { opacity: 1; transform: none; } }
 
 @media (max-width: 899px) {
   .case-section, .case-result { grid-template-columns: 1fr; gap: calc(14 * var(--u)); }
   .case-gallery { grid-template-columns: 1fr; }
-  .case-next-card { flex-direction: column; align-items: flex-start; }
+  .case-more { grid-template-columns: 1fr; gap: calc(28 * var(--u)); }
 }

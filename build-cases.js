@@ -45,7 +45,9 @@ function gallery(c) {
 }
 
 function page(c, i) {
-  const next = cases[(i + 1) % cases.length];
+  // three other cases: the ones that follow this one in the list (wrapping around)
+  const others = [];
+  for (let k = 1; k < cases.length && others.length < 3; k++) others.push(cases[(i + k) % cases.length]);
   const chips = (c.meta || []).map((m) => `<span class="chip">${esc(m)}</span>`).join("");
   const result = c.result
     ? `      <section class="case-result" data-reveal>
@@ -90,14 +92,14 @@ ${result}
     </div>
 
     <section class="case-next">
-      <p class="case-eyebrow" data-reveal>Next case</p>
-      <a class="case-next-card" href="${esc(next.slug)}.html" data-reveal>
-        <span class="case-next-text">
-          <span class="case-next-cat">${esc(next.category)}</span>
-          <span class="case-next-title">${esc(next.title)}</span>
-        </span>
-        <span class="case-next-btn">View case ${arrow}</span>
-      </a>
+      <p class="case-eyebrow" data-reveal>More cases</p>
+      <div class="case-more">
+${others.map((o) => `        <a class="case-more-card" href="${esc(o.slug)}.html" data-reveal>
+          <span class="case-more-img"><img src="${esc(rel(o.cover.image))}" alt="" loading="lazy"><span class="case-more-open" aria-hidden="true">View case ${arrow}</span></span>
+          <span class="case-more-cat">${esc(o.category)}</span>
+          <span class="case-more-title">${esc(o.title)}</span>
+        </a>`).join("\n")}
+      </div>
     </section>
   </main>
 
