@@ -13,6 +13,7 @@
   "use strict";
 
   var root = document.documentElement;
+  var WIDE_FROM = 2560; // physical width from which the wide (ultrawide) hero picture and the one-line wordmark are used
   var ZOOM_LEVELS = [0.25, 0.33, 0.5, 0.67, 0.75, 0.8, 0.9, 1, 1.1, 1.25, 1.5, 1.75, 2, 2.5, 3, 4, 5]; // Chrome / Edge steps
   var isWindows = /Windows/i.test(navigator.userAgent);
 
@@ -35,7 +36,7 @@
     var base = physicalWidth > 1920 ? 1.5 : 1;
     root.style.setProperty("--ui", String(+(base / os).toFixed(4)));
     // Which hero picture to use: chosen by physical width, not CSS width, so Windows scaling does not pick a smaller crop
-    root.setAttribute("data-hero", physicalWidth >= 1600 ? "1920" : physicalWidth >= 1024 ? "1440" : physicalWidth >= 640 ? "768" : "375");
+    root.setAttribute("data-hero", physicalWidth >= WIDE_FROM ? "3424" : physicalWidth >= 1600 ? "1920" : physicalWidth >= 1024 ? "1440" : physicalWidth >= 640 ? "768" : "375");
   }
 
   apply();

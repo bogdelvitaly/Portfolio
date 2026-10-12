@@ -1,0 +1,140 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# After a save, Netlify runs `node build.js` (see netlify.toml): it regenerates
+# index.html from content/site.json and work/*.html from content/cases/*.json.
+publish_mode: simple
+
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+collections:
+  - name: "site"
+    label: "Home Page"
+    editor:
+      preview: false
+    files:
+      - file: "content/site.json"
+        label: "Home page texts"
+        name: "site"
+        fields:
+          - label: "Browser tab title & link preview title"
+            name: "seoTitle"
+            widget: "string"
+          - label: "Search & link preview description"
+            name: "seoDescription"
+            widget: "text"
+          - { label: "Link preview image — description (for accessibility)", name: "ogImageAlt", widget: "string" }
+
+          - { label: "Hero — text bottom-left", name: "heroDescription", widget: "text" }
+          - { label: "Hero — label bottom-right", name: "heroRole", widget: "string" }
+
+          - label: "Tags strip (the running line under the first screen)"
+            name: "tags"
+            widget: "list"
+            summary: "{{fields.tag}}"
+            field: { label: "Tag", name: "tag", widget: "string" }
+
+          - label: "Selected Work — heading"
+            name: "introHeading"
+            widget: "string"
+            hint: "The first, white part of the heading"
+          - { label: "Selected Work — heading (orange part)", name: "introHeadingAccent", widget: "string" }
+          - label: "Selected Work — paragraphs on the right"
+            name: "introNote"
+            widget: "list"
+            summary: "{{fields.paragraph}}"
+            field: { label: "Paragraph", name: "paragraph", widget: "text" }
+
+          - label: "Selected Work — project list (shown in this order)"
+            name: "works"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Name in the list", name: "title", widget: "string" }
+              - { label: "Category line (e.g. Insurance • UX/UI Design)", name: "category", widget: "string" }
+              - { label: "Case page address (the case's URL slug, e.g. risk-calculation)", name: "caseSlug", widget: "string", pattern: ["^[a-z0-9-]+$", "Lowercase letters, numbers and dashes only"] }
+              - { label: "Preview picture that appears on hover", name: "image", widget: "image" }
+
+          - { label: "About — heading (orange first word)", name: "trustHeadingAccent", widget: "string" }
+          - { label: "About — heading (rest)", name: "trustHeading", widget: "string" }
+          - { label: "About — paragraph on the right", name: "trustNote", widget: "text" }
+
+          - label: "Capability cards (slide in from the right)"
+            name: "cards"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Card title", name: "title", widget: "string" }
+              - label: "Bullet points"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.point}}"
+                field: { label: "Point", name: "point", widget: "string" }
+
+          - { label: "FAQ — heading", name: "faqTitle", widget: "string" }
+          - label: "FAQ — questions (the first one is open by default)"
+            name: "faq"
+            widget: "list"
+            summary: "{{fields.question}}"
+            fields:
+              - { label: "Question", name: "question", widget: "string" }
+              - { label: "Answer", name: "answer", widget: "text" }
+
+          - { label: "Footer — heading, line 1", name: "footerHeadingLine1", widget: "string" }
+          - { label: "Footer — heading, line 2", name: "footerHeadingLine2", widget: "string" }
+          - { label: "Footer — button text", name: "footerButton", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "LinkedIn URL", name: "linkedin", widget: "string" }
+          - { label: "Instagram URL", name: "instagram", widget: "string" }
+
+  - name: "cases"
+    label: "Case Studies"
+    editor:
+      preview: false
+    folder: "content/cases"
+    extension: "json"
+    format: "json"
+    create: true
+    slug: "{{fields.slug}}"
+    summary: "{{order}} — {{title}}"
+    identifier_field: "title"
+    fields:
+      - { label: "Order (controls position on homepage, 1 = first/featured)", name: "order", widget: "number", value_type: "int" }
+      - { label: "URL slug (letters, numbers, dashes only — e.g. risk-calculation)", name: "slug", widget: "string", pattern: ["^[a-z0-9-]+$", "Lowercase letters, numbers and dashes only"] }
+      - { label: "Category tag (e.g. Insurance · UX/UI Design)", name: "category", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Homepage card summary (short, shown on the Work grid)", name: "cardSummary", widget: "text" }
+      - { label: "Case intro (shown at the top of the case study page)", name: "sub", widget: "text" }
+      - label: "Role tags (small pills under the intro)"
+        name: "meta"
+        widget: "list"
+        field: { label: "Tag", name: "tag", widget: "string" }
+      - label: "Cover image"
+        name: "cover"
+        widget: "object"
+        fields:
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Alt text (describe the image for accessibility)", name: "alt", widget: "string" }
+      - label: "Body sections"
+        name: "sections"
+        widget: "list"
+        summary: "{{fields.heading}}"
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - label: "Paragraphs"
+            name: "paragraphs"
+            widget: "list"
+            field: { label: "Paragraph", name: "paragraph", widget: "text" }
+          - label: "Bullet list (optional)"
+            name: "list"
+            widget: "list"
+            required: false
+            field: { label: "Item", name: "item", widget: "string" }
+      - label: "Gallery images (optional)"
+        name: "gallery"
+        widget: "list"
+        required: false
+        field: { label: "Image", name: "image", widget: "image" }
+      - { label: "Result / outcome (optional — leave blank to hide this block)", name: "result", widget: "text", required: false }

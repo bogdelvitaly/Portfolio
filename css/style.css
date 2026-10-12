@@ -95,11 +95,18 @@ ul, ol { list-style: none; }
 @media (min-width: 640px) { :root:not([data-hero]) .hero-bg { background-image: url("../assets/hero/hero-768.webp"); } }
 @media (min-width: 1024px) { :root:not([data-hero]) .hero-bg { background-image: url("../assets/hero/hero-1440.webp"); } }
 @media (min-width: 1600px) { :root:not([data-hero]) .hero-bg { background-image: url("../assets/hero/hero-1920.webp"); } }
+@media (min-width: 2560px) { :root:not([data-hero]) .hero-bg { background-image: url("../assets/hero/hero-3424.webp"); } }
 :root[data-hero="768"] .hero-bg { background-image: url("../assets/hero/hero-768.webp"); }
 :root[data-hero="1440"] .hero-bg { background-image: url("../assets/hero/hero-1440.webp"); }
 :root[data-hero="1920"] .hero-bg { background-image: url("../assets/hero/hero-1920.webp"); }
+:root[data-hero="3424"] .hero-bg { background-image: url("../assets/hero/hero-3424.webp"); }
 .hero-bottom { position: absolute; left: calc(20 * var(--u)); right: calc(20 * var(--u)); bottom: calc(41 * var(--u)); display: flex; flex-direction: column; gap: calc(32 * var(--u)); }
 .hero-title img { width: 100%; height: auto; }
+/* Wide screens: one-line wordmark instead of the two-line one (switched together with the hero picture) */
+.hero-title .wordmark-wide { display: none; }
+:root[data-hero="3424"] .hero-title .wordmark-std { display: none; }
+:root[data-hero="3424"] .hero-title .wordmark-wide { display: block; }
+@media (min-width: 2560px) { :root:not([data-hero]) .hero-title .wordmark-std { display: none; } :root:not([data-hero]) .hero-title .wordmark-wide { display: block; } }
 .hero-meta { display: flex; justify-content: space-between; align-items: flex-end; gap: calc(24 * var(--u)); font-family: var(--font-mono); font-weight: 500; font-size: calc(14 * var(--u)); line-height: calc(20 * var(--u)); color: #fff; }
 .hero-desc { width: calc(455 * var(--u)); max-width: 55%; }
 .hero-role { letter-spacing: calc(1.5 * var(--u)); white-space: nowrap; }
