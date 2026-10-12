@@ -77,17 +77,34 @@ function page(c, i) {
   <meta property="og:image:alt" content="${esc(c.cover.alt || c.title)}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#070707">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23070707'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='700' fill='%23f26b0f' text-anchor='middle'%3EVB%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23070707'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='700' fill='%23ff5800' text-anchor='middle'%3EVB%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Host+Grotesk:wght@300;400;500&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body class="case-page" id="top">
   <header class="site-header" data-header>
-    <a class="brand" href="../index.html" aria-label="Vitaly Bogdel — home"><span>VITALY</span><span class="brand-dim">BOGDEL</span></a>
-    <a class="pill" href="../index.html#contact"><span class="pill-dot" aria-hidden="true"></span>Get in Touch</a>
+    <a class="logo" href="../index.html#top" aria-label="V. Bogdel — home"><span>V</span><span class="logo-dot">.</span><span> BOGDEL</span><span class="logo-dot">.</span></a>
+    <nav class="tabs" aria-label="Main">
+      <a class="tab" href="../index.html#top"><span class="tab-name">Home</span><span class="tab-num">01</span></a>
+      <a class="tab" href="../index.html#work"><span class="tab-name">Work</span><span class="tab-num">02</span></a>
+      <a class="tab" href="../index.html#about"><span class="tab-name">About</span><span class="tab-num">03</span></a>
+      <a class="tab" href="#contact"><span class="tab-name">Contact</span><span class="tab-num">04</span></a>
+    </nav>
+    <a class="btn-outline" href="#contact">Let's talk</a>
+    <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav" data-nav-toggle><span></span><span></span><span></span></button>
   </header>
+
+  <div class="mobile-nav" id="mobile-nav" data-mobile-nav aria-hidden="true">
+    <nav aria-label="Mobile">
+      <a href="../index.html#top"><span>Home</span><sup>01</sup></a>
+      <a href="../index.html#work"><span>Work</span><sup>02</sup></a>
+      <a href="../index.html#about"><span>About</span><sup>03</sup></a>
+      <a href="#contact"><span>Contact</span><sup>04</sup></a>
+    </nav>
+    <a class="btn-outline" href="#contact">Let's talk</a>
+  </div>
 
   <main>
     <section class="case-hero">
@@ -121,7 +138,7 @@ ${others.map((o) => `        <a class="case-next-card" href="${esc(o.slug)}.html
 
   <footer class="footer" id="contact">
     <div class="footer-card">
-      <div class="footer-brand brand brand--xl"><span>VITALY</span><span class="brand-dim">BOGDEL</span></div>
+      <div class="footer-brand"><span>VITALY</span><span class="footer-brand-dim">BOGDEL</span></div>
       <div class="footer-cta">
         <h2 class="footer-heading">Let's build something<br>worth using.</h2>
         <a class="pill" href="mailto:bogdelvitaly@gmail.com"><span class="pill-dot" aria-hidden="true"></span>Get in Touch</a>

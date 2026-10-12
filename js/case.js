@@ -15,6 +15,23 @@
   document.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
+  // Mobile menu (same behaviour as the home page)
+  var navToggle = document.querySelector("[data-nav-toggle]");
+  var mobileNav = document.querySelector("[data-mobile-nav]");
+  if (navToggle && mobileNav) {
+    var setNav = function (open) {
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+      navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      mobileNav.classList.toggle("is-open", open);
+      mobileNav.setAttribute("aria-hidden", open ? "false" : "true");
+      document.body.style.overflow = open ? "hidden" : "";
+    };
+    navToggle.addEventListener("click", function () { setNav(navToggle.getAttribute("aria-expanded") !== "true"); });
+    Array.prototype.forEach.call(mobileNav.querySelectorAll("a"), function (a) { a.addEventListener("click", function () { setNav(false); }); });
+    window.addEventListener("keydown", function (e) { if (e.key === "Escape") setNav(false); });
+    window.addEventListener("resize", function () { if (window.innerWidth >= 1024) setNav(false); });
+  }
+
   if (reduceMotion || typeof window.gsap === "undefined" || typeof window.ScrollTrigger === "undefined") return;
 
   gsap.registerPlugin(ScrollTrigger);

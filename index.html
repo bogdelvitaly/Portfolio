@@ -17,172 +17,175 @@
   <meta property="og:image:alt" content="Vitaly Bogdel — Interfaces that make complexity simple">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#070707">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23070707'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='700' fill='%23f26b0f' text-anchor='middle'%3EVB%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23070707'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='700' fill='%23ff5800' text-anchor='middle'%3EVB%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <a class="skip-link" href="#work">Skip to work</a>
 
   <header class="site-header" data-header>
-    <a class="brand" href="#top" aria-label="Vitaly Bogdel — home"><span>VITALY</span><span class="brand-dim">BOGDEL</span></a>
-    <a class="pill" href="#contact"><span class="pill-dot" aria-hidden="true"></span>Get in Touch</a>
+    <a class="logo" href="#top" aria-label="V. Bogdel — home"><span>V</span><span class="logo-dot">.</span><span> BOGDEL</span><span class="logo-dot">.</span></a>
+    <nav class="tabs" aria-label="Main">
+      <a class="tab" href="#top"><span class="tab-name">Home</span><span class="tab-num">01</span></a>
+      <a class="tab" href="#work"><span class="tab-name">Work</span><span class="tab-num">02</span></a>
+      <a class="tab" href="#about"><span class="tab-name">About</span><span class="tab-num">03</span></a>
+      <a class="tab" href="#contact"><span class="tab-name">Contact</span><span class="tab-num">04</span></a>
+    </nav>
+    <a class="btn-outline" href="#contact">Let's talk</a>
+    <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav" data-nav-toggle><span></span><span></span><span></span></button>
   </header>
 
+  <div class="mobile-nav" id="mobile-nav" data-mobile-nav aria-hidden="true">
+    <nav aria-label="Mobile">
+      <a href="#top"><span>Home</span><sup>01</sup></a>
+      <a href="#work"><span>Work</span><sup>02</sup></a>
+      <a href="#about"><span>About</span><sup>03</sup></a>
+      <a href="#contact"><span>Contact</span><sup>04</sup></a>
+    </nav>
+    <a class="btn-outline" href="#contact">Let's talk</a>
+  </div>
+
   <main>
-    <!-- 1. Hero + zoom-out transition into the project collage -->
-    <section class="stage" id="top" data-stage>
-      <div class="stage-tiles" aria-hidden="true">
-        <figure class="tile t1" data-dx="-1" data-dy="-1"><img src="assets/images/project-insurance.webp" alt=""><figcaption>Risk Calculation</figcaption></figure>
-        <figure class="tile t2" data-dx="1" data-dy="-1"><img src="assets/images/project-wizart.webp" alt=""><figcaption>Wizart.ai</figcaption></figure>
-        <figure class="tile t3" data-dx="-1" data-dy="1"><img src="assets/images/project-logistic.webp" alt=""><figcaption>Logistic Service</figcaption></figure>
-        <figure class="tile t4" data-dx="1" data-dy="1"><img src="assets/images/project-time2pack.webp" alt=""><figcaption>Time2pack</figcaption></figure>
-        <figure class="tile t5" data-dx="0" data-dy="-1"><img src="assets/images/project-employee.webp" alt=""><figcaption>Employee Relations Manager</figcaption></figure>
-        <figure class="tile t6" data-dx="0" data-dy="1"><img src="assets/images/project-bitcoin.webp" alt=""><figcaption>Bitcoin DE</figcaption></figure>
-      </div>
-
-      <div class="hero-card" data-hero-card>
-        <div class="hero-card-bg" aria-hidden="true"><span class="hero-glow" data-parallax="glow"></span></div>
-        <div class="hero-copy">
-          <h1 class="hero-title" data-parallax="copy">
-            <span class="hero-line"><span>Interfaces that</span></span>
-            <span class="hero-line"><span>make complexity</span></span>
-            <span class="hero-line"><span>simple.</span></span>
-          </h1>
-        </div>
-        <img class="hero-card-img" data-parallax="person" src="assets/images/hero-cutout.webp" alt="Portrait of Vitaly Bogdel" width="1672" height="941" fetchpriority="high">
-        <p class="hero-label hero-label--top">6 shipped<br>products</p>
-        <p class="hero-label hero-label--bottom">UX/UI &amp; Product<br>Designer</p>
-      </div>
-    </section>
-
-    <!-- 2. Selected work -->
-    <section class="cases" id="work" aria-labelledby="work-title">
-      <div class="cases-head">
-        <h2 class="h2 cases-title" id="work-title" data-reveal>Selected Work</h2>
-      </div>
-      <!-- Only this stage is pinned: the heading above scrolls away, content sits just under the header -->
-      <div class="cases-stage" data-cases-stage>
-        <div class="cases-layout">
-          <div class="cases-list-wrap">
-          <ol class="cases-list" data-cases-list>
-            <li><button type="button" class="case-item is-active" aria-current="true"><span class="case-item-title">Risk Calculation</span><span class="case-item-meta">Insurance • UX/UI Design</span></button></li>
-            <li><button type="button" class="case-item"><span class="case-item-title">Wizart.ai</span><span class="case-item-meta">E-Commerce • Product Design</span></button></li>
-            <li><button type="button" class="case-item"><span class="case-item-title">Logistic Service</span><span class="case-item-meta">Logistics • UX/UI Design</span></button></li>
-            <li><button type="button" class="case-item"><span class="case-item-title">Time2pack</span><span class="case-item-meta">Product Design • UX/UI Design</span></button></li>
-            <li><button type="button" class="case-item"><span class="case-item-title">Employee Relations Manager</span><span class="case-item-meta">Data Manager • UX/UI</span></button></li>
-            <li><button type="button" class="case-item"><span class="case-item-title">Bitcoin DE</span><span class="case-item-meta">Currency • UX/UI Design</span></button></li>
-          </ol>
-          </div>
-
-          <div class="cases-preview" data-cases-preview>
-            <figure class="case-slide is-active"><img src="assets/images/project-insurance.webp" alt="Risk Calculation project preview"><figcaption><span>Insurance • UX/UI Design</span><strong>Risk Calculation</strong></figcaption><span class="case-open" aria-hidden="true">View case ↗</span><a class="case-slide-link" href="work/risk-calculation.html" aria-label="Open case study: Risk Calculation"></a></figure>
-            <figure class="case-slide"><img src="assets/images/project-wizart.webp" alt="Wizart.ai project preview" loading="lazy"><figcaption><span>E-Commerce • Product Design</span><strong>Wizart.ai</strong></figcaption><span class="case-open" aria-hidden="true">View case ↗</span><a class="case-slide-link" href="work/wizart.html" aria-label="Open case study: Wizart.ai"></a></figure>
-            <figure class="case-slide"><img src="assets/images/project-logistic.webp" alt="Logistic Service project preview" loading="lazy"><figcaption><span>Logistics • UX/UI Design</span><strong>Logistic Service</strong></figcaption><span class="case-open" aria-hidden="true">View case ↗</span><a class="case-slide-link" href="work/logistic-service.html" aria-label="Open case study: Logistic Service"></a></figure>
-            <figure class="case-slide"><img src="assets/images/project-time2pack.webp" alt="Time2pack project preview" loading="lazy"><figcaption><span>Product Design • UX/UI Design</span><strong>Time2pack</strong></figcaption><span class="case-open" aria-hidden="true">View case ↗</span><a class="case-slide-link" href="work/time2pack.html" aria-label="Open case study: Time2pack"></a></figure>
-            <figure class="case-slide"><img src="assets/images/project-employee.webp" alt="Employee Relations Manager project preview" loading="lazy"><figcaption><span>Data Manager • UX/UI</span><strong>Employee Relations Manager</strong></figcaption><span class="case-open" aria-hidden="true">View case ↗</span><a class="case-slide-link" href="work/employee-relations.html" aria-label="Open case study: Employee Relations Manager"></a></figure>
-            <figure class="case-slide"><img src="assets/images/project-bitcoin.webp" alt="Bitcoin DE project preview" loading="lazy"><figcaption><span>Currency • UX/UI Design</span><strong>Bitcoin DE</strong></figcaption><span class="case-open" aria-hidden="true">View case ↗</span><a class="case-slide-link" href="work/bitcoin-de.html" aria-label="Open case study: Bitcoin DE"></a></figure>
-          </div>
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <picture class="hero-bg">
+        <source media="(min-width: 1600px)" srcset="assets/hero/hero-1920.webp">
+        <source media="(min-width: 1024px)" srcset="assets/hero/hero-1440.webp">
+        <source media="(min-width: 640px)" srcset="assets/hero/hero-768.webp">
+        <img src="assets/hero/hero-375.webp" alt="Portrait of Vitaly Bogdel" fetchpriority="high">
+      </picture>
+      <div class="hero-bottom">
+        <h1 class="hero-title"><img src="assets/hero/product-designer.svg" alt="Vitaly Bogdel — Product Designer" width="1880" height="310"></h1>
+        <div class="hero-meta">
+          <p class="hero-desc">I design interfaces for insurance, fintech, logistics and e-commerce products — the kind of complexity most people never see, made simple to use.</p>
+          <p class="hero-role">UX/UI &amp; PRODUCT DESIGN</p>
         </div>
       </div>
     </section>
 
-    <!-- 3. Why work with me -->
-    <section class="why" aria-labelledby="why-title">
-      <div class="why-head">
-        <h2 class="h2" id="why-title" data-reveal>Why Work With Me?</h2>
-        <p data-reveal data-delay="0.1">Design built for real-world use</p>
-      </div>
-      <div class="why-grid">
-        <article class="why-item" data-reveal>
-          <svg class="why-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
-          <h3>Product Thinking</h3>
-          <p>I turn ambiguous problems into shippable products — balancing user needs, business goals and engineering constraints into one direction.</p>
-        </article>
-        <article class="why-item" data-reveal data-delay="0.1">
-          <svg class="why-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
-          <h3>User Experience</h3>
-          <p>Good UX disappears. I use research and prototyping to make interactions feel obvious, whether it's a trading app or an internal ops tool.</p>
-        </article>
-        <article class="why-item" data-reveal data-delay="0.2">
-          <svg class="why-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-          <h3>Visual Systems</h3>
-          <p>I build interfaces that hold together: reusable components, clear hierarchy, and typography that makes a product feel considered before anyone reads a word.</p>
-        </article>
+    <!-- Tags -->
+    <section class="tags" aria-label="Disciplines">
+      <div class="tags-track" data-tags>
+        <ul class="tags-set">
+          <li>UX/UI Design</li><li>Insurance</li><li>E-Commerce</li><li>Logistics</li><li>Product Design</li><li>Product Design</li><li>Data management</li><li>Crypto currency</li><li>Product Thinking</li><li>User Experience</li><li>Visual Systems</li><li>UX Research</li><li>Mobile &amp; web</li><li>Prototyping</li><li>iteration design</li>
+        </ul>
+        <ul class="tags-set" aria-hidden="true">
+          <li>UX/UI Design</li><li>Insurance</li><li>E-Commerce</li><li>Logistics</li><li>Product Design</li><li>Product Design</li><li>Data management</li><li>Crypto currency</li><li>Product Thinking</li><li>User Experience</li><li>Visual Systems</li><li>UX Research</li><li>Mobile &amp; web</li><li>Prototyping</li><li>iteration design</li>
+        </ul>
       </div>
     </section>
 
-    <!-- 4. Intro text + horizontal capability cards -->
-    <section class="intro" aria-labelledby="intro-title">
-      <h2 class="h2" id="intro-title" data-reveal>Design that earns<br>trust at first use</h2>
-      <p class="intro-text" data-reveal data-delay="0.1">I design interfaces for insurance, fintech, logistics and e-commerce products — the kind of complexity most people never see, made simple to use. I blend strategy, research and craft to take a product from a messy problem to something people rely on every day.</p>
+    <!-- Selected work -->
+    <section class="intro-light" aria-labelledby="work-title">
+      <div class="head-grid">
+        <h2 class="display" id="work-title" data-reveal>Complex problems. Clear thinking. <span class="grad">Better products.</span></h2>
+        <div class="head-note" data-reveal data-delay="0.1">
+          <p>I design interfaces for insurance, fintech, logistics and e-commerce products — the kind of complexity most people never see,</p>
+          <p>made simple to use.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="works" id="work" aria-label="Selected work">
+      <ol class="works-list" data-works>
+        <li><a class="work-row" href="work/risk-calculation.html" data-preview="assets/images/project-insurance.webp">
+          <span class="work-num">01</span><span class="work-title">Risk Calculator</span><span class="work-cat">Insurance • UX/UI Design</span><span class="work-arrow"><svg viewBox="0 0 34 32" width="34" height="32" aria-hidden="true"><rect x="0.5" y="0.5" width="33" height="31" fill="none" stroke="currentColor"/><path d="M21.3536 16.3536C21.5488 16.1583 21.5488 15.8417 21.3536 15.6464L18.1716 12.4645C17.9763 12.2692 17.6597 12.2692 17.4645 12.4645C17.2692 12.6597 17.2692 12.9763 17.4645 13.1716L20.2929 16L17.4645 18.8284C17.2692 19.0237 17.2692 19.3403 17.4645 19.5355C17.6597 19.7308 17.9763 19.7308 18.1716 19.5355L21.3536 16.3536ZM13 16L13 16.5L21 16.5L21 16L21 15.5L13 15.5L13 16Z" fill="currentColor"/></svg></span>
+        </a></li>
+        <li><a class="work-row" href="work/wizart.html" data-preview="assets/images/project-wizart.webp">
+          <span class="work-num">02</span><span class="work-title">Wizart.ai</span><span class="work-cat">E-Commerce • Product Design</span><span class="work-arrow"><svg viewBox="0 0 34 32" width="34" height="32" aria-hidden="true"><rect x="0.5" y="0.5" width="33" height="31" fill="none" stroke="currentColor"/><path d="M21.3536 16.3536C21.5488 16.1583 21.5488 15.8417 21.3536 15.6464L18.1716 12.4645C17.9763 12.2692 17.6597 12.2692 17.4645 12.4645C17.2692 12.6597 17.2692 12.9763 17.4645 13.1716L20.2929 16L17.4645 18.8284C17.2692 19.0237 17.2692 19.3403 17.4645 19.5355C17.6597 19.7308 17.9763 19.7308 18.1716 19.5355L21.3536 16.3536ZM13 16L13 16.5L21 16.5L21 16L21 15.5L13 15.5L13 16Z" fill="currentColor"/></svg></span>
+        </a></li>
+        <li><a class="work-row" href="work/logistic-service.html" data-preview="assets/images/project-logistic.webp">
+          <span class="work-num">03</span><span class="work-title">Logistic Service</span><span class="work-cat">Logistics • UX/UI Design</span><span class="work-arrow"><svg viewBox="0 0 34 32" width="34" height="32" aria-hidden="true"><rect x="0.5" y="0.5" width="33" height="31" fill="none" stroke="currentColor"/><path d="M21.3536 16.3536C21.5488 16.1583 21.5488 15.8417 21.3536 15.6464L18.1716 12.4645C17.9763 12.2692 17.6597 12.2692 17.4645 12.4645C17.2692 12.6597 17.2692 12.9763 17.4645 13.1716L20.2929 16L17.4645 18.8284C17.2692 19.0237 17.2692 19.3403 17.4645 19.5355C17.6597 19.7308 17.9763 19.7308 18.1716 19.5355L21.3536 16.3536ZM13 16L13 16.5L21 16.5L21 16L21 15.5L13 15.5L13 16Z" fill="currentColor"/></svg></span>
+        </a></li>
+        <li><a class="work-row" href="work/time2pack.html" data-preview="assets/images/project-time2pack.webp">
+          <span class="work-num">04</span><span class="work-title">Time2pack</span><span class="work-cat">Product Design • UX/UI Design</span><span class="work-arrow"><svg viewBox="0 0 34 32" width="34" height="32" aria-hidden="true"><rect x="0.5" y="0.5" width="33" height="31" fill="none" stroke="currentColor"/><path d="M21.3536 16.3536C21.5488 16.1583 21.5488 15.8417 21.3536 15.6464L18.1716 12.4645C17.9763 12.2692 17.6597 12.2692 17.4645 12.4645C17.2692 12.6597 17.2692 12.9763 17.4645 13.1716L20.2929 16L17.4645 18.8284C17.2692 19.0237 17.2692 19.3403 17.4645 19.5355C17.6597 19.7308 17.9763 19.7308 18.1716 19.5355L21.3536 16.3536ZM13 16L13 16.5L21 16.5L21 16L21 15.5L13 15.5L13 16Z" fill="currentColor"/></svg></span>
+        </a></li>
+        <li><a class="work-row" href="work/employee-relations.html" data-preview="assets/images/project-employee.webp">
+          <span class="work-num">05</span><span class="work-title">Employee Relations Manager</span><span class="work-cat">Data Manager • UX/UI</span><span class="work-arrow"><svg viewBox="0 0 34 32" width="34" height="32" aria-hidden="true"><rect x="0.5" y="0.5" width="33" height="31" fill="none" stroke="currentColor"/><path d="M21.3536 16.3536C21.5488 16.1583 21.5488 15.8417 21.3536 15.6464L18.1716 12.4645C17.9763 12.2692 17.6597 12.2692 17.4645 12.4645C17.2692 12.6597 17.2692 12.9763 17.4645 13.1716L20.2929 16L17.4645 18.8284C17.2692 19.0237 17.2692 19.3403 17.4645 19.5355C17.6597 19.7308 17.9763 19.7308 18.1716 19.5355L21.3536 16.3536ZM13 16L13 16.5L21 16.5L21 16L21 15.5L13 15.5L13 16Z" fill="currentColor"/></svg></span>
+        </a></li>
+        <li><a class="work-row" href="work/bitcoin-de.html" data-preview="assets/images/project-bitcoin.webp">
+          <span class="work-num">06</span><span class="work-title">Bitcoin DE</span><span class="work-cat">Currency • UX/UI Design</span><span class="work-arrow"><svg viewBox="0 0 34 32" width="34" height="32" aria-hidden="true"><rect x="0.5" y="0.5" width="33" height="31" fill="none" stroke="currentColor"/><path d="M21.3536 16.3536C21.5488 16.1583 21.5488 15.8417 21.3536 15.6464L18.1716 12.4645C17.9763 12.2692 17.6597 12.2692 17.4645 12.4645C17.2692 12.6597 17.2692 12.9763 17.4645 13.1716L20.2929 16L17.4645 18.8284C17.2692 19.0237 17.2692 19.3403 17.4645 19.5355C17.6597 19.7308 17.9763 19.7308 18.1716 19.5355L21.3536 16.3536ZM13 16L13 16.5L21 16.5L21 16L21 15.5L13 15.5L13 16Z" fill="currentColor"/></svg></span>
+        </a></li>
+      </ol>
+      <!-- Floating preview that follows the hovered row (desktop with a mouse only) -->
+      <div class="work-preview" data-work-preview aria-hidden="true">
+        <img src="assets/images/project-insurance.webp" alt="" data-slide>
+        <img src="assets/images/project-wizart.webp" alt="" data-slide>
+        <img src="assets/images/project-logistic.webp" alt="" data-slide>
+        <img src="assets/images/project-time2pack.webp" alt="" data-slide>
+        <img src="assets/images/project-employee.webp" alt="" data-slide>
+        <img src="assets/images/project-bitcoin.webp" alt="" data-slide>
+      </div>
+    </section>
+
+    <!-- About / what I do -->
+    <section class="trust" id="about" aria-labelledby="trust-title">
+      <div class="head-grid head-grid--dark">
+        <h2 class="display" id="trust-title" data-reveal><span class="grad">Design</span> that earns trust at first use</h2>
+        <p class="head-note" data-reveal data-delay="0.1">I design interfaces for insurance, fintech, logistics and e-commerce products — the kind of complexity most people never see, made simple to use. I blend strategy, research and craft to take a product from a messy problem to something people rely on every day.</p>
+      </div>
     </section>
 
     <section class="cards" data-cards aria-label="What I do">
       <div class="cards-enter" data-cards-enter>
-      <div class="cards-track" data-cards-track>
-        <article class="svc-card">
-          <h3>Product Design</h3>
-          <ul><li>Product Strategy</li><li>UX/UI Design</li><li>Interaction Design</li><li>Prototyping</li></ul>
-        </article>
-        <article class="svc-card">
-          <h3>Design Systems</h3>
-          <ul><li>Figma Libraries</li><li>Reusable Components</li><li>Documentation</li><li>Design Ops</li></ul>
-        </article>
-        <article class="svc-card">
-          <h3>UX Research</h3>
-          <ul><li>User Research</li><li>Usability Testing</li><li>Customer Development</li><li>Analytics</li></ul>
-        </article>
-        <article class="svc-card">
-          <h3>Enterprise UX</h3>
-          <ul><li>Dashboards</li><li>Admin Systems</li><li>Data-heavy Interfaces</li><li>Internal Tools</li></ul>
-        </article>
-        <article class="svc-card">
-          <h3>Mobile &amp; Web</h3>
-          <ul><li>Android Apps</li><li>Responsive Web</li><li>Cross-platform Products</li><li>Web Platforms</li></ul>
-        </article>
-        <article class="svc-card">
-          <h3>Domains</h3>
-          <ul><li>Fintech</li><li>Insurance</li><li>Logistics</li><li>E-Commerce</li></ul>
-        </article>
-      </div>
+        <div class="cards-track" data-cards-track>
+          <article class="svc-card">
+            <h3>Product Design</h3>
+            <ul><li>Product Strategy</li><li>UX/UI Design</li><li>Interaction Design</li><li>Prototyping</li></ul>
+          </article>
+          <article class="svc-card">
+            <h3>Design Systems</h3>
+            <ul><li>Figma Libraries</li><li>Reusable Components</li><li>Documentation</li><li>Design Ops</li></ul>
+          </article>
+          <article class="svc-card">
+            <h3>UX Research</h3>
+            <ul><li>User Research</li><li>Usability Testing</li><li>Customer Development</li><li>Analytics</li></ul>
+          </article>
+          <article class="svc-card">
+            <h3>Enterprise UX</h3>
+            <ul><li>Dashboards</li><li>Admin Systems</li><li>Data-heavy Interfaces</li><li>Internal Tools</li></ul>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- 5. FAQ -->
-    <section class="faq" aria-labelledby="faq-title">
-      <h2 class="h2" id="faq-title" data-reveal>Frequently Asked Questions</h2>
+    <!-- FAQ -->
+    <section class="faq-head" aria-labelledby="faq-title">
+      <h2 class="faq-title" id="faq-title" data-reveal>Frequently Asked Questions</h2>
+    </section>
+    <section class="faq" aria-label="Questions and answers">
       <div class="faq-list" data-faq>
         <div class="faq-item is-open" data-reveal>
-          <h3><button type="button" class="faq-q" aria-expanded="true" aria-controls="faq-a1" id="faq-q1"><span>Who is Vitaly and what kind of projects do you take?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+          <h3><button type="button" class="faq-q" aria-expanded="true" aria-controls="faq-a1" id="faq-q1"><span class="faq-q-text">Who is Vitaly and what kind of projects do you take?</span><span class="faq-btn" aria-hidden="true"></span></button></h3>
           <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1"><div><p>I'm a UX/UI and product designer with 7+ years of experience. I work on complex products — insurance, fintech, logistics, e-commerce and internal enterprise tools — and take them from a messy problem to an interface people trust on the first try.</p></div></div>
         </div>
         <div class="faq-item" data-reveal>
-          <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a2" id="faq-q2"><span>What does your process look like?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+          <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a2" id="faq-q2"><span class="faq-q-text">What does your process look like?</span><span class="faq-btn" aria-hidden="true"></span></button></h3>
           <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2"><div><p>It starts with requirements and research, then low-fidelity prototypes for fast stakeholder feedback. Once the core flows are validated I move into visual design and a reusable component system, and keep iterating after launch using real user feedback.</p></div></div>
         </div>
         <div class="faq-item" data-reveal>
-          <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a3" id="faq-q3"><span>Do you work with existing design systems and teams?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+          <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a3" id="faq-q3"><span class="faq-q-text">Do you work with existing design systems and teams?</span><span class="faq-btn" aria-hidden="true"></span></button></h3>
           <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3"><div><p>Yes. I've worked inside enterprise teams with many stakeholders, and I build or extend component-based design systems so products stay consistent across web and mobile.</p></div></div>
         </div>
         <div class="faq-item" data-reveal>
-          <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a4" id="faq-q4"><span>Which platforms do you design for?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+          <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a4" id="faq-q4"><span class="faq-q-text">Which platforms do you design for?</span><span class="faq-btn" aria-hidden="true"></span></button></h3>
           <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4"><div><p>Web applications, responsive websites and mobile apps — including Android and cross-platform products — as well as dashboards and internal tools.</p></div></div>
         </div>
         <div class="faq-item" data-reveal>
-          <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a5" id="faq-q5"><span>How can we start working together?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+          <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a5" id="faq-q5"><span class="faq-q-text">How can we start working together?</span><span class="faq-btn" aria-hidden="true"></span></button></h3>
           <div class="faq-a" id="faq-a5" role="region" aria-labelledby="faq-q5"><div><p>Send me a short message about your product, goals and timeline. I read every message myself and reply with next steps.</p></div></div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- 6. Footer / contact -->
+  <!-- Footer / contact -->
   <footer class="footer" id="contact">
     <div class="footer-card">
-      <div class="footer-brand brand brand--xl"><span>VITALY</span><span class="brand-dim">BOGDEL</span></div>
+      <div class="footer-brand"><span>VITALY</span><span class="footer-brand-dim">BOGDEL</span></div>
       <div class="footer-cta">
         <h2 class="footer-heading">Let's build something<br>worth using.</h2>
         <a class="pill" href="mailto:bogdelvitaly@gmail.com"><span class="pill-dot" aria-hidden="true"></span>Get in Touch</a>
