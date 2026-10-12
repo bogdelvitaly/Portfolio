@@ -1,5 +1,6 @@
 [build]
-  command = "node build.js"
+  # Regenerates work/*.html from content/cases/*.json (plain Node, no dependencies)
+  command = "node build-cases.js"
   publish = "."
 
 [build.environment]

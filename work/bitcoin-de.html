@@ -1,133 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bitcoin DE — Case Study — Vitaly Bogdel</title>
-<meta name="description" content="An Android cryptocurrency trading experience built to make a volatile market feel steady and legible.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="../css/style.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230B0C0E'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' font-weight='700' fill='%23FF7A45' text-anchor='middle'%3EVB%3C/text%3E%3C/svg%3E">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bitcoin DE — Vitaly Bogdel</title>
+  <meta name="description" content="An Android cryptocurrency trading experience built to make a volatile market feel steady and legible.">
+  <meta name="theme-color" content="#070707">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23070707'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='700' fill='%23f26b0f' text-anchor='middle'%3EVB%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body class="case-page" id="top">
+  <header class="site-header" data-header>
+    <a class="brand" href="../index.html" aria-label="Vitaly Bogdel — home"><span>VITALY</span><span class="brand-dim">BOGDEL</span></a>
+    <a class="pill" href="../index.html#contact"><span class="pill-dot" aria-hidden="true"></span>Get in Touch</a>
+  </header>
 
-<a class="skip-link" href="#main">Skip to content</a>
-
-<div class="grain" aria-hidden="true"></div>
-
-<header class="site-header" data-header id="top">
-  <div class="wrap header-inner">
-    <a class="logo" href="../index.html#top" aria-label="Vitaly Bogdel — home">VB<span>.</span></a>
-
-    <nav class="nav" aria-label="Primary">
-      <a href="../index.html#work">Work</a>
-      <a href="../index.html#about">About</a>
-      <a href="../index.html#contact">Contact</a>
-    </nav>
-
-    <a class="btn btn-ghost header-cta" href="../index.html#contact">Let's talk</a>
-
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-nav-toggle>
-      <span></span><span></span><span></span>
-      <span class="sr-only">Menu</span>
-    </button>
-  </div>
-</header>
-
-<div class="mobile-nav" id="mobile-nav" data-mobile-nav>
-  <nav aria-label="Mobile">
-    <a href="../index.html#work">Work</a>
-    <a href="../index.html#about">About</a>
-    <a href="../index.html#contact">Contact</a>
-  </nav>
-  <a class="btn btn-primary" href="../index.html#contact">Let's talk</a>
-</div>
-
-<main id="main">
-  <div class="wrap">
-    <a class="case-back" href="../index.html#work">&larr; All work</a>
-  </div>
-
-  <section class="case-hero">
-    <div class="wrap">
-      <p class="eyebrow" data-reveal>Currency · UX/UI Design — 06 / 06</p>
-      <h1 data-reveal>Bitcoin DE</h1>
+  <main>
+    <section class="case-hero">
+      <a class="case-back" href="../index.html#work" data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>All work</a>
+      <p class="case-eyebrow" data-reveal>Currency · UX/UI Design</p>
+      <h1 class="case-title" data-reveal>Bitcoin DE</h1>
       <p class="case-sub" data-reveal>An Android cryptocurrency trading experience built to make a volatile market feel steady and legible.</p>
-      <div class="case-meta" data-reveal><span>Interaction Design</span><span>Visual Design</span><span>Android</span></div>
-      <div class="case-cover" data-reveal>
-        <img src="/assets/images/project-bitcoin.webp" alt="Bitcoin DE Android trading app interface" width="1400" height="933" fetchpriority="high">
+      <div class="case-chips" data-reveal><span class="chip">Interaction Design</span><span class="chip">Visual Design</span><span class="chip">Android</span></div>
+      <figure class="case-cover" data-reveal><img src="../assets/images/project-bitcoin.webp" alt="Bitcoin DE Android trading app interface" fetchpriority="high"></figure>
+    </section>
+
+    <div class="case-body">
+      <section class="case-section" data-reveal>
+        <h2 class="case-section-title">Challenge</h2>
+        <div class="case-section-copy">
+          <p>Bitcoin.de needed a convenient, trustworthy Android app for cryptocurrency trading — one that supported essential financial workflows while staying approachable for users at any experience level. Key features:</p>
+          <ul><li>Buying and selling cryptocurrencies</li><li>Portfolio and balance management</li><li>Price alerts and market monitoring</li><li>Clear transaction and notification flows</li></ul>
+        </div>
+      </section>
+      <section class="case-section" data-reveal>
+        <h2 class="case-section-title">Design Approach</h2>
+        <div class="case-section-copy">
+          <p>The experience was built around three principles: simplicity, trust, and efficiency.</p>
+          <ul><li>Clear information hierarchy for financial data</li><li>Intuitive trading and transaction flows</li><li>Android-native navigation patterns</li><li>Readable portfolio and balance views</li><li>Transparent states and confirmations for critical actions</li></ul>
+        </div>
+      </section>
+      <div class="case-gallery">
+        <figure class="case-shot case-shot--full" data-reveal><img src="../assets/images/gallery/bitcoin-1.webp" alt="Bitcoin DE — screen 1"></figure>
       </div>
+      <section class="case-result" data-reveal>
+        <h2 class="case-section-title">Result</h2>
+        <p>The updated Android app expanded Bitcoin.de's ecosystem and attracted more than 10,000 users — giving them a clearer, more convenient way to manage their crypto.</p>
+      </section>
     </div>
-  </section>
 
-  <section>
-    <div class="wrap case-body">
-      <div class="case-section" data-reveal>
-        <h2>Challenge</h2>
-        <div class="case-section-copy">
-        <p>Bitcoin.de needed a convenient, trustworthy Android app for cryptocurrency trading — one that supported essential financial workflows while staying approachable for users at any experience level. Key features:</p>
-        <ul>
-          <li>Buying and selling cryptocurrencies</li>
-          <li>Portfolio and balance management</li>
-          <li>Price alerts and market monitoring</li>
-          <li>Clear transaction and notification flows</li>
-        </ul>
-        </div>
-      </div>
-
-      <div class="case-section" data-reveal>
-        <h2>Design Approach</h2>
-        <div class="case-section-copy">
-        <p>The experience was built around three principles: simplicity, trust, and efficiency.</p>
-        <ul>
-          <li>Clear information hierarchy for financial data</li>
-          <li>Intuitive trading and transaction flows</li>
-          <li>Android-native navigation patterns</li>
-          <li>Readable portfolio and balance views</li>
-          <li>Transparent states and confirmations for critical actions</li>
-        </ul>
-        </div>
-      </div>
-      <div class="case-gallery" data-reveal>
-        <img src="/assets/images/gallery/bitcoin-1.webp" alt="" loading="lazy" data-span-2>
-      </div>
-
-      <div class="case-section case-section--result" data-reveal>
-        <h2>Result</h2>
-        <div class="case-section-copy">
-          <p>The updated Android app expanded Bitcoin.de's ecosystem and attracted more than 10,000 users — giving them a clearer, more convenient way to manage their crypto.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="case-next">
-    <div class="wrap">
-      <p class="eyebrow case-next-label" data-reveal>Next case</p>
+    <section class="case-next">
+      <p class="case-eyebrow" data-reveal>Next case</p>
       <a class="case-next-card" href="risk-calculation.html" data-reveal>
-        <div>
-          <p class="work-tag">Insurance · UX/UI Design</p>
-          <h3>Risk Calculation</h3>
-        </div>
-        <span class="btn btn-ghost">View case →</span>
+        <span class="case-next-text">
+          <span class="case-next-cat">Insurance · UX/UI Design</span>
+          <span class="case-next-title">Risk Calculation</span>
+        </span>
+        <span class="case-next-btn">View case <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
       </a>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="footer-card">
+      <div class="footer-brand brand brand--xl"><span>VITALY</span><span class="brand-dim">BOGDEL</span></div>
+      <div class="footer-cta">
+        <h2 class="footer-heading">Let's build something<br>worth using.</h2>
+        <a class="pill" href="mailto:bogdelvitaly@gmail.com"><span class="pill-dot" aria-hidden="true"></span>Get in Touch</a>
+      </div>
+      <div class="footer-reach">
+        <p class="footer-reach-label">REACH OUT</p>
+        <a href="mailto:bogdelvitaly@gmail.com">bogdelvitaly@gmail.com</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/vitaly-bogdel-211036164/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://www.instagram.com/vitaly_bogdel/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+      </div>
     </div>
-  </section>
-</main>
+    <div class="footer-bottom">
+      <span>Copyright © Vitaly Bogdel <span data-year>2026</span></span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
 
-<footer class="site-footer">
-  <div class="wrap footer-inner">
-    <p>© <span data-year></span> Vitaly Bogdel. All rights reserved.</p>
-    <a href="#top">Back to top ↑</a>
-  </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script src="../js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="../js/case.js"></script>
 </body>
 </html>
