@@ -33,6 +33,8 @@
     var physicalWidth = cssWidth * os;
     var base = physicalWidth > 1920 ? 1.75 : 1;
     root.style.setProperty("--ui", String(+(base / os).toFixed(4)));
+    // Which hero picture to use: chosen by physical width, not CSS width, so Windows scaling does not pick a smaller crop
+    root.setAttribute("data-hero", physicalWidth >= 1600 ? "1920" : physicalWidth >= 1024 ? "1440" : physicalWidth >= 640 ? "768" : "375");
   }
 
   apply();
