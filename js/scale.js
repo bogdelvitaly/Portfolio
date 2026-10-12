@@ -7,7 +7,8 @@
    - Browser zoom (Ctrl +/−) is NOT cancelled: it is measured separately (outerWidth / innerWidth) and left alone.
    - Only Windows desktops are corrected. Phones, tablets and Macs have hardware pixel density, not a scaling
      setting, so they are never touched.
-   - There is no extra enlargement on big screens: at 100 % --ui is 1 at every width. */
+   - Above 1920 physical pixels the interface is enlarged 1.5x (same as a 150 % browser zoom); the CSS fallback
+     in style.css applies the same rule when JavaScript is off. */
 (function () {
   "use strict";
 
@@ -31,7 +32,8 @@
     // Only desktop-width layouts are corrected; below that the layout is the tablet/phone one and must keep its size
     if (cssWidth < 1024) os = 1;
     var physicalWidth = cssWidth * os;
-    root.style.setProperty("--ui", String(+(1 / os).toFixed(4)));
+    var base = physicalWidth > 1920 ? 1.5 : 1;
+    root.style.setProperty("--ui", String(+(base / os).toFixed(4)));
     // Which hero picture to use: chosen by physical width, not CSS width, so Windows scaling does not pick a smaller crop
     root.setAttribute("data-hero", physicalWidth >= 1600 ? "1920" : physicalWidth >= 1024 ? "1440" : physicalWidth >= 640 ? "768" : "375");
   }

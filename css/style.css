@@ -1,5 +1,5 @@
 /* ---------- Tokens ---------- */
-/* UI scale unit: --u stands for 1px and rem follows the root font-size, both driven by --ui (1 by default).
+/* UI scale unit: --u stands for 1px and rem follows the root font-size, both driven by --ui (1 by default, 1.5 above 1920px).
    js/scale.js lowers --ui on Windows displays with scaling (125 %, 150 % …) so the site keeps its size; browser zoom still works. */
 :root {
   --ui: 1;
@@ -24,6 +24,9 @@
   --pad: clamp(calc(20 * var(--u)), 4vw, calc(76 * var(--u)));
 }
 
+
+/* Big screens: enlarge the interface 1.5x, like a 150% browser zoom (js/scale.js applies the same rule by physical width) */
+@media (min-width: 1921px) { :root { --ui: 1.5; } }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { background: var(--bg); color: var(--text); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; font-size: calc(var(--ui) * 100%); scroll-padding-top: 0; }
