@@ -1,0 +1,11 @@
+{
+  "name": "vitaly-bogdel-portfolio",
+  "private": true,
+  "description": "Static portfolio. The only dependency is used at build time to cut the hero photo into the sizes the site needs.",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "sharp": "^0.33.5"
+  }
+}

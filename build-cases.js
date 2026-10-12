@@ -22,6 +22,14 @@ const cases = fs.readdirSync(casesDir)
   .map((f) => JSON.parse(fs.readFileSync(path.join(casesDir, f), "utf8")))
   .sort((a, b) => a.order - b.order);
 
+// The order of the project list on the home page (content/site.json → works, reorderable in /admin) decides
+// the order of cases everywhere (the "More cases" block). Cases missing from that list go last, by their own order.
+try {
+  const site = JSON.parse(fs.readFileSync(path.join(root, "content", "site.json"), "utf8"));
+  const rank = (slug) => { const i = (site.works || []).findIndex((w) => w.caseSlug === slug); return i < 0 ? 1e6 : i; };
+  cases.sort((a, b) => rank(a.slug) - rank(b.slug) || a.order - b.order);
+} catch (e) { /* no site.json: keep the order numbers */ }
+
 const arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>';
 
 function section(s) {

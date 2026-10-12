@@ -29,6 +29,19 @@ collections:
 
           - { label: "Hero — text bottom-left", name: "heroDescription", widget: "text" }
           - { label: "Hero — label bottom-right", name: "heroRole", widget: "string" }
+          - label: "Hero — main photo"
+            name: "heroImage"
+            widget: "image"
+            required: false
+            hint: "Upload ONE wide photo, ideally 3440×1440 or larger (ratio about 2.4:1), JPG, PNG or WebP. After publishing, the site cuts it into all the sizes it needs (ultrawide, desktop, tablet, phone) by itself. Leave empty to keep the current photo."
+          - label: "Hero — face position (% from the left edge)"
+            name: "heroFocusX"
+            widget: "number"
+            value_type: "int"
+            min: 0
+            max: 100
+            default: 52
+            hint: "Where the face is horizontally, 0 = left edge, 100 = right edge. The tablet and phone pictures are cropped around this point. Check the phone view after changing the photo."
 
           - label: "Tags strip (the running line under the first screen)"
             name: "tags"
@@ -47,9 +60,10 @@ collections:
             summary: "{{fields.paragraph}}"
             field: { label: "Paragraph", name: "paragraph", widget: "text" }
 
-          - label: "Selected Work — project list (shown in this order)"
+          - label: "Selected Work — project list"
             name: "works"
             widget: "list"
+            hint: "Drag the ≡ handle to change the order. This order is used on the home page AND for the 'More cases' block under every case."
             summary: "{{fields.title}}"
             fields:
               - { label: "Name in the list", name: "title", widget: "string" }
@@ -98,10 +112,9 @@ collections:
     format: "json"
     create: true
     slug: "{{fields.slug}}"
-    summary: "{{order}} — {{title}}"
+    summary: "{{title}}"
     identifier_field: "title"
     fields:
-      - { label: "Order (controls position on homepage, 1 = first/featured)", name: "order", widget: "number", value_type: "int" }
       - { label: "URL slug (letters, numbers, dashes only — e.g. risk-calculation)", name: "slug", widget: "string", pattern: ["^[a-z0-9-]+$", "Lowercase letters, numbers and dashes only"] }
       - { label: "Category tag (e.g. Insurance · UX/UI Design)", name: "category", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }

@@ -4,6 +4,8 @@
   "ogImageAlt": "Vitaly Bogdel — Product Designer",
   "heroDescription": "I design interfaces for insurance, fintech, logistics and e-commerce products — the kind of complexity most people never see, made simple to use.",
   "heroRole": "UX/UI & PRODUCT DESIGN",
+  "heroImage": "",
+  "heroFocusX": 52,
   "tags": [
     "UX/UI Design",
     "Insurance",
@@ -28,29 +30,106 @@
     "made simple to use."
   ],
   "works": [
-    { "title": "Risk Calculator", "category": "Insurance • UX/UI Design", "caseSlug": "risk-calculation", "image": "/assets/images/project-insurance.webp" },
-    { "title": "Wizart.ai", "category": "E-Commerce • Product Design", "caseSlug": "wizart", "image": "/assets/images/project-wizart.webp" },
-    { "title": "Logistic Service", "category": "Logistics • UX/UI Design", "caseSlug": "logistic-service", "image": "/assets/images/project-logistic.webp" },
-    { "title": "Time2pack", "category": "Product Design • UX/UI Design", "caseSlug": "time2pack", "image": "/assets/images/project-time2pack.webp" },
-    { "title": "Employee Relations Manager", "category": "Data Manager • UX/UI", "caseSlug": "employee-relations", "image": "/assets/images/project-employee.webp" },
-    { "title": "Bitcoin DE", "category": "Currency • UX/UI Design", "caseSlug": "bitcoin-de", "image": "/assets/images/project-bitcoin.webp" }
+    {
+      "title": "Risk Calculator",
+      "category": "Insurance • UX/UI Design",
+      "caseSlug": "risk-calculation",
+      "image": "/assets/images/project-insurance.webp"
+    },
+    {
+      "title": "Wizart.ai",
+      "category": "E-Commerce • Product Design",
+      "caseSlug": "wizart",
+      "image": "/assets/images/project-wizart.webp"
+    },
+    {
+      "title": "Logistic Service",
+      "category": "Logistics • UX/UI Design",
+      "caseSlug": "logistic-service",
+      "image": "/assets/images/project-logistic.webp"
+    },
+    {
+      "title": "Time2pack",
+      "category": "Product Design • UX/UI Design",
+      "caseSlug": "time2pack",
+      "image": "/assets/images/project-time2pack.webp"
+    },
+    {
+      "title": "Employee Relations Manager",
+      "category": "Data Manager • UX/UI",
+      "caseSlug": "employee-relations",
+      "image": "/assets/images/project-employee.webp"
+    },
+    {
+      "title": "Bitcoin DE",
+      "category": "Currency • UX/UI Design",
+      "caseSlug": "bitcoin-de",
+      "image": "/assets/images/project-bitcoin.webp"
+    }
   ],
   "trustHeadingAccent": "Design",
   "trustHeading": "that earns trust at first use",
   "trustNote": "I design interfaces for insurance, fintech, logistics and e-commerce products — the kind of complexity most people never see, made simple to use. I blend strategy, research and craft to take a product from a messy problem to something people rely on every day.",
   "cards": [
-    { "title": "Product Design", "items": ["Product Strategy", "UX/UI Design", "Interaction Design", "Prototyping"] },
-    { "title": "Design Systems", "items": ["Figma Libraries", "Reusable Components", "Documentation", "Design Ops"] },
-    { "title": "UX Research", "items": ["User Research", "Usability Testing", "Customer Development", "Analytics"] },
-    { "title": "Enterprise UX", "items": ["Dashboards", "Admin Systems", "Data-heavy Interfaces", "Internal Tools"] }
+    {
+      "title": "Product Design",
+      "items": [
+        "Product Strategy",
+        "UX/UI Design",
+        "Interaction Design",
+        "Prototyping"
+      ]
+    },
+    {
+      "title": "Design Systems",
+      "items": [
+        "Figma Libraries",
+        "Reusable Components",
+        "Documentation",
+        "Design Ops"
+      ]
+    },
+    {
+      "title": "UX Research",
+      "items": [
+        "User Research",
+        "Usability Testing",
+        "Customer Development",
+        "Analytics"
+      ]
+    },
+    {
+      "title": "Enterprise UX",
+      "items": [
+        "Dashboards",
+        "Admin Systems",
+        "Data-heavy Interfaces",
+        "Internal Tools"
+      ]
+    }
   ],
   "faqTitle": "Frequently Asked Questions",
   "faq": [
-    { "question": "Who is Vitaly and what kind of projects do you take?", "answer": "I'm a UX/UI and product designer with 7+ years of experience. I work on complex products — insurance, fintech, logistics, e-commerce and internal enterprise tools — and take them from a messy problem to an interface people trust on the first try." },
-    { "question": "What does your process look like?", "answer": "It starts with requirements and research, then low-fidelity prototypes for fast stakeholder feedback. Once the core flows are validated I move into visual design and a reusable component system, and keep iterating after launch using real user feedback." },
-    { "question": "Do you work with existing design systems and teams?", "answer": "Yes. I've worked inside enterprise teams with many stakeholders, and I build or extend component-based design systems so products stay consistent across web and mobile." },
-    { "question": "Which platforms do you design for?", "answer": "Web applications, responsive websites and mobile apps — including Android and cross-platform products — as well as dashboards and internal tools." },
-    { "question": "How can we start working together?", "answer": "Send me a short message about your product, goals and timeline. I read every message myself and reply with next steps." }
+    {
+      "question": "Who is Vitaly and what kind of projects do you take?",
+      "answer": "I'm a UX/UI and product designer with 7+ years of experience. I work on complex products — insurance, fintech, logistics, e-commerce and internal enterprise tools — and take them from a messy problem to an interface people trust on the first try."
+    },
+    {
+      "question": "What does your process look like?",
+      "answer": "It starts with requirements and research, then low-fidelity prototypes for fast stakeholder feedback. Once the core flows are validated I move into visual design and a reusable component system, and keep iterating after launch using real user feedback."
+    },
+    {
+      "question": "Do you work with existing design systems and teams?",
+      "answer": "Yes. I've worked inside enterprise teams with many stakeholders, and I build or extend component-based design systems so products stay consistent across web and mobile."
+    },
+    {
+      "question": "Which platforms do you design for?",
+      "answer": "Web applications, responsive websites and mobile apps — including Android and cross-platform products — as well as dashboards and internal tools."
+    },
+    {
+      "question": "How can we start working together?",
+      "answer": "Send me a short message about your product, goals and timeline. I read every message myself and reply with next steps."
+    }
   ],
   "footerHeadingLine1": "Let's build something",
   "footerHeadingLine2": "worth using.",
