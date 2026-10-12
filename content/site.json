@@ -1,34 +1,7 @@
 {
-  "seoTitle": "Vitaly Bogdel — UX/UI & Product Designer",
-  "seoDescription": "UX/UI and product designer with 7+ years of experience in insurance, fintech, logistics and e-commerce products.",
-  "ogImageAlt": "Vitaly Bogdel — Product Designer",
-  "heroDescription": "I design interfaces for insurance, fintech, logistics and e-commerce products — the kind of complexity most people never see, made simple to use.",
-  "heroRole": "UX/UI & PRODUCT DESIGN",
-  "heroImage": "",
-  "heroFocusX": 52,
-  "tags": [
-    "UX/UI Design",
-    "Insurance",
-    "E-Commerce",
-    "Logistics",
-    "Product Design",
-    "Product Design",
-    "Data management",
-    "Crypto currency",
-    "Product Thinking",
-    "User Experience",
-    "Visual Systems",
-    "UX Research",
-    "Mobile & web",
-    "Prototyping",
-    "iteration design"
-  ],
-  "introHeading": "Complex problems. Clear thinking.",
   "introHeadingAccent": "Better products.",
-  "introNote": [
-    "I design interfaces for insurance, fintech, logistics and e-commerce products — the kind of complexity most people never see,",
-    "made simple to use."
-  ],
+  "heroImage": "/assets/images/uploads/image-hero.png",
+  "faqTitle": "Frequently Asked Questions",
   "works": [
     {
       "title": "Risk Calculator",
@@ -67,9 +40,7 @@
       "image": "/assets/images/project-bitcoin.webp"
     }
   ],
-  "trustHeadingAccent": "Design",
-  "trustHeading": "that earns trust at first use",
-  "trustNote": "I design interfaces for insurance, fintech, logistics and e-commerce products — the kind of complexity most people never see, made simple to use. I blend strategy, research and craft to take a product from a messy problem to something people rely on every day.",
+  "heroDescription": "I design interfaces for insurance, fintech, logistics and e-commerce products — the kind of complexity most people never see, made simple to use.",
   "cards": [
     {
       "title": "Product Design",
@@ -108,7 +79,14 @@
       ]
     }
   ],
-  "faqTitle": "Frequently Asked Questions",
+  "ogImageAlt": "Vitaly Bogdel — Product Designer",
+  "trustHeading": "that earns trust at first use",
+  "trustNote": "I design interfaces for insurance, fintech, logistics and e-commerce products — the kind of complexity most people never see, made simple to use. I blend strategy, research and craft to take a product from a messy problem to something people rely on every day.",
+  "footerButton": "Get in Touch",
+  "heroRole": "UX/UI & PRODUCT DESIGN",
+  "instagram": "https://www.instagram.com/vitaly_bogdel/",
+  "trustHeadingAccent": "Design",
+  "introHeading": "Complex problems. Clear thinking.",
   "faq": [
     {
       "question": "Who is Vitaly and what kind of projects do you take?",
@@ -133,8 +111,30 @@
   ],
   "footerHeadingLine1": "Let's build something",
   "footerHeadingLine2": "worth using.",
-  "footerButton": "Get in Touch",
+  "tags": [
+    "UX/UI Design",
+    "Insurance",
+    "E-Commerce",
+    "Logistics",
+    "Product Design",
+    "Product Design",
+    "Data management",
+    "Crypto currency",
+    "Product Thinking",
+    "User Experience",
+    "Visual Systems",
+    "UX Research",
+    "Mobile & web",
+    "Prototyping",
+    "iteration design"
+  ],
+  "heroFocusX": 52,
+  "seoTitle": "Vitaly Bogdel — UX/UI & Product Designer",
   "email": "bogdelvitaly@gmail.com",
+  "introNote": [
+    "I design interfaces for insurance, fintech, logistics and e-commerce products — the kind of complexity most people never see,",
+    "made simple to use."
+  ],
   "linkedin": "https://www.linkedin.com/in/vitaly-bogdel-211036164/",
-  "instagram": "https://www.instagram.com/vitaly_bogdel/"
+  "seoDescription": "UX/UI and product designer with 7+ years of experience in insurance, fintech, logistics and e-commerce products."
 }
