@@ -2,6 +2,8 @@
   "use strict";
 
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // UI scale from the CSS (1, or 1.75 above 1920px wide): pixel constants below are multiplied by it
+  var ui = function () { return parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--ui")) || 1; };
   var $ = function (s, c) { return (c || document).querySelector(s); };
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
 
@@ -43,7 +45,7 @@
   function measureLine() {
     if (!caseList) return;
     dotY = caseItems.map(function (b) {
-      return b.offsetTop + (parseFloat(getComputedStyle(b, "::before").top) || 0) + 6; // + half the 12px dot
+      return b.offsetTop + (parseFloat(getComputedStyle(b, "::before").top) || 0) + 6 * ui(); // + half the 12px dot
     });
     var len = Math.max(1, dotY[dotY.length - 1] - dotY[0]);
     caseList.style.setProperty("--line-top", dotY[0] + "px");
@@ -175,11 +177,11 @@
     var glowY = gsap.quickTo(glow, "y", opts);
 
     function apply(nx, ny) {
-      personX(nx * 36);
-      personY((ny + 0.5) * 14); // only ever moves down, so the cropped bottom edge never shows a gap
-      copyX(nx * -20);
-      glowX(nx * -70);
-      glowY(ny * -45);
+      personX(nx * 36 * ui());
+      personY((ny + 0.5) * 14 * ui()); // only ever moves down, so the cropped bottom edge never shows a gap
+      copyX(nx * -20 * ui());
+      glowX(nx * -70 * ui());
+      glowY(ny * -45 * ui());
     }
     function onMove(e) { apply(e.clientX / window.innerWidth - 0.5, e.clientY / window.innerHeight - 0.5); }
     function onLeave() { apply(0, 0); }
@@ -207,7 +209,7 @@
     // The header height varies with screen size, so keep the pinned content a small gap below it,
     // and work out how far the (taller) list has to travel to line up with the preview's bottom edge.
     function measure() {
-      var gap = Math.max(16, Math.min(28, window.innerHeight * 0.025));
+      var gap = Math.max(16 * ui(), Math.min(28 * ui(), window.innerHeight * 0.025));
       cases.style.setProperty("--cases-top", Math.round(header.offsetHeight + gap) + "px");
       dist = Math.max(0, list.offsetHeight - wrap.clientHeight);
       measureLine();
@@ -257,7 +259,7 @@
 
     // Keep the cards a small gap below the real (variable-height) header; they stretch to fill the rest.
     function measure() {
-      var gap = Math.max(16, Math.min(28, window.innerHeight * 0.025));
+      var gap = Math.max(16 * ui(), Math.min(28 * ui(), window.innerHeight * 0.025));
       section.style.setProperty("--cards-top", Math.round(header.offsetHeight + gap) + "px");
     }
     measure();
