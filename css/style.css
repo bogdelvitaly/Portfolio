@@ -340,6 +340,7 @@ ul, ol { list-style: none; }
 .case-back:hover svg { transform: translateX(calc(-3 * var(--u))); }
 .case-eyebrow { margin-bottom: 1.2rem; color: var(--o1); font-size: clamp(0.8rem, 1vw, 1rem); letter-spacing: 0.14em; text-transform: uppercase; }
 .case-title { margin-bottom: clamp(calc(24 * var(--u)), 4vh, calc(44 * var(--u))); font-weight: 300; font-size: clamp(3rem, 8.5vw, 10rem); line-height: 0.98; letter-spacing: -0.03em; }
+.case-title--long { font-size: clamp(2.6rem, 6vw, 7.2rem); line-height: 1.02; }
 .case-sub { max-width: 40em; color: var(--muted); font-size: clamp(1.1rem, 1.6vw, 1.7rem); line-height: 1.45; }
 .case-chips { display: flex; flex-wrap: wrap; gap: calc(10 * var(--u)); margin: clamp(calc(28 * var(--u)), 5vh, calc(52 * var(--u))) 0 clamp(calc(36 * var(--u)), 7vh, calc(80 * var(--u))); padding-top: clamp(calc(24 * var(--u)), 4vh, calc(40 * var(--u))); border-top: calc(1 * var(--u)) solid var(--line); }
 .chip { padding: 0.55em 1.1em; border: calc(1 * var(--u)) solid rgba(255, 255, 255, 0.22); border-radius: calc(999 * var(--u)); color: var(--muted); font-size: 0.9rem; }
@@ -357,6 +358,9 @@ ul, ol { list-style: none; }
 .case-section-copy li { position: relative; padding-left: 1.6em; }
 .case-section-copy li::before { content: ""; position: absolute; left: 0; top: 0.85em; width: 0.9em; height: calc(2 * var(--u)); background: var(--o1); }
 
+.case-shots { --shots-gap: clamp(calc(10 * var(--u)), 1.6vw, calc(28 * var(--u))); grid-column: 1 / -1; display: flex; gap: var(--shots-gap); width: 100%; max-width: var(--shots-max); margin: clamp(calc(8 * var(--u)), 2vh, calc(24 * var(--u))) auto 0; }
+.case-screen { min-width: 0; overflow: hidden; border-radius: clamp(calc(10 * var(--u)), 1.4vw, calc(22 * var(--u))); background: #141414; }
+.case-screen img { display: block; width: 100%; height: auto; }
 .case-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(calc(14 * var(--u)), 2vw, calc(32 * var(--u))); margin: clamp(calc(40 * var(--u)), 8vh, calc(90 * var(--u))) 0; }
 .case-shot { border-radius: clamp(calc(14 * var(--u)), 1.6vw, calc(24 * var(--u))); }
 .case-shot--full { grid-column: 1 / -1; }
@@ -394,5 +398,21 @@ ul, ol { list-style: none; }
 @media (max-width: 899px) {
   .case-section, .case-result { grid-template-columns: 1fr; gap: calc(14 * var(--u)); }
   .case-gallery { grid-template-columns: 1fr; }
+  .case-shots { max-width: none; margin-inline: calc(-1 * var(--pad)); padding-inline: var(--pad); width: auto; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+  .case-shots::-webkit-scrollbar { display: none; }
+  .case-screen { flex: 0 0 58% !important; scroll-snap-align: start; }
   .case-next-card { flex-direction: column; align-items: flex-start; }
 }
+
+/* click a picture in a case to see it large */
+.case-screen img, .case-shot img { cursor: zoom-in; }
+.lightbox { position: fixed; inset: 0; z-index: 200; display: grid; place-items: center; padding: 3vh 3vw; background: rgba(5, 5, 5, 0.94); opacity: 0; visibility: hidden; transition: opacity 0.25s ease, visibility 0.25s; }
+.lightbox.is-open { opacity: 1; visibility: visible; }
+.lightbox img { max-width: 100%; max-height: 100%; width: auto; height: auto; border-radius: calc(10 * var(--u)); background: #141414; cursor: zoom-out; }
+.lightbox-btn { position: absolute; display: grid; place-items: center; width: calc(48 * var(--u)); height: calc(48 * var(--u)); border: calc(1 * var(--u)) solid rgba(255, 255, 255, 0.3); border-radius: 50%; background: rgba(20, 20, 20, 0.7); color: #fff; cursor: pointer; transition: background 0.2s ease; }
+.lightbox-btn:hover { background: rgba(255, 255, 255, 0.18); }
+.lightbox-btn svg { width: 45%; height: 45%; }
+.lightbox-close { top: calc(18 * var(--u)); right: calc(18 * var(--u)); }
+.lightbox-prev { left: calc(18 * var(--u)); top: 50%; transform: translateY(-50%); }
+.lightbox-next { right: calc(18 * var(--u)); top: 50%; transform: translateY(-50%); }
+@media (max-width: 899px) { .lightbox-prev, .lightbox-next { display: none; } }

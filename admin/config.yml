@@ -145,6 +145,17 @@ collections:
             widget: "list"
             required: false
             field: { label: "Item", name: "item", widget: "string" }
+          - label: "Pictures under this section (optional — each row is shown side by side, all the same height)"
+            name: "shots"
+            widget: "list"
+            required: false
+            summary: "Row of {{fields.images.length}} picture(s)"
+            fields:
+              - label: "Pictures in this row (best 1–5; drag to reorder)"
+                name: "images"
+                widget: "list"
+                field: { label: "Image", name: "image", widget: "image" }
+              - { label: "Max height of this row in px (optional — default 640; use 900–1000 for big wide boards)", name: "height", widget: "number", value_type: "int", min: 200, max: 1200, required: false }
       - label: "Gallery images (optional)"
         name: "gallery"
         widget: "list"

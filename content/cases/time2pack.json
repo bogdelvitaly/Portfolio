@@ -3,50 +3,172 @@
   "slug": "time2pack",
   "category": "Product Design · UX/UI Design",
   "title": "Time2pack",
-  "cardSummary": "An all-in-one travel companion for planning trips, building packing lists, and keeping every travel detail in one place.",
-  "sub": "An all-in-one travel companion that helps people plan trips, build packing lists, and keep every travel detail in one place.",
-  "meta": ["Product Strategy", "UX Research", "Prototyping", "Mobile"],
+  "cardSummary": "From one travel-prep app to two products with a clear focus each: Time2Pack for organising a trip and OnlyFlights for following flights.",
+  "sub": "Two connected travel apps. Time2Pack helps people organise a trip, and OnlyFlights grew out of it into a standalone app for flights — I shaped the product decisions, flows and interfaces as both grew.",
+  "meta": [
+    "Product Design",
+    "UX/UI Design",
+    "Mobile",
+    "A/B Testing"
+  ],
   "cover": {
-    "image": "/assets/images/project-time2pack.webp",
-    "alt": "Time2pack travel planning app interface"
+    "image": "/assets/images/project-time2pack-cover.webp",
+    "alt": "Time2Pack trip screen on a phone standing on a rock against the sky"
   },
   "sections": [
     {
-      "heading": "Challenge",
+      "heading": "Overview",
       "paragraphs": [
-        "Travelers juggle multiple apps, notes and spreadsheets to prepare for a trip. Packing lists go stale, documents scatter across services, and flight information is hard to track in one place. The challenge was combining these workflows into one lightweight, accessible, enjoyable product."
+        "I worked as the product designer on two connected travel apps. Time2Pack helps people prepare a trip: packing lists, notes and documents. OnlyFlights grew out of it into a standalone product focused on flights.",
+        "My job was to grow the functionality while keeping the interaction simple. I took part in product decisions, proposed new features, reworked flows and screens, studied A/B test data and kept development constraints in mind."
       ],
       "list": []
     },
     {
-      "heading": "Solution",
-      "paragraphs": ["The app brings together the core travel scenarios in a single flow:"],
+      "heading": "The challenge",
+      "paragraphs": [
+        "Preparing for a trip is a pile of small tasks: packing, checking the weather, keeping documents, following flight details. They all belong to one trip, but each comes up at a different moment and needs a different level of attention.",
+        "As Time2Pack grew, the question became how to add capabilities without losing a clear purpose and a simple structure."
+      ],
+      "list": []
+    },
+    {
+      "heading": "The key decision: split the apps",
+      "paragraphs": [
+        "Flights needed a focus of their own, so we moved them out into a separate app. Each product got a clear job:"
+      ],
       "list": [
-        "Smart, customizable packing lists",
-        "Packing progress tracking",
-        "Flight tracking with real-time alerts",
-        "Weather forecasts for travel dates",
-        "Travel documents and ticket storage",
-        "Notes, photos, and offline access to trip information"
+        "Time2Pack — prepare and organise the trip: packing lists, notes, documents and the overall travel context",
+        "OnlyFlights — keep flight information at hand: add flights, check status, times and details"
+      ],
+      "shots": [
+        {
+          "images": [
+            "/assets/images/time2pack/of-onboarding-1.webp",
+            "/assets/images/time2pack/of-onboarding-2.webp",
+            "/assets/images/time2pack/of-onboarding-3.webp",
+            "/assets/images/time2pack/of-onboarding-4.webp"
+          ]
+        }
       ]
     },
     {
-      "heading": "Design Approach",
-      "paragraphs": ["Information is grouped around the trip itself, keeping navigation intuitive and cognitive load low. Particular attention went to:"],
-      "list": [
-        "Fast onboarding with no mandatory registration",
-        "Clear information hierarchy",
-        "Editable, reusable packing templates",
-        "Visual progress tracking while packing",
-        "Offline access for reliability while traveling",
-        "No ads, no unnecessary complexity"
+      "heading": "Time2Pack: a shorter path to the main task",
+      "paragraphs": [
+        "We dropped the complex onboarding and shortened the creation flows, so people take fewer actions before they can start using the app.",
+        "On the trip screen, a card structure splits mixed content — weather, packing, notes, documents — into clear blocks. The packing card shows how many items are checked off out of the total, so readiness is visible without opening the full list. Adding a document offers two ways: take a photo or upload a file."
+      ],
+      "list": [],
+      "shots": [
+        {
+          "images": [
+            "/assets/images/time2pack/t2p-onboarding-1.webp",
+            "/assets/images/time2pack/t2p-trip-constructor.webp",
+            "/assets/images/time2pack/t2p-trip-details.webp",
+            "/assets/images/time2pack/t2p-edit-modules.webp",
+            "/assets/images/time2pack/t2p-packing-list.webp"
+          ]
+        }
       ]
+    },
+    {
+      "heading": "OnlyFlights: making a flight readable",
+      "paragraphs": [
+        "Flight screens carry a lot of data: route, times, status, flight number, terminal, gate. I reworked how it is grouped and how the hierarchy reads, and the flight card became the main element of the overview.",
+        "A delay is shown through several signals — a text status, colour highlight and the new time next to the crossed-out original — so people see exactly what changed. Online check-in is a prominent action, set apart from the reference details.",
+        "Later versions of the details screen added a route map and expandable information about the operating carrier and related flight numbers, keeping secondary data away from the main route."
+      ],
+      "list": [],
+      "shots": [
+        {
+          "images": [
+            "/assets/images/time2pack/of-active-flights.webp",
+            "/assets/images/time2pack/of-statistics.webp",
+            "/assets/images/time2pack/of-details-1.webp",
+            "/assets/images/time2pack/of-details-2.webp"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "One visual system, two products",
+      "paragraphs": [
+        "Time2Pack uses a purple accent and OnlyFlights a blue one, built on shared principles: cards, rounded surfaces, repeatable information blocks and clear primary actions.",
+        "Both apps have light and dark themes, so status, primary text, secondary data and actions had to stay distinguishable in each. Each component was designed with its states in both themes: empty, focused and filled inputs, collapsed and expanded blocks, and the locked Pro state."
+      ],
+      "list": [],
+      "shots": [
+        {
+          "images": [
+            "/assets/images/time2pack/of-board-airport.webp",
+            "/assets/images/time2pack/of-board-inputs.webp"
+          ],
+          "height": 1000
+        },
+        {
+          "images": [
+            "/assets/images/time2pack/of-board-forecast.webp",
+            "/assets/images/time2pack/of-board-plane.webp"
+          ],
+          "height": 1000
+        }
+      ]
+    },
+    {
+      "heading": "Beyond the app screens",
+      "paragraphs": [
+        "I designed home-screen widgets for the phone, where space is tight and the choice of content matters most.",
+        "For the Live Activities I designed several states of the flight card in dark and light versions, shown on the lock screen: the countdown to departure, then terminal and gate, seat, and the weather at the destination, so each moment before the flight shows the data that matters right then.",
+        "For watches I designed widgets in two sizes, large and small, showing flight progress and the departure and arrival dates. They change with the stage of the flight — countdown, check-in details, gate and seat, progress in the air, arrival information — and the layout and hierarchy were adapted to each size so the flight stays readable at a glance on the wrist.",
+        "I also reworked the App Store screenshots. People don't know the product yet, so the sequence has to show what it can do and why they might need it."
+      ],
+      "list": [],
+      "shots": [
+        {
+          "images": [
+            "/assets/images/time2pack/of-lock-screen.webp",
+            "/assets/images/time2pack/of-live-activities.webp"
+          ]
+        },
+        {
+          "images": [
+            "/assets/images/time2pack/of-complications-rect.webp"
+          ],
+          "height": 1000
+        },
+        {
+          "images": [
+            "/assets/images/time2pack/of-complications-circular.webp",
+            "/assets/images/time2pack/of-watch-face.webp"
+          ],
+          "height": 480
+        },
+        {
+          "images": [
+            "/assets/images/time2pack/of-appstore-1.webp",
+            "/assets/images/time2pack/of-appstore-2.webp",
+            "/assets/images/time2pack/of-appstore-3.webp",
+            "/assets/images/time2pack/of-appstore-4.webp",
+            "/assets/images/time2pack/of-appstore-5.webp"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Trade-offs",
+      "paragraphs": [
+        "I studied A/B test data and joined product discussions, but development effort shaped the decisions too. Some ideas turned out far more complex to build than they looked in design, and we dropped several of them. Feasibility became part of the design conversation."
+      ],
+      "list": []
+    },
+    {
+      "heading": "What I took away",
+      "paragraphs": [
+        "A growing product needs its complexity reviewed regularly. Every new feature affects navigation, hierarchy and the first steps, so growth meant not only adding functions but also cutting flows, revisiting decisions and giving flights an app of their own."
+      ],
+      "list": []
     }
   ],
-  "gallery": [
-    "/assets/images/gallery/time2pack-1.webp",
-    "/assets/images/gallery/time2pack-2.webp",
-    "/assets/images/gallery/time2pack-3.webp"
-  ],
-  "result": "Time2Pack grew into a travel companion used by tens of thousands of people worldwide, with regular updates that keep improving how they plan and pack."
+  "gallery": [],
+  "result": "Two focused products instead of one overloaded app: Time2Pack for preparing a trip and OnlyFlights for following a flight. Time2Pack has grown into a travel companion used by tens of thousands of people worldwide."
 }

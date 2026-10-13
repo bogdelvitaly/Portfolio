@@ -32,7 +32,51 @@ try {
 
 const arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>';
 
-function section(s) {
+// Pixel size of a local picture (PNG, JPEG or WebP) read from its file header; null if unknown.
+function imgSize(p) {
+  try {
+    const buf = fs.readFileSync(path.join(root, String(p).replace(/^\/+/, "")));
+    if (buf.toString("ascii", 1, 4) === "PNG") return { w: buf.readUInt32BE(16), h: buf.readUInt32BE(20) };
+    if (buf.toString("ascii", 0, 4) === "RIFF" && buf.toString("ascii", 8, 12) === "WEBP") {
+      const k = buf.toString("ascii", 12, 16);
+      if (k === "VP8X") return { w: 1 + buf.readUIntLE(24, 3), h: 1 + buf.readUIntLE(27, 3) };
+      if (k === "VP8 ") return { w: buf.readUInt16LE(26) & 0x3fff, h: buf.readUInt16LE(28) & 0x3fff };
+      if (k === "VP8L") { const v = buf.readUInt32LE(21); return { w: 1 + (v & 0x3fff), h: 1 + ((v >> 14) & 0x3fff) }; }
+    }
+    if (buf[0] === 0xff && buf[1] === 0xd8) {
+      let i = 2;
+      while (i < buf.length) {
+        if (buf[i] !== 0xff) { i++; continue; }
+        const m = buf[i + 1];
+        if (m >= 0xc0 && m <= 0xcf && m !== 0xc4 && m !== 0xc8 && m !== 0xcc) return { w: buf.readUInt16BE(i + 7), h: buf.readUInt16BE(i + 5) };
+        i += 2 + buf.readUInt16BE(i + 2);
+      }
+    }
+  } catch (e) { /* fall through */ }
+  return null;
+}
+
+// Rows of pictures inside a section (content/cases/*.json → sections[].shots[].images).
+// Every row is as wide as its pictures allow, they all get the same height; a lone picture is not stretched.
+const SHOT_H = 640; // tallest a row may get, in px (before --u scaling); a row can ask for more with its "height" field
+function shots(s, c) {
+  const rows = (s.shots || []).map((r) => ({ imgs: (r && r.images ? r.images : []).filter(Boolean), h: Number(r && r.height) || SHOT_H })).filter((r) => r.imgs.length);
+  if (!rows.length) return "";
+  let n = 0;
+  return rows.map(({ imgs, h }) => {
+    const ratios = imgs.map((src) => { const d = imgSize(src); return d ? d.w / d.h : 0.5; });
+    const sum = ratios.reduce((a, b) => a + b, 0);
+    const figs = imgs.map((src, i) => {
+      n++;
+      const d = imgSize(src);
+      const dims = d ? ` width="${d.w}" height="${d.h}"` : "";
+      return `<figure class="case-screen" style="flex:${ratios[i].toFixed(4)} 1 0"><img src="${esc(rel(src))}" alt="${esc(c.title)} — ${esc(s.heading)}, screen ${n}"${dims} loading="lazy"></figure>`;
+    }).join("");
+    return `\n        <div class="case-shots" style="--shots-max: calc(${sum.toFixed(4)} * ${h} * var(--u) + ${imgs.length - 1} * var(--shots-gap))">${figs}</div>`;
+  }).join("");
+}
+
+function section(s, c) {
   const paras = (s.paragraphs || []).map((p) => `<p>${esc(p)}</p>`).join("\n          ");
   const list = (s.list && s.list.length)
     ? `\n          <ul>${s.list.map((i) => `<li>${esc(i)}</li>`).join("")}</ul>` : "";
@@ -40,7 +84,7 @@ function section(s) {
         <h2 class="case-section-title">${esc(s.heading)}</h2>
         <div class="case-section-copy">
           ${paras}${list}
-        </div>
+        </div>${shots(s, c)}
       </section>`;
 }
 
@@ -119,14 +163,14 @@ function page(c, i) {
     <section class="case-hero">
       <a class="case-back" href="../index.html#work" data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>All work</a>
       <p class="case-eyebrow" data-reveal>${esc(c.category)}</p>
-      <h1 class="case-title" data-reveal>${esc(c.title)}</h1>
+      <h1 class="case-title${c.title.length > 22 ? " case-title--long" : ""}" data-reveal>${esc(c.title)}</h1>
       <p class="case-sub" data-reveal>${esc(c.sub)}</p>
       <div class="case-chips" data-reveal>${chips}</div>
       <figure class="case-cover" data-reveal><img src="${esc(rel(c.cover.image))}" alt="${esc(c.cover.alt || c.title)}" fetchpriority="high"></figure>
     </section>
 
     <div class="case-body">
-${(c.sections || []).map(section).join("\n")}
+${(c.sections || []).map((s) => section(s, c)).join("\n")}
 ${gallery(c)}
 ${result}
     </div>

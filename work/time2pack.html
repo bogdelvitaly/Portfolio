@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Time2pack — Vitaly Bogdel</title>
-  <meta name="description" content="An all-in-one travel companion that helps people plan trips, build packing lists, and keep every travel detail in one place.">
+  <meta name="description" content="Two connected travel apps. Time2Pack helps people organise a trip, and OnlyFlights grew out of it into a standalone app for flights — I shaped the product decisions, flows and interfaces as both grew.">
   <link rel="canonical" href="https://vitaly-portfolio.netlify.app/work/time2pack.html">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Vitaly Bogdel">
   <meta property="og:title" content="Time2pack — Vitaly Bogdel">
-  <meta property="og:description" content="An all-in-one travel companion that helps people plan trips, build packing lists, and keep every travel detail in one place.">
+  <meta property="og:description" content="Two connected travel apps. Time2Pack helps people organise a trip, and OnlyFlights grew out of it into a standalone app for flights — I shaped the product decisions, flows and interfaces as both grew.">
   <meta property="og:url" content="https://vitaly-portfolio.netlify.app/work/time2pack.html">
   <meta property="og:image" content="https://vitaly-portfolio.netlify.app/assets/og/time2pack.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Time2pack travel planning app interface">
+  <meta property="og:image:alt" content="Time2Pack trip screen on a phone standing on a rock against the sky">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#070707">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23070707'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='700' fill='%23ff5800' text-anchor='middle'%3EVB%3C/text%3E%3C/svg%3E">
@@ -52,40 +52,89 @@
       <a class="case-back" href="../index.html#work" data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>All work</a>
       <p class="case-eyebrow" data-reveal>Product Design · UX/UI Design</p>
       <h1 class="case-title" data-reveal>Time2pack</h1>
-      <p class="case-sub" data-reveal>An all-in-one travel companion that helps people plan trips, build packing lists, and keep every travel detail in one place.</p>
-      <div class="case-chips" data-reveal><span class="chip">Product Strategy</span><span class="chip">UX Research</span><span class="chip">Prototyping</span><span class="chip">Mobile</span></div>
-      <figure class="case-cover" data-reveal><img src="../assets/images/project-time2pack.webp" alt="Time2pack travel planning app interface" fetchpriority="high"></figure>
+      <p class="case-sub" data-reveal>Two connected travel apps. Time2Pack helps people organise a trip, and OnlyFlights grew out of it into a standalone app for flights — I shaped the product decisions, flows and interfaces as both grew.</p>
+      <div class="case-chips" data-reveal><span class="chip">Product Design</span><span class="chip">UX/UI Design</span><span class="chip">Mobile</span><span class="chip">A/B Testing</span></div>
+      <figure class="case-cover" data-reveal><img src="../assets/images/project-time2pack-cover.webp" alt="Time2Pack trip screen on a phone standing on a rock against the sky" fetchpriority="high"></figure>
     </section>
 
     <div class="case-body">
       <section class="case-section" data-reveal>
-        <h2 class="case-section-title">Challenge</h2>
+        <h2 class="case-section-title">Overview</h2>
         <div class="case-section-copy">
-          <p>Travelers juggle multiple apps, notes and spreadsheets to prepare for a trip. Packing lists go stale, documents scatter across services, and flight information is hard to track in one place. The challenge was combining these workflows into one lightweight, accessible, enjoyable product.</p>
+          <p>I worked as the product designer on two connected travel apps. Time2Pack helps people prepare a trip: packing lists, notes and documents. OnlyFlights grew out of it into a standalone product focused on flights.</p>
+          <p>My job was to grow the functionality while keeping the interaction simple. I took part in product decisions, proposed new features, reworked flows and screens, studied A/B test data and kept development constraints in mind.</p>
         </div>
       </section>
       <section class="case-section" data-reveal>
-        <h2 class="case-section-title">Solution</h2>
+        <h2 class="case-section-title">The challenge</h2>
         <div class="case-section-copy">
-          <p>The app brings together the core travel scenarios in a single flow:</p>
-          <ul><li>Smart, customizable packing lists</li><li>Packing progress tracking</li><li>Flight tracking with real-time alerts</li><li>Weather forecasts for travel dates</li><li>Travel documents and ticket storage</li><li>Notes, photos, and offline access to trip information</li></ul>
+          <p>Preparing for a trip is a pile of small tasks: packing, checking the weather, keeping documents, following flight details. They all belong to one trip, but each comes up at a different moment and needs a different level of attention.</p>
+          <p>As Time2Pack grew, the question became how to add capabilities without losing a clear purpose and a simple structure.</p>
         </div>
       </section>
       <section class="case-section" data-reveal>
-        <h2 class="case-section-title">Design Approach</h2>
+        <h2 class="case-section-title">The key decision: split the apps</h2>
         <div class="case-section-copy">
-          <p>Information is grouped around the trip itself, keeping navigation intuitive and cognitive load low. Particular attention went to:</p>
-          <ul><li>Fast onboarding with no mandatory registration</li><li>Clear information hierarchy</li><li>Editable, reusable packing templates</li><li>Visual progress tracking while packing</li><li>Offline access for reliability while traveling</li><li>No ads, no unnecessary complexity</li></ul>
+          <p>Flights needed a focus of their own, so we moved them out into a separate app. Each product got a clear job:</p>
+          <ul><li>Time2Pack — prepare and organise the trip: packing lists, notes, documents and the overall travel context</li><li>OnlyFlights — keep flight information at hand: add flights, check status, times and details</li></ul>
+        </div>
+        <div class="case-shots" style="--shots-max: calc(1.8483 * 640 * var(--u) + 3 * var(--shots-gap))"><figure class="case-screen" style="flex:0.4621 1 0"><img src="../assets/images/time2pack/of-onboarding-1.webp" alt="Time2pack — The key decision: split the apps, screen 1" width="780" height="1688" loading="lazy"></figure><figure class="case-screen" style="flex:0.4621 1 0"><img src="../assets/images/time2pack/of-onboarding-2.webp" alt="Time2pack — The key decision: split the apps, screen 2" width="780" height="1688" loading="lazy"></figure><figure class="case-screen" style="flex:0.4621 1 0"><img src="../assets/images/time2pack/of-onboarding-3.webp" alt="Time2pack — The key decision: split the apps, screen 3" width="780" height="1688" loading="lazy"></figure><figure class="case-screen" style="flex:0.4621 1 0"><img src="../assets/images/time2pack/of-onboarding-4.webp" alt="Time2pack — The key decision: split the apps, screen 4" width="780" height="1688" loading="lazy"></figure></div>
+      </section>
+      <section class="case-section" data-reveal>
+        <h2 class="case-section-title">Time2Pack: a shorter path to the main task</h2>
+        <div class="case-section-copy">
+          <p>We dropped the complex onboarding and shortened the creation flows, so people take fewer actions before they can start using the app.</p>
+          <p>On the trip screen, a card structure splits mixed content — weather, packing, notes, documents — into clear blocks. The packing card shows how many items are checked off out of the total, so readiness is visible without opening the full list. Adding a document offers two ways: take a photo or upload a file.</p>
+        </div>
+        <div class="case-shots" style="--shots-max: calc(2.3105 * 640 * var(--u) + 4 * var(--shots-gap))"><figure class="case-screen" style="flex:0.4621 1 0"><img src="../assets/images/time2pack/t2p-onboarding-1.webp" alt="Time2pack — Time2Pack: a shorter path to the main task, screen 1" width="780" height="1688" loading="lazy"></figure><figure class="case-screen" style="flex:0.4621 1 0"><img src="../assets/images/time2pack/t2p-trip-constructor.webp" alt="Time2pack — Time2Pack: a shorter path to the main task, screen 2" width="390" height="844" loading="lazy"></figure><figure class="case-screen" style="flex:0.4621 1 0"><img src="../assets/images/time2pack/t2p-trip-details.webp" alt="Time2pack — Time2Pack: a shorter path to the main task, screen 3" width="390" height="844" loading="lazy"></figure><figure class="case-screen" style="flex:0.4621 1 0"><img src="../assets/images/time2pack/t2p-edit-modules.webp" alt="Time2pack — Time2Pack: a shorter path to the main task, screen 4" width="390" height="844" loading="lazy"></figure><figure class="case-screen" style="flex:0.4622 1 0"><img src="../assets/images/time2pack/t2p-packing-list.webp" alt="Time2pack — Time2Pack: a shorter path to the main task, screen 5" width="800" height="1731" loading="lazy"></figure></div>
+      </section>
+      <section class="case-section" data-reveal>
+        <h2 class="case-section-title">OnlyFlights: making a flight readable</h2>
+        <div class="case-section-copy">
+          <p>Flight screens carry a lot of data: route, times, status, flight number, terminal, gate. I reworked how it is grouped and how the hierarchy reads, and the flight card became the main element of the overview.</p>
+          <p>A delay is shown through several signals — a text status, colour highlight and the new time next to the crossed-out original — so people see exactly what changed. Online check-in is a prominent action, set apart from the reference details.</p>
+          <p>Later versions of the details screen added a route map and expandable information about the operating carrier and related flight numbers, keeping secondary data away from the main route.</p>
+        </div>
+        <div class="case-shots" style="--shots-max: calc(1.9971 * 640 * var(--u) + 3 * var(--shots-gap))"><figure class="case-screen" style="flex:0.4621 1 0"><img src="../assets/images/time2pack/of-active-flights.webp" alt="Time2pack — OnlyFlights: making a flight readable, screen 1" width="780" height="1688" loading="lazy"></figure><figure class="case-screen" style="flex:0.4621 1 0"><img src="../assets/images/time2pack/of-statistics.webp" alt="Time2pack — OnlyFlights: making a flight readable, screen 2" width="390" height="844" loading="lazy"></figure><figure class="case-screen" style="flex:0.5221 1 0"><img src="../assets/images/time2pack/of-details-1.webp" alt="Time2pack — OnlyFlights: making a flight readable, screen 3" width="390" height="747" loading="lazy"></figure><figure class="case-screen" style="flex:0.5508 1 0"><img src="../assets/images/time2pack/of-details-2.webp" alt="Time2pack — OnlyFlights: making a flight readable, screen 4" width="390" height="708" loading="lazy"></figure></div>
+      </section>
+      <section class="case-section" data-reveal>
+        <h2 class="case-section-title">One visual system, two products</h2>
+        <div class="case-section-copy">
+          <p>Time2Pack uses a purple accent and OnlyFlights a blue one, built on shared principles: cards, rounded surfaces, repeatable information blocks and clear primary actions.</p>
+          <p>Both apps have light and dark themes, so status, primary text, secondary data and actions had to stay distinguishable in each. Each component was designed with its states in both themes: empty, focused and filled inputs, collapsed and expanded blocks, and the locked Pro state.</p>
+        </div>
+        <div class="case-shots" style="--shots-max: calc(4.4519 * 1000 * var(--u) + 1 * var(--shots-gap))"><figure class="case-screen" style="flex:2.0751 1 0"><img src="../assets/images/time2pack/of-board-airport.webp" alt="Time2pack — One visual system, two products, screen 1" width="1575" height="759" loading="lazy"></figure><figure class="case-screen" style="flex:2.3768 1 0"><img src="../assets/images/time2pack/of-board-inputs.webp" alt="Time2pack — One visual system, two products, screen 2" width="1842" height="775" loading="lazy"></figure></div>
+        <div class="case-shots" style="--shots-max: calc(2.0267 * 1000 * var(--u) + 1 * var(--shots-gap))"><figure class="case-screen" style="flex:0.9787 1 0"><img src="../assets/images/time2pack/of-board-forecast.webp" alt="Time2pack — One visual system, two products, screen 3" width="1058" height="1081" loading="lazy"></figure><figure class="case-screen" style="flex:1.0480 1 0"><img src="../assets/images/time2pack/of-board-plane.webp" alt="Time2pack — One visual system, two products, screen 4" width="1245" height="1188" loading="lazy"></figure></div>
+      </section>
+      <section class="case-section" data-reveal>
+        <h2 class="case-section-title">Beyond the app screens</h2>
+        <div class="case-section-copy">
+          <p>I designed home-screen widgets for the phone, where space is tight and the choice of content matters most.</p>
+          <p>For the Live Activities I designed several states of the flight card in dark and light versions, shown on the lock screen: the countdown to departure, then terminal and gate, seat, and the weather at the destination, so each moment before the flight shows the data that matters right then.</p>
+          <p>For watches I designed widgets in two sizes, large and small, showing flight progress and the departure and arrival dates. They change with the stage of the flight — countdown, check-in details, gate and seat, progress in the air, arrival information — and the layout and hierarchy were adapted to each size so the flight stays readable at a glance on the wrist.</p>
+          <p>I also reworked the App Store screenshots. People don't know the product yet, so the sequence has to show what it can do and why they might need it.</p>
+        </div>
+        <div class="case-shots" style="--shots-max: calc(1.6942 * 640 * var(--u) + 1 * var(--shots-gap))"><figure class="case-screen" style="flex:0.4621 1 0"><img src="../assets/images/time2pack/of-lock-screen.webp" alt="Time2pack — Beyond the app screens, screen 1" width="390" height="844" loading="lazy"></figure><figure class="case-screen" style="flex:1.2321 1 0"><img src="../assets/images/time2pack/of-live-activities.webp" alt="Time2pack — Beyond the app screens, screen 2" width="828" height="672" loading="lazy"></figure></div>
+        <div class="case-shots" style="--shots-max: calc(1.1899 * 1000 * var(--u) + 0 * var(--shots-gap))"><figure class="case-screen" style="flex:1.1899 1 0"><img src="../assets/images/time2pack/of-complications-rect.webp" alt="Time2pack — Beyond the app screens, screen 3" width="1441" height="1211" loading="lazy"></figure></div>
+        <div class="case-shots" style="--shots-max: calc(1.0826 * 480 * var(--u) + 1 * var(--shots-gap))"><figure class="case-screen" style="flex:0.2644 1 0"><img src="../assets/images/time2pack/of-complications-circular.webp" alt="Time2pack — Beyond the app screens, screen 4" width="151" height="571" loading="lazy"></figure><figure class="case-screen" style="flex:0.8182 1 0"><img src="../assets/images/time2pack/of-watch-face.webp" alt="Time2pack — Beyond the app screens, screen 5" width="792" height="968" loading="lazy"></figure></div>
+        <div class="case-shots" style="--shots-max: calc(2.3101 * 640 * var(--u) + 4 * var(--shots-gap))"><figure class="case-screen" style="flex:0.4620 1 0"><img src="../assets/images/time2pack/of-appstore-1.webp" alt="Time2pack — Beyond the app screens, screen 6" width="900" height="1948" loading="lazy"></figure><figure class="case-screen" style="flex:0.4620 1 0"><img src="../assets/images/time2pack/of-appstore-2.webp" alt="Time2pack — Beyond the app screens, screen 7" width="900" height="1948" loading="lazy"></figure><figure class="case-screen" style="flex:0.4620 1 0"><img src="../assets/images/time2pack/of-appstore-3.webp" alt="Time2pack — Beyond the app screens, screen 8" width="900" height="1948" loading="lazy"></figure><figure class="case-screen" style="flex:0.4620 1 0"><img src="../assets/images/time2pack/of-appstore-4.webp" alt="Time2pack — Beyond the app screens, screen 9" width="900" height="1948" loading="lazy"></figure><figure class="case-screen" style="flex:0.4620 1 0"><img src="../assets/images/time2pack/of-appstore-5.webp" alt="Time2pack — Beyond the app screens, screen 10" width="900" height="1948" loading="lazy"></figure></div>
+      </section>
+      <section class="case-section" data-reveal>
+        <h2 class="case-section-title">Trade-offs</h2>
+        <div class="case-section-copy">
+          <p>I studied A/B test data and joined product discussions, but development effort shaped the decisions too. Some ideas turned out far more complex to build than they looked in design, and we dropped several of them. Feasibility became part of the design conversation.</p>
         </div>
       </section>
-      <div class="case-gallery">
-        <figure class="case-shot" data-reveal><img src="../assets/images/gallery/time2pack-1.webp" alt="Time2pack — screen 1"></figure>
-        <figure class="case-shot" data-reveal><img src="../assets/images/gallery/time2pack-2.webp" alt="Time2pack — screen 2"></figure>
-        <figure class="case-shot case-shot--full" data-reveal><img src="../assets/images/gallery/time2pack-3.webp" alt="Time2pack — screen 3"></figure>
-      </div>
+      <section class="case-section" data-reveal>
+        <h2 class="case-section-title">What I took away</h2>
+        <div class="case-section-copy">
+          <p>A growing product needs its complexity reviewed regularly. Every new feature affects navigation, hierarchy and the first steps, so growth meant not only adding functions but also cutting flows, revisiting decisions and giving flights an app of their own.</p>
+        </div>
+      </section>
+
       <section class="case-result" data-reveal>
         <h2 class="case-section-title">Result</h2>
-        <p>Time2Pack grew into a travel companion used by tens of thousands of people worldwide, with regular updates that keep improving how they plan and pack.</p>
+        <p>Two focused products instead of one overloaded app: Time2Pack for preparing a trip and OnlyFlights for following a flight. Time2Pack has grown into a travel companion used by tens of thousands of people worldwide.</p>
       </section>
     </div>
 

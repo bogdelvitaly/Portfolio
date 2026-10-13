@@ -32,6 +32,50 @@
     window.addEventListener("resize", function () { if (window.innerWidth >= 1024) setNav(false); });
   }
 
+  // Pictures open large on click (arrows / swipe through the case's pictures, Esc or a click closes)
+  var shots = $$(".case-screen img, .case-shot img");
+  if (shots.length) {
+    var box = document.createElement("div");
+    box.className = "lightbox";
+    box.setAttribute("role", "dialog");
+    box.setAttribute("aria-modal", "true");
+    box.setAttribute("aria-hidden", "true");
+    var arrow = function (d) { return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="' + d + '"/></svg>'; };
+    box.innerHTML = '<img alt="">' +
+      '<button class="lightbox-btn lightbox-close" type="button" aria-label="Close">' + arrow("M6 6l12 12M18 6 6 18") + '</button>' +
+      '<button class="lightbox-btn lightbox-prev" type="button" aria-label="Previous">' + arrow("M15 5l-7 7 7 7") + '</button>' +
+      '<button class="lightbox-btn lightbox-next" type="button" aria-label="Next">' + arrow("M9 5l7 7-7 7") + '</button>';
+    document.body.appendChild(box);
+    var big = box.querySelector("img");
+    var cur = 0;
+    var show = function (i) {
+      cur = (i + shots.length) % shots.length;
+      big.src = shots[cur].currentSrc || shots[cur].src;
+      big.alt = shots[cur].alt;
+    };
+    var open = function (i) {
+      show(i);
+      box.classList.add("is-open");
+      box.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    };
+    var close = function () {
+      box.classList.remove("is-open");
+      box.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    };
+    shots.forEach(function (img, i) { img.addEventListener("click", function () { open(i); }); });
+    box.addEventListener("click", function (e) { if (e.target === box || e.target === big || e.target.closest(".lightbox-close")) close(); });
+    box.querySelector(".lightbox-prev").addEventListener("click", function () { show(cur - 1); });
+    box.querySelector(".lightbox-next").addEventListener("click", function () { show(cur + 1); });
+    window.addEventListener("keydown", function (e) {
+      if (!box.classList.contains("is-open")) return;
+      if (e.key === "Escape") close();
+      else if (e.key === "ArrowLeft") show(cur - 1);
+      else if (e.key === "ArrowRight") show(cur + 1);
+    });
+  }
+
   if (reduceMotion || typeof window.gsap === "undefined" || typeof window.ScrollTrigger === "undefined") return;
 
   gsap.registerPlugin(ScrollTrigger);
