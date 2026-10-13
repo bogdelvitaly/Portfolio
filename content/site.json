@@ -4,18 +4,6 @@
   "faqTitle": "Frequently Asked Questions",
   "works": [
     {
-      "title": "Risk Calculator",
-      "category": "Insurance • UX/UI Design",
-      "caseSlug": "risk-calculation",
-      "image": "/assets/images/project-insurance.webp"
-    },
-    {
-      "title": "Wizart.ai",
-      "category": "E-Commerce • Product Design",
-      "caseSlug": "wizart",
-      "image": "/assets/images/project-wizart.webp"
-    },
-    {
       "title": "Logistic Service",
       "category": "Logistics • UX/UI Design",
       "caseSlug": "logistic-service",
@@ -32,6 +20,18 @@
       "category": "Data Manager • UX/UI",
       "caseSlug": "employee-relations",
       "image": "/assets/images/project-employee.webp"
+    },
+    {
+      "title": "Wizart.ai",
+      "category": "E-Commerce • Product Design",
+      "caseSlug": "wizart",
+      "image": "/assets/images/project-wizart.webp"
+    },
+    {
+      "title": "Risk Calculator",
+      "category": "Insurance • UX/UI Design",
+      "caseSlug": "risk-calculation",
+      "image": "/assets/images/project-insurance.webp"
     },
     {
       "title": "Bitcoin DE",
