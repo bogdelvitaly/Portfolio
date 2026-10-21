@@ -49,6 +49,43 @@
     });
   });
 
+  /* ---------- Experience: the left column follows the chapter in the middle of the screen ---------- */
+  var xpChapters = $$("[data-xp-ch]");
+  if (xpChapters.length) {
+    var xpWord = $("[data-xp-word]");
+    var xpNum = $("[data-xp-n]");
+    var xpLinks = $$("[data-xp-tl]");
+    var xpCur = 0;
+    var xpSet = function (i) {
+      if (i < 0 || i === xpCur) return;
+      xpCur = i;
+      xpLinks.forEach(function (a, k) { a.classList.toggle("is-active", k === i); });
+      if (xpNum) xpNum.textContent = String(i + 1).padStart(2, "0");
+      if (xpWord) {
+        xpWord.classList.add("is-swap");
+        setTimeout(function () { xpWord.textContent = xpChapters[xpCur].getAttribute("data-word"); xpWord.classList.remove("is-swap"); }, 160);
+      }
+    };
+    if ("IntersectionObserver" in window) {
+      var xpObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) xpSet(xpChapters.indexOf(e.target)); });
+      }, { rootMargin: "-45% 0px -50% 0px" });
+      xpChapters.forEach(function (c) { xpObs.observe(c); });
+    }
+    // the length of the current jobs keeps counting even if the page was built months ago
+    $$("[data-xp-dur]").forEach(function (el) {
+      var m = /^(\d{4})-(\d{2})$/.exec(el.getAttribute("data-start") || "");
+      if (!m) return;
+      var now = new Date();
+      var n = (now.getFullYear() - +m[1]) * 12 + (now.getMonth() + 1 - +m[2]) + 1;
+      if (n < 1) return;
+      var y = Math.floor(n / 12), mo = n % 12, p = [];
+      if (y) p.push(y + (y === 1 ? " yr" : " yrs"));
+      if (mo) p.push(mo + (mo === 1 ? " mo" : " mos"));
+      el.textContent = p.join(" ");
+    });
+  }
+
   /* ---------- Selected work: a tilted preview follows the hovered row (desktop with a mouse) ---------- */
   var worksList = $("[data-works]");
   var preview = $("[data-work-preview]");

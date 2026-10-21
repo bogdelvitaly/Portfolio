@@ -87,6 +87,43 @@ collections:
                 summary: "{{fields.point}}"
                 field: { label: "Point", name: "point", widget: "string" }
 
+          - { label: "Experience — heading (white part)", name: "experienceHeading", widget: "string" }
+          - { label: "Experience — heading (orange part)", name: "experienceHeadingAccent", widget: "string" }
+          - { label: "Experience — small note next to the heading (e.g. 2018 — now)", name: "experienceNote", widget: "string" }
+          - label: "Experience — jobs (newest first; drag to reorder)"
+            name: "experience"
+            widget: "list"
+            summary: "{{fields.company}} — {{fields.role}}"
+            fields:
+              - { label: "Company", name: "company", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Start (year-month, e.g. 2025-07)", name: "start", widget: "string", pattern: ["^\\d{4}-\\d{2}$", "Use the form 2025-07"] }
+              - { label: "End (year-month, e.g. 2025-04) — leave empty if it is your current job", name: "end", widget: "string", required: false, pattern: ["^(\\d{4}-\\d{2})?$", "Use the form 2025-04 or leave empty"] }
+              - { label: "Place (optional, e.g. Remote)", name: "place", widget: "string", required: false }
+              - { label: "Work format (optional, e.g. Part-time, NDA project)", name: "format", widget: "string", required: false }
+              - { label: "Small line above the company (optional, e.g. Where I am now)", name: "kicker", widget: "string", required: false }
+              - { label: "Big word in the left column (optional — by default Now for the current job, otherwise the start year)", name: "word", widget: "string", required: false }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - { label: "Label above the chips (optional, e.g. Modules I designed)", name: "chipsLabel", widget: "string", required: false }
+              - label: "Chips (optional)"
+                name: "chips"
+                widget: "list"
+                required: false
+                field: { label: "Chip", name: "chip", widget: "string" }
+              - label: "What I did"
+                name: "bullets"
+                widget: "list"
+                summary: "{{fields.bullet}}"
+                field: { label: "Point", name: "bullet", widget: "text" }
+              - label: "Tags (optional)"
+                name: "tags"
+                widget: "list"
+                required: false
+                field: { label: "Tag", name: "tag", widget: "string" }
+              - { label: "Link to a case study (optional — the case's URL slug, e.g. time2pack)", name: "caseSlug", widget: "string", required: false }
+          - { label: "Experience — education label", name: "experienceEducationLabel", widget: "string", required: false }
+          - { label: "Experience — education line", name: "experienceEducation", widget: "text", required: false }
+
           - { label: "FAQ — heading", name: "faqTitle", widget: "string" }
           - label: "FAQ — questions (the first one is open by default)"
             name: "faq"

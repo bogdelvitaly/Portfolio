@@ -44,6 +44,83 @@ const faq = arr(site.faq).map((f, i) => {
         </div>`;
 }).join("\n");
 
+
+// ----- Experience ("Where I've worked") -----
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const ym = (v) => { const m = /^(\d{4})-(\d{2})$/.exec(String(v || "")); return m ? { y: +m[1], m: +m[2] } : null; };
+const fmtMonth = (v) => { const d = ym(v); return d ? MONTHS[d.m - 1] + " " + d.y : ""; };
+// whole months from start to end (both months counted), "1 yr 3 mos"
+const durText = (start, end) => {
+  const a = ym(start); if (!a) return "";
+  const b = ym(end) || { y: new Date().getFullYear(), m: new Date().getMonth() + 1 };
+  const n = (b.y - a.y) * 12 + (b.m - a.m) + 1;
+  if (n < 1) return "";
+  const y = Math.floor(n / 12), m = n % 12, p = [];
+  if (y) p.push(y + (y === 1 ? " yr" : " yrs"));
+  if (m) p.push(m + (m === 1 ? " mo" : " mos"));
+  return p.join(" ");
+};
+const jobs = arr(site.experience);
+const jobWord = (j, i) => j.word || (i === 0 && !j.end ? "Now" : String(j.start || "").slice(0, 4));
+const SMALL_ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+const xpChapters = jobs.map((j, i) => {
+  const present = !j.end;
+  const n = String(i + 1).padStart(2, "0");
+  const word = jobWord(j, i);
+  const dates = fmtMonth(j.start) + " — " + (present ? "Present" : fmtMonth(j.end));
+  const dur = durText(j.start, j.end);
+  const meta = [
+    `<span>${esc(dates)}</span>`,
+    dur ? `<span${present ? ` data-xp-dur data-start="${esc(j.start)}"` : ""}>${esc(dur)}</span>` : "",
+    j.place ? `<span>${esc(j.place)}</span>` : "",
+    j.format ? `<span>${esc(j.format)}</span>` : ""
+  ].filter(Boolean).join('<span class="xp-sep" aria-hidden="true">·</span>');
+  const chips = arr(j.chips).length
+    ? `\n          ${j.chipsLabel ? `<p class="xp-label">${esc(j.chipsLabel)}</p>` : ""}<ul class="xp-chips">${arr(j.chips).map((c) => `<li>${esc(text(c))}</li>`).join("")}</ul>` : "";
+  const bullets = arr(j.bullets).map((b, k) => `<li><span class="xp-n">${String(k + 1).padStart(2, "0")}</span><p>${esc(text(b))}</p></li>`).join("\n            ");
+  const tags = arr(j.tags).length ? `\n          <ul class="xp-tags">${arr(j.tags).map((t) => `<li>${esc(text(t))}</li>`).join("")}</ul>` : "";
+  const link = j.caseSlug ? `\n          <a class="xp-case" href="work/${esc(j.caseSlug)}.html">Read the case study ${SMALL_ARROW}</a>` : "";
+  return `        <article class="xp-ch" id="xp-ch-${i + 1}" data-xp-ch data-word="${esc(word)}" data-reveal>
+          <p class="xp-word-m" aria-hidden="true">${esc(word)}</p>
+          <p class="xp-k"><span>Chapter ${n}</span>${j.kicker ? `<span class="xp-k-dim">${esc(j.kicker)}</span>` : ""}${present ? '<span class="xp-live">Present</span>' : ""}</p>
+          <div class="xp-hd"><h3 class="xp-company">${esc(j.company)}</h3><p class="xp-role">${esc(j.role)}</p></div>
+          <p class="xp-meta">${meta}</p>
+          <p class="xp-lead">${esc(j.summary)}</p>${chips}
+          <p class="xp-label">What I did</p>
+          <ol class="xp-list">
+            ${bullets}
+          </ol>${tags}${link}
+        </article>`;
+}).join("\n");
+const xpTimeline = jobs.map((j, i) => `            <li><a class="xp-tl${i === 0 ? " is-active" : ""}" href="#xp-ch-${i + 1}" data-xp-tl><span class="xp-tl-name">${esc(j.company)}</span><span class="xp-tl-year">${esc(String(j.start || "").slice(0, 4))}</span></a></li>`).join("\n");
+const experienceSection = jobs.length ? `    <!-- Experience -->
+    <section class="xp" id="experience" aria-labelledby="xp-title">
+      <div class="head-grid head-grid--dark">
+        <h2 class="display" id="xp-title" data-reveal>${esc(site.experienceHeading)} <span class="grad">${esc(site.experienceHeadingAccent)}</span></h2>
+        <p class="head-note" data-reveal data-delay="0.1">${esc(site.experienceNote)}</p>
+      </div>
+      <div class="xp-body">
+        <aside class="xp-side" aria-hidden="false">
+          <div class="xp-side-in">
+            <p class="xp-count">Chapter <b data-xp-n>01</b> / ${String(jobs.length).padStart(2, "0")}</p>
+            <div class="xp-word grad" data-xp-word aria-hidden="true">${esc(jobWord(jobs[0], 0))}</div>
+            <ol class="xp-timeline" aria-label="Jobs">
+${xpTimeline}
+            </ol>
+          </div>
+        </aside>
+        <div class="xp-chapters">
+${xpChapters}
+        </div>
+      </div>${site.experienceEducation ? `
+      <div class="xp-edu" data-reveal>
+        <p class="xp-label">${esc(site.experienceEducationLabel)}</p>
+        <p>${esc(site.experienceEducation)}</p>
+      </div>` : ""}
+    </section>
+
+` : "";
+
 const introNote = arr(site.introNote).map((p) => `          <p>${esc(text(p))}</p>`).join("\n");
 
 const html = `<!doctype html>
@@ -118,7 +195,7 @@ ${tagList(true)}
       </div>
     </section>
 
-    <!-- Selected work -->
+${experienceSection}    <!-- Selected work -->
     <section class="intro-light" aria-labelledby="work-title">
       <div class="head-grid">
         <h2 class="display" id="work-title" data-reveal>${esc(site.introHeading)} <span class="grad">${esc(site.introHeadingAccent)}</span></h2>
