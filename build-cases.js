@@ -80,7 +80,7 @@ const stepsHtml = (steps) => {
   const list = (steps || []).filter((x) => x && (x.title || x.text));
   if (!list.length) return "";
   return `
-        <ol class="cs-steps">${list.map((x, i) => `<li><span class="cs-step-n">${String(i + 1).padStart(2, "0")}</span>${x.title ? `<h3>${esc(x.title)}</h3>` : ""}${x.text ? `<p>${esc(x.text)}</p>` : ""}</li>`).join("")}</ol>`;
+        <ol class="cs-steps cs-steps--${list.length}">${list.map((x, i) => `<li><span class="cs-step-n">${String(i + 1).padStart(2, "0")}</span>${x.title ? `<h3>${esc(x.title)}</h3>` : ""}${x.text ? `<p>${esc(x.text)}</p>` : ""}</li>`).join("")}</ol>`;
 };
 
 function storySection(s, c) {

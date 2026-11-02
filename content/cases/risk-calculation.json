@@ -5,38 +5,112 @@
   "title": "Risk Calculation",
   "cardSummary": "An application that calculates insurance risk from a handful of inputs, built for the managers who help people get insured — not for actuaries.",
   "sub": "A web application that turns insurance risk assessment into a handful of inputs — built for the managers who help people get insured, not for actuaries.",
-  "meta": ["UI/UX Design", "Visual Direction", "Interaction Design"],
+  "meta": [
+    "UI/UX Design",
+    "Visual Direction",
+    "Interaction Design"
+  ],
   "cover": {
     "image": "/assets/images/project-insurance.webp",
     "alt": "Risk calculation dashboard on laptop and phone"
   },
   "sections": [
     {
-      "heading": "Wireframes",
+      "heading": "Overview",
+      "headline": "Risk assessment in a handful of inputs",
       "paragraphs": [
-        "We collected the requirements and started developing prototypes on top of them — first the controls, general navigation, and status displays, then a first draft of the risk-identification map. Visual interactions and a UI kit followed."
+        "A web application for the managers who help people get insured, not for actuaries. It turns insurance risk assessment into a handful of inputs and shows the result so that it can be read at a glance."
       ],
       "list": []
     },
     {
-      "heading": "Prototype",
+      "heading": "01 — Wireframes",
+      "headline": "From requirements to a first risk map",
+      "paragraphs": [
+        "We collected the requirements and developed prototypes on top of them. Visual interactions and a UI kit followed."
+      ],
+      "list": [],
+      "steps": [
+        {
+          "title": "Controls and navigation"
+        },
+        {
+          "title": "Status displays"
+        },
+        {
+          "title": "Risk-identification map",
+          "text": "A first draft."
+        }
+      ],
+      "shots": [
+        {
+          "images": [
+            "/assets/images/gallery/risk-1.webp"
+          ],
+          "height": 1000
+        }
+      ]
+    },
+    {
+      "heading": "02 — Prototype",
+      "headline": "From a structural outline to realistic components",
       "paragraphs": [
         "The prototype started as a structural outline. Once the client approved it, I moved to detailed prototypes built from realistic components — some elements were simplified, others rethought completely."
       ],
-      "list": []
+      "list": [],
+      "shots": [
+        {
+          "images": [
+            "/assets/images/gallery/risk-3.webp"
+          ],
+          "height": 1000
+        }
+      ]
     },
     {
-      "heading": "Visual Design",
+      "heading": "03 — Visual design",
+      "headline": "Colour that carries meaning",
       "paragraphs": [
-        "Risk needed to be readable at a glance, so color carries meaning throughout: you can tell which risk group something belongs to without reading a label. A UI kit followed — colors, type, components and their states, documented for reuse."
+        "Risk needed to be readable at a glance, so colour carries meaning throughout: you can tell which risk group something belongs to without reading a label.",
+        "A UI kit followed — colours, type, components and their states, documented for reuse."
       ],
-      "list": []
+      "list": [],
+      "shots": [
+        {
+          "images": [
+            "/assets/images/gallery/risk-2.webp"
+          ],
+          "height": 1000
+        }
+      ]
     }
   ],
-  "gallery": [
-    "/assets/images/gallery/risk-1.webp",
-    "/assets/images/gallery/risk-2.webp",
-    "/assets/images/gallery/risk-3.webp"
+  "gallery": [],
+  "result": "Managers can now process a client's risk profile in under 2 minutes — down from around 10. That difference shows up directly in how many contracts they can close in a day.",
+  "theme": "light",
+  "accent": "#c2301f",
+  "facts": [
+    {
+      "label": "Role",
+      "value": "UX/UI Designer"
+    },
+    {
+      "label": "Domain",
+      "value": "Insurance"
+    },
+    {
+      "label": "Platform",
+      "value": "Web application"
+    }
   ],
-  "result": "Managers can now process a client's risk profile in under 2 minutes — down from around 10. That difference shows up directly in how many contracts they can close in a day."
+  "designed": {
+    "label": "What I designed",
+    "tags": [
+      "UX/UI design",
+      "Visual direction",
+      "Interaction design",
+      "UI kit"
+    ],
+    "text": "A web application that turns insurance risk assessment into a handful of inputs, with a risk-identification map and a documented UI kit."
+  }
 }

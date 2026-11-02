@@ -5,59 +5,142 @@
   "title": "Wizart.ai",
   "cardSummary": "An ecosystem for material visualization and 3D content, helping shoppers see a product in their own space before they buy it.",
   "sub": "A product ecosystem for visualizing interior finishing materials — paints, wallpaper, flooring — across mobile, web and enterprise tools.",
-  "meta": ["UI/UX Design", "Analytics", "Design Systems", "Mobile"],
+  "meta": [
+    "UI/UX Design",
+    "Analytics",
+    "Design Systems",
+    "Mobile"
+  ],
   "cover": {
     "image": "/assets/images/project-wizart.webp",
     "alt": "Wizart.ai material visualization on a phone"
   },
   "sections": [
     {
-      "heading": "Product Ecosystem",
-      "paragraphs": ["The platform includes several interconnected services:"],
-      "list": [
-        "Mobile Visualizer for real-time material visualization",
-        "PIM system (Product Information Management)",
-        "Vision API for integration and recognition tasks",
-        "Material Cloud for centralized asset management"
-      ]
-    },
-    {
-      "heading": "User Research & CustDev",
+      "heading": "Overview",
+      "headline": "A product ecosystem for visualising interior materials",
       "paragraphs": [
-        "Ongoing research through surveys and in-store observations in construction retail environments validated hypotheses and shaped new product directions based on real purchasing behavior."
+        "Wizart helps shoppers see a product in their own space before they buy it: paints, wallpaper and flooring across mobile, web and enterprise tools.",
+        "I designed new features, led research, ideation, prototyping and usability testing together with product and engineering teams, and kept the design documentation consistent across releases."
       ],
       "list": []
     },
     {
-      "heading": "Analytics-Driven Design",
-      "paragraphs": ["Product decisions were guided by data, not opinion. Key metrics included:"],
-      "list": [
-        "Total users, sessions, and renders",
-        "Usage of custom vs. predefined interiors",
-        "Conversion funnel: product selection → cart → checkout",
-        "Most frequently used materials and products",
-        "Behavioral insights gathered via Microsoft Clarity"
+      "heading": "01 — Product ecosystem",
+      "headline": "Four connected services",
+      "paragraphs": [
+        "The platform includes several interconnected services."
+      ],
+      "list": [],
+      "steps": [
+        {
+          "title": "Mobile Visualizer",
+          "text": "Real-time material visualisation."
+        },
+        {
+          "title": "PIM system",
+          "text": "Product Information Management."
+        },
+        {
+          "title": "Vision API",
+          "text": "Integration and recognition tasks."
+        },
+        {
+          "title": "Material Cloud",
+          "text": "Centralised asset management."
+        }
+      ],
+      "shots": [
+        {
+          "images": [
+            "/assets/images/gallery/wizart-1.webp",
+            "/assets/images/gallery/wizart-2.webp"
+          ],
+          "height": 1000
+        },
+        {
+          "images": [
+            "/assets/images/gallery/wizart-3.webp"
+          ],
+          "height": 1000
+        }
       ]
     },
     {
-      "heading": "Design System",
+      "heading": "02 — Research",
+      "headline": "Hypotheses tested where purchases happen",
+      "paragraphs": [
+        "Ongoing research through surveys and in-store observations in construction retail validated hypotheses and shaped new product directions based on real purchasing behaviour."
+      ],
+      "list": []
+    },
+    {
+      "heading": "03 — Analytics",
+      "headline": "Decisions guided by data, not opinion",
+      "paragraphs": [
+        "Key metrics included:"
+      ],
+      "list": [
+        "Total users, sessions and renders",
+        "Usage of custom vs. predefined interiors",
+        "Conversion funnel: product selection → cart → checkout",
+        "Most frequently used materials and products",
+        "Behavioural insights gathered via Microsoft Clarity"
+      ]
+    },
+    {
+      "heading": "04 — Design system",
+      "headline": "Atomic design for a scalable ecosystem",
       "paragraphs": [
         "A structured system built on atomic design principles kept the product scalable and consistent — reusable navigation, forms, tables and controls, shared across every product in the ecosystem."
       ],
       "list": []
     },
     {
-      "heading": "Marketing & Print",
+      "heading": "05 — Marketing and print",
+      "headline": "Beyond the digital product",
       "paragraphs": [
-        "Beyond the digital product, I designed brochures, catalogs, flyers, books and exhibition stands — refined through continuous feedback loops with the client."
+        "I also designed brochures, catalogs, flyers, books and exhibition stands, refined through continuous feedback loops with the client."
       ],
       "list": []
     }
   ],
-  "gallery": [
-    "/assets/images/gallery/wizart-1.webp",
-    "/assets/images/gallery/wizart-2.webp",
-    "/assets/images/gallery/wizart-3.webp"
+  "gallery": [],
+  "result": "Improvements shipped on the back of usage analytics increased feature adoption by 12%.",
+  "theme": "light",
+  "accent": "#0f766e",
+  "facts": [
+    {
+      "label": "Company",
+      "value": "Wizart"
+    },
+    {
+      "label": "Role",
+      "value": "Product Designer"
+    },
+    {
+      "label": "Period",
+      "value": "May 2022 — Mar 2024"
+    },
+    {
+      "label": "Platform",
+      "value": "Mobile, web, enterprise tools"
+    },
+    {
+      "label": "Domain",
+      "value": "E-commerce · Visualisation"
+    }
   ],
-  "result": ""
+  "designed": {
+    "label": "What I designed",
+    "tags": [
+      "Product design",
+      "UX research",
+      "Analytics",
+      "Design system",
+      "Mobile",
+      "Print"
+    ],
+    "text": ""
+  }
 }

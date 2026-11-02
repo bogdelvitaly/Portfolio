@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="../css/style.css">
   <script src="../js/scale.js"></script>
 </head>
-<body class="case-page" id="top">
+<body class="case-page case-page--light" id="top" style="--case-accent:#1d4ed8">
   <header class="site-header" data-header>
     <a class="logo" href="../index.html#top" aria-label="V. Bogdel — home"><span>V</span><span class="logo-dot">.</span><span> BOGDEL</span><span class="logo-dot">.</span></a>
     <nav class="tabs" aria-label="Main">
@@ -53,52 +53,71 @@
       <p class="case-eyebrow" data-reveal>Data Manager · UX/UI</p>
       <h1 class="case-title case-title--long" data-reveal>Employee Relations Manager</h1>
       <p class="case-sub" data-reveal>A mobile and web platform that gives employees one place to access company information, manage schedules, and stay connected.</p>
-      <div class="case-chips" data-reveal><span class="chip">Mobile UI</span><span class="chip">Stakeholder Alignment</span><span class="chip">Design Systems</span></div>
+      <dl class="case-facts" data-reveal><div><dt>Role</dt><dd>UX/UI Designer</dd></div><div><dt>Platform</dt><dd>Mobile · web</dd></div><div><dt>Domain</dt><dd>HR · Enterprise</dd></div></dl>
+      <div class="case-chips case-chips--after-facts" data-reveal><span class="chip">Mobile UI</span><span class="chip">Stakeholder Alignment</span><span class="chip">Design Systems</span></div>
       <figure class="case-cover" data-reveal><img src="../assets/images/project-employee.webp" alt="Employee Relations Manager platform interface" fetchpriority="high"></figure>
     </section>
 
     <div class="case-body">
-      <section class="case-section" data-reveal>
-        <h2 class="case-section-title">Challenge</h2>
-        <div class="case-section-copy">
-          <p>A large number of stakeholders with different priorities made alignment slow, and there was no direct access to end users early on, which limited how well assumptions could be validated. The product still needed several business-critical modules: work schedules, an internal chatbot, salary calculations, and reporting.</p>
+      <section class="cs" data-reveal>
+        <p class="cs-eyebrow">Overview</p>
+        <div class="cs-top">
+          <h2 class="cs-headline">One place for everything employees need</h2>
+          <div class="cs-copy"><p>A mobile and web platform that gives employees one place to access company information, manage schedules and stay connected.</p></div>
         </div>
       </section>
-      <section class="case-section" data-reveal>
-        <h2 class="case-section-title">Process</h2>
-        <div class="case-section-copy">
-          <p>Low-fidelity prototypes went to stakeholders for feedback first. Narrowing the number of decision-makers over time sped up iteration and sharpened discussion. Once core workflows were validated, I moved into visual design and reusable components. User testing wasn't available up front, but the first release generated real employee feedback that shaped later refinements — and pushed the team toward a more user-centered process going forward.</p>
+      <section class="cs" data-reveal>
+        <p class="cs-eyebrow">The challenge</p>
+        <div class="cs-top">
+          <h2 class="cs-headline">Many stakeholders, no early access to users</h2>
+          <div class="cs-copy"><p>A large number of stakeholders with different priorities made alignment slow, and there was no direct access to end users early on, which limited how well assumptions could be validated. The product still needed several business-critical modules.</p></div>
+        </div>
+        <ol class="cs-steps cs-steps--4"><li><span class="cs-step-n">01</span><h3>Work schedules</h3></li><li><span class="cs-step-n">02</span><h3>Internal chatbot</h3></li><li><span class="cs-step-n">03</span><h3>Salary calculations</h3></li><li><span class="cs-step-n">04</span><h3>Reporting</h3></li></ol>
+      </section>
+      <section class="cs" data-reveal>
+        <p class="cs-eyebrow">Process</p>
+        <div class="cs-top">
+          <h2 class="cs-headline">Fewer decision-makers, faster iteration</h2>
+          <div class="cs-copy"><p>Low-fidelity prototypes went to stakeholders for feedback first. Narrowing the number of decision-makers over time sped up iteration and sharpened the discussion. Once the core workflows were validated, I moved into visual design and reusable components.</p><p>User testing was not available up front, but the first release generated real employee feedback that shaped later refinements and pushed the team toward a more user-centred process.</p></div>
         </div>
       </section>
-      <section class="case-section" data-reveal>
-        <h2 class="case-section-title">Work Schedules</h2>
-        <div class="case-section-copy">
-          <p>Employees get instant access to their hours and daily status. Managers get more: visibility into subordinate schedules, and the ability to edit shifts, hours and attendance directly in the system.</p>
+      <section class="cs" data-reveal>
+        <p class="cs-eyebrow">01 — Work schedules</p>
+        <div class="cs-top">
+          <h2 class="cs-headline">Hours at a glance, control for managers</h2>
+          <div class="cs-copy"><p>Employees get instant access to their hours and daily status. Managers get more: visibility into subordinates’ schedules and the ability to edit shifts, hours and attendance directly in the system.</p></div>
         </div>
+        <div class="case-shots" style="--shots-max: calc(1.7778 * 1000 * var(--u) + 0 * var(--shots-gap))"><figure class="case-screen" style="flex:1.7778 1 0"><img src="../assets/images/gallery/employee-1.webp" alt="Employee Relations Manager — 01 — Work schedules, screen 1" width="1600" height="900" loading="lazy"></figure></div>
       </section>
-      <section class="case-section" data-reveal>
-        <h2 class="case-section-title">Chatbot</h2>
-        <div class="case-section-copy">
-          <p>An internal chatbot simplifies access to company information through a deliberately simple flow:</p>
-          <ul><li>Select a topic of interest</li><li>Choose a predefined question or category</li><li>Get the answer, or submit a new question</li></ul>
+      <section class="cs" data-reveal>
+        <p class="cs-eyebrow">02 — Chatbot</p>
+        <div class="cs-top">
+          <h2 class="cs-headline">A deliberately simple flow</h2>
+          <div class="cs-copy"><p>An internal chatbot simplifies access to company information.</p></div>
         </div>
+        <ol class="cs-steps cs-steps--3"><li><span class="cs-step-n">01</span><h3>Select a topic of interest</h3></li><li><span class="cs-step-n">02</span><h3>Choose a predefined question or category</h3></li><li><span class="cs-step-n">03</span><h3>Get the answer, or submit a new question</h3></li></ol>
+        <div class="case-shots" style="--shots-max: calc(1.7778 * 1000 * var(--u) + 0 * var(--shots-gap))"><figure class="case-screen" style="flex:1.7778 1 0"><img src="../assets/images/gallery/employee-2.webp" alt="Employee Relations Manager — 02 — Chatbot, screen 1" width="1600" height="900" loading="lazy"></figure></div>
       </section>
-      <section class="case-section" data-reveal>
-        <h2 class="case-section-title">Salary Calculator &amp; Reports</h2>
-        <div class="case-section-copy">
-          <p>A dedicated module helps employees understand their earnings and bonus calculations — entering relevant data, calculating expected payments, reviewing bonuses, and tracking changes over time.</p>
+      <section class="cs" data-reveal>
+        <p class="cs-eyebrow">03 — Salary calculator and reports</p>
+        <div class="cs-top">
+          <h2 class="cs-headline">Earnings and bonuses, made understandable</h2>
+          <div class="cs-copy"><p>A dedicated module helps employees understand their earnings and bonus calculations: entering relevant data, calculating expected payments, reviewing bonuses and tracking changes over time.</p></div>
         </div>
+        <div class="case-shots" style="--shots-max: calc(1.7778 * 1000 * var(--u) + 0 * var(--shots-gap))"><figure class="case-screen" style="flex:1.7778 1 0"><img src="../assets/images/gallery/employee-3.webp" alt="Employee Relations Manager — 03 — Salary calculator and reports, screen 1" width="1600" height="900" loading="lazy"></figure></div>
       </section>
-      <div class="case-gallery">
-        <figure class="case-shot" data-reveal><img src="../assets/images/gallery/employee-1.webp" alt="Employee Relations Manager — screen 1"></figure>
-        <figure class="case-shot" data-reveal><img src="../assets/images/gallery/employee-2.webp" alt="Employee Relations Manager — screen 2"></figure>
-        <figure class="case-shot case-shot--full" data-reveal><img src="../assets/images/gallery/employee-3.webp" alt="Employee Relations Manager — screen 3"></figure>
-      </div>
+
       <section class="case-result" data-reveal>
         <h2 class="case-section-title">Result</h2>
         <p>The platform unified essential employee services into one ecosystem — better access to information, more transparency, and simpler everyday interactions between employees and the company.</p>
       </section>
-
+      <section class="case-designed" data-reveal>
+        <h2 class="cs-eyebrow">What I designed</h2>
+        <div class="case-designed-in">
+          <ul class="case-designed-tags"><li>Mobile UI</li><li>Stakeholder alignment</li><li>Design system</li></ul>
+          
+        </div>
+      </section>
     </div>
 
     <section class="case-next">

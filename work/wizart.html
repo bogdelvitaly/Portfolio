@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="../css/style.css">
   <script src="../js/scale.js"></script>
 </head>
-<body class="case-page" id="top">
+<body class="case-page case-page--light" id="top" style="--case-accent:#0f766e">
   <header class="site-header" data-header>
     <a class="logo" href="../index.html#top" aria-label="V. Bogdel — home"><span>V</span><span class="logo-dot">.</span><span> BOGDEL</span><span class="logo-dot">.</span></a>
     <nav class="tabs" aria-label="Main">
@@ -53,50 +53,69 @@
       <p class="case-eyebrow" data-reveal>E-Commerce · Product Design</p>
       <h1 class="case-title" data-reveal>Wizart.ai</h1>
       <p class="case-sub" data-reveal>A product ecosystem for visualizing interior finishing materials — paints, wallpaper, flooring — across mobile, web and enterprise tools.</p>
-      <div class="case-chips" data-reveal><span class="chip">UI/UX Design</span><span class="chip">Analytics</span><span class="chip">Design Systems</span><span class="chip">Mobile</span></div>
+      <dl class="case-facts" data-reveal><div><dt>Company</dt><dd>Wizart</dd></div><div><dt>Role</dt><dd>Product Designer</dd></div><div><dt>Period</dt><dd>May 2022 — Mar 2024</dd></div><div><dt>Platform</dt><dd>Mobile, web, enterprise tools</dd></div><div><dt>Domain</dt><dd>E-commerce · Visualisation</dd></div></dl>
+      <div class="case-chips case-chips--after-facts" data-reveal><span class="chip">UI/UX Design</span><span class="chip">Analytics</span><span class="chip">Design Systems</span><span class="chip">Mobile</span></div>
       <figure class="case-cover" data-reveal><img src="../assets/images/project-wizart.webp" alt="Wizart.ai material visualization on a phone" fetchpriority="high"></figure>
     </section>
 
     <div class="case-body">
-      <section class="case-section" data-reveal>
-        <h2 class="case-section-title">Product Ecosystem</h2>
-        <div class="case-section-copy">
-          <p>The platform includes several interconnected services:</p>
-          <ul><li>Mobile Visualizer for real-time material visualization</li><li>PIM system (Product Information Management)</li><li>Vision API for integration and recognition tasks</li><li>Material Cloud for centralized asset management</li></ul>
+      <section class="cs" data-reveal>
+        <p class="cs-eyebrow">Overview</p>
+        <div class="cs-top">
+          <h2 class="cs-headline">A product ecosystem for visualising interior materials</h2>
+          <div class="cs-copy"><p>Wizart helps shoppers see a product in their own space before they buy it: paints, wallpaper and flooring across mobile, web and enterprise tools.</p><p>I designed new features, led research, ideation, prototyping and usability testing together with product and engineering teams, and kept the design documentation consistent across releases.</p></div>
         </div>
       </section>
-      <section class="case-section" data-reveal>
-        <h2 class="case-section-title">User Research &amp; CustDev</h2>
-        <div class="case-section-copy">
-          <p>Ongoing research through surveys and in-store observations in construction retail environments validated hypotheses and shaped new product directions based on real purchasing behavior.</p>
+      <section class="cs" data-reveal>
+        <p class="cs-eyebrow">01 — Product ecosystem</p>
+        <div class="cs-top">
+          <h2 class="cs-headline">Four connected services</h2>
+          <div class="cs-copy"><p>The platform includes several interconnected services.</p></div>
+        </div>
+        <ol class="cs-steps cs-steps--4"><li><span class="cs-step-n">01</span><h3>Mobile Visualizer</h3><p>Real-time material visualisation.</p></li><li><span class="cs-step-n">02</span><h3>PIM system</h3><p>Product Information Management.</p></li><li><span class="cs-step-n">03</span><h3>Vision API</h3><p>Integration and recognition tasks.</p></li><li><span class="cs-step-n">04</span><h3>Material Cloud</h3><p>Centralised asset management.</p></li></ol>
+        <div class="case-shots" style="--shots-max: calc(3.5556 * 1000 * var(--u) + 1 * var(--shots-gap))"><figure class="case-screen" style="flex:1.7778 1 0"><img src="../assets/images/gallery/wizart-1.webp" alt="Wizart.ai — 01 — Product ecosystem, screen 1" width="1600" height="900" loading="lazy"></figure><figure class="case-screen" style="flex:1.7778 1 0"><img src="../assets/images/gallery/wizart-2.webp" alt="Wizart.ai — 01 — Product ecosystem, screen 2" width="1600" height="900" loading="lazy"></figure></div>
+        <div class="case-shots" style="--shots-max: calc(1.7778 * 1000 * var(--u) + 0 * var(--shots-gap))"><figure class="case-screen" style="flex:1.7778 1 0"><img src="../assets/images/gallery/wizart-3.webp" alt="Wizart.ai — 01 — Product ecosystem, screen 3" width="1600" height="900" loading="lazy"></figure></div>
+      </section>
+      <section class="cs" data-reveal>
+        <p class="cs-eyebrow">02 — Research</p>
+        <div class="cs-top">
+          <h2 class="cs-headline">Hypotheses tested where purchases happen</h2>
+          <div class="cs-copy"><p>Ongoing research through surveys and in-store observations in construction retail validated hypotheses and shaped new product directions based on real purchasing behaviour.</p></div>
         </div>
       </section>
-      <section class="case-section" data-reveal>
-        <h2 class="case-section-title">Analytics-Driven Design</h2>
-        <div class="case-section-copy">
-          <p>Product decisions were guided by data, not opinion. Key metrics included:</p>
-          <ul><li>Total users, sessions, and renders</li><li>Usage of custom vs. predefined interiors</li><li>Conversion funnel: product selection → cart → checkout</li><li>Most frequently used materials and products</li><li>Behavioral insights gathered via Microsoft Clarity</li></ul>
+      <section class="cs" data-reveal>
+        <p class="cs-eyebrow">03 — Analytics</p>
+        <div class="cs-top">
+          <h2 class="cs-headline">Decisions guided by data, not opinion</h2>
+          <div class="cs-copy"><p>Key metrics included:</p><ul><li>Total users, sessions and renders</li><li>Usage of custom vs. predefined interiors</li><li>Conversion funnel: product selection → cart → checkout</li><li>Most frequently used materials and products</li><li>Behavioural insights gathered via Microsoft Clarity</li></ul></div>
         </div>
       </section>
-      <section class="case-section" data-reveal>
-        <h2 class="case-section-title">Design System</h2>
-        <div class="case-section-copy">
-          <p>A structured system built on atomic design principles kept the product scalable and consistent — reusable navigation, forms, tables and controls, shared across every product in the ecosystem.</p>
+      <section class="cs" data-reveal>
+        <p class="cs-eyebrow">04 — Design system</p>
+        <div class="cs-top">
+          <h2 class="cs-headline">Atomic design for a scalable ecosystem</h2>
+          <div class="cs-copy"><p>A structured system built on atomic design principles kept the product scalable and consistent — reusable navigation, forms, tables and controls, shared across every product in the ecosystem.</p></div>
         </div>
       </section>
-      <section class="case-section" data-reveal>
-        <h2 class="case-section-title">Marketing &amp; Print</h2>
-        <div class="case-section-copy">
-          <p>Beyond the digital product, I designed brochures, catalogs, flyers, books and exhibition stands — refined through continuous feedback loops with the client.</p>
+      <section class="cs" data-reveal>
+        <p class="cs-eyebrow">05 — Marketing and print</p>
+        <div class="cs-top">
+          <h2 class="cs-headline">Beyond the digital product</h2>
+          <div class="cs-copy"><p>I also designed brochures, catalogs, flyers, books and exhibition stands, refined through continuous feedback loops with the client.</p></div>
         </div>
       </section>
-      <div class="case-gallery">
-        <figure class="case-shot" data-reveal><img src="../assets/images/gallery/wizart-1.webp" alt="Wizart.ai — screen 1"></figure>
-        <figure class="case-shot" data-reveal><img src="../assets/images/gallery/wizart-2.webp" alt="Wizart.ai — screen 2"></figure>
-        <figure class="case-shot case-shot--full" data-reveal><img src="../assets/images/gallery/wizart-3.webp" alt="Wizart.ai — screen 3"></figure>
-      </div>
 
-
+      <section class="case-result" data-reveal>
+        <h2 class="case-section-title">Result</h2>
+        <p>Improvements shipped on the back of usage analytics increased feature adoption by 12%.</p>
+      </section>
+      <section class="case-designed" data-reveal>
+        <h2 class="cs-eyebrow">What I designed</h2>
+        <div class="case-designed-in">
+          <ul class="case-designed-tags"><li>Product design</li><li>UX research</li><li>Analytics</li><li>Design system</li><li>Mobile</li><li>Print</li></ul>
+          
+        </div>
+      </section>
     </div>
 
     <section class="case-next">

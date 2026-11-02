@@ -334,7 +334,7 @@ ul, ol { list-style: none; }
 .case-page { --case-accent: var(--o1); --cp-fg: var(--text); --cp-muted: var(--muted); --cp-line: var(--line); }
 
 /* ---------- Case pages ---------- */
-.case-hero { padding: clamp(calc(110 * var(--u)), 16vh, calc(180 * var(--u))) var(--pad) 0; }
+.case-hero { padding: clamp(calc(110 * var(--u)), 16vh, calc(180 * var(--u))) max(var(--pad), calc((100% - 1400 * var(--u)) / 2)) 0; }
 .case-back { display: inline-flex; align-items: center; gap: 0.6em; margin-bottom: clamp(calc(28 * var(--u)), 6vh, calc(60 * var(--u))); color: var(--muted); font-size: clamp(0.9rem, 1.1vw, 1.1rem); transition: color 0.3s ease; }
 .case-back svg { width: 1.1em; height: 1.1em; transition: transform 0.3s ease; }
 .case-back:hover { color: #fff; }
@@ -349,7 +349,7 @@ ul, ol { list-style: none; }
 .case-cover { border-radius: clamp(calc(20 * var(--u)), 2.4vw, calc(36 * var(--u))); }
 .case-cover img, .case-shot img { width: 100%; height: auto; }
 
-.case-body { padding: clamp(calc(60 * var(--u)), 12vh, calc(140 * var(--u))) var(--pad) 0; }
+.case-body { padding: clamp(calc(60 * var(--u)), 12vh, calc(140 * var(--u))) max(var(--pad), calc((100% - 1400 * var(--u)) / 2)) 0; }
 .case-section { display: grid; grid-template-columns: minmax(calc(180 * var(--u)), 1fr) 2fr; gap: clamp(calc(20 * var(--u)), 5vw, calc(100 * var(--u))); padding: clamp(calc(28 * var(--u)), 5vh, calc(56 * var(--u))) 0; border-top: calc(1 * var(--u)) solid var(--cp-line); }
 .case-section-title { font-weight: 300; font-size: clamp(1.6rem, 2.6vw, 3rem); line-height: 1.1; letter-spacing: -0.02em; }
 .case-section-copy p, .case-section-copy li { color: var(--cp-muted); font-size: clamp(1rem, 1.25vw, 1.3rem); line-height: 1.65; }
@@ -374,7 +374,7 @@ ul, ol { list-style: none; }
 .case-result::before { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(60% 120% at 100% 100%, rgba(242, 107, 15, 0.35), transparent 70%); }
 .case-result p { max-width: 40em; font-size: clamp(1.1rem, 1.6vw, 1.7rem); line-height: 1.5; }
 
-.case-next { padding: clamp(calc(80 * var(--u)), 14vh, calc(160 * var(--u))) var(--pad); }
+.case-next { padding: clamp(calc(80 * var(--u)), 14vh, calc(160 * var(--u))) max(var(--pad), calc((100% - 1400 * var(--u)) / 2)); }
 .case-next-card {
   position: relative; isolation: isolate; overflow: hidden; display: flex; align-items: center; justify-content: space-between; gap: calc(24 * var(--u));
   padding: clamp(calc(24 * var(--u)), 3vw, calc(56 * var(--u))); border: calc(1 * var(--u)) solid rgba(255, 255, 255, 0.14); border-radius: clamp(calc(20 * var(--u)), 2.4vw, calc(36 * var(--u))); transition: border-color 0.5s ease;
@@ -496,6 +496,9 @@ ul, ol { list-style: none; }
 .cs-copy li::before { content: ""; position: absolute; left: 0; top: 0.85em; width: 0.9em; height: calc(2 * var(--u)); background: var(--case-accent); }
 .cs-steps { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: calc(40 * var(--u)) clamp(calc(20 * var(--u)), 3vw, calc(56 * var(--u))); margin-top: clamp(calc(40 * var(--u)), 7vh, calc(80 * var(--u))); }
 .cs-steps li { padding-top: calc(18 * var(--u)); border-top: calc(1 * var(--u)) solid var(--cp-line); }
+.cs-steps--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.cs-steps--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 1100px) and (min-width: 900px) { .cs-steps--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .cs-step-n { display: block; margin-bottom: calc(18 * var(--u)); font-family: var(--font-mono); font-weight: 500; font-size: calc(12 * var(--u)); letter-spacing: 0.1em; color: var(--case-accent); }
 .cs-steps h3 { font-weight: 500; font-size: clamp(1.1rem, 1.5vw, 1.55rem); line-height: 1.2; letter-spacing: -0.01em; color: var(--cp-fg); }
 .cs-steps p { margin-top: 0.7em; color: var(--cp-muted); font-size: clamp(0.95rem, 1.05vw, 1.1rem); line-height: 1.55; }
@@ -517,5 +520,8 @@ ul, ol { list-style: none; }
 
 @media (max-width: 899px) {
   .cs-top, .case-designed { grid-template-columns: 1fr; }
-  .cs-steps { grid-template-columns: 1fr; }
+  .cs-steps, .cs-steps--2, .cs-steps--4 { grid-template-columns: 1fr; }
 }
+/* the accent is tuned for the light body; on the dark hero the small label gets a lighter tone */
+.case-page--light .case-hero .case-eyebrow { color: var(--case-accent); color: color-mix(in srgb, var(--case-accent) 55%, #fff); }
+.case-result { color: var(--text); }
