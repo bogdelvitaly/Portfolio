@@ -87,7 +87,8 @@ collections:
                 summary: "{{fields.point}}"
                 field: { label: "Point", name: "point", widget: "string" }
 
-          - { label: "Experience — heading (white part)", name: "experienceHeading", widget: "string" }
+          - { label: "Experience — theme", name: "experienceTheme", widget: "select", options: [{ label: "Light", value: "light" }, { label: "Dark", value: "dark" }], default: "light" }
+          - { label: "Experience — heading (first part)", name: "experienceHeading", widget: "string" }
           - { label: "Experience — heading (orange part)", name: "experienceHeadingAccent", widget: "string" }
           - { label: "Experience — small note next to the heading (e.g. 2018 — now)", name: "experienceNote", widget: "string" }
           - label: "Experience — jobs (newest first; drag to reorder)"
@@ -161,6 +162,16 @@ collections:
         name: "meta"
         widget: "list"
         field: { label: "Tag", name: "tag", widget: "string" }
+      - label: "Key facts strip under the intro (optional — e.g. Client / Role / Platform / Period)"
+        name: "facts"
+        widget: "list"
+        required: false
+        summary: "{{fields.label}}: {{fields.value}}"
+        fields:
+          - { label: "Label (e.g. Client)", name: "label", widget: "string" }
+          - { label: "Value (e.g. Confidential, NDA)", name: "value", widget: "string" }
+      - { label: "Page theme under the cover", name: "theme", widget: "select", options: [{ label: "Dark", value: "dark" }, { label: "Light", value: "light" }], default: "dark", required: false }
+      - { label: "Accent colour of the case (optional — e.g. #ff5800)", name: "accent", widget: "color", required: false, allowInput: true }
       - label: "Cover image"
         name: "cover"
         widget: "object"
@@ -172,7 +183,16 @@ collections:
         widget: "list"
         summary: "{{fields.heading}}"
         fields:
-          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Heading (small label above the headline; used on its own in the old layout)", name: "heading", widget: "string" }
+          - { label: "Headline — one big sentence (optional; when filled, the section uses the new layout)", name: "headline", widget: "string", required: false }
+          - label: "Numbered cards (optional — steps, decisions, parts)"
+            name: "steps"
+            widget: "list"
+            required: false
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string", required: false }
+              - { label: "Short text", name: "text", widget: "text", required: false }
           - label: "Paragraphs"
             name: "paragraphs"
             widget: "list"
@@ -199,3 +219,15 @@ collections:
         required: false
         field: { label: "Image", name: "image", widget: "image" }
       - { label: "Result / outcome (optional — leave blank to hide this block)", name: "result", widget: "text", required: false }
+      - label: "What I designed (optional closing block)"
+        name: "designed"
+        widget: "object"
+        required: false
+        fields:
+          - { label: "Label", name: "label", widget: "string", required: false }
+          - label: "Tags"
+            name: "tags"
+            widget: "list"
+            required: false
+            field: { label: "Tag", name: "tag", widget: "string" }
+          - { label: "Text", name: "text", widget: "text", required: false }

@@ -76,7 +76,27 @@ function shots(s, c) {
   }).join("");
 }
 
+const stepsHtml = (steps) => {
+  const list = (steps || []).filter((x) => x && (x.title || x.text));
+  if (!list.length) return "";
+  return `
+        <ol class="cs-steps">${list.map((x, i) => `<li><span class="cs-step-n">${String(i + 1).padStart(2, "0")}</span>${x.title ? `<h3>${esc(x.title)}</h3>` : ""}${x.text ? `<p>${esc(x.text)}</p>` : ""}</li>`).join("")}</ol>`;
+};
+
+function storySection(s, c) {
+  const paras = (s.paragraphs || []).map((p) => `<p>${esc(p)}</p>`).join("");
+  const list = (s.list && s.list.length) ? `<ul>${s.list.map((i) => `<li>${esc(i)}</li>`).join("")}</ul>` : "";
+  return `      <section class="cs" data-reveal>
+        <p class="cs-eyebrow">${esc(s.eyebrow || s.heading)}</p>
+        <div class="cs-top">
+          <h2 class="cs-headline">${esc(s.headline)}</h2>
+          <div class="cs-copy">${paras}${list}</div>
+        </div>${stepsHtml(s.steps)}${shots(s, c)}
+      </section>`;
+}
+
 function section(s, c) {
+  if (s.headline) return storySection(s, c);
   const paras = (s.paragraphs || []).map((p) => `<p>${esc(p)}</p>`).join("\n          ");
   const list = (s.list && s.list.length)
     ? `\n          <ul>${s.list.map((i) => `<li>${esc(i)}</li>`).join("")}</ul>` : "";
@@ -104,6 +124,19 @@ function page(c, i) {
   const others = [];
   for (let k = 1; k < cases.length && others.length < 3; k++) others.push(cases[(i + k) % cases.length]);
   const chips = (c.meta || []).map((m) => `<span class="chip">${esc(m)}</span>`).join("");
+  const facts = (c.facts || []).filter((f) => f && f.label && f.value);
+  const factsHtml = facts.length
+    ? `      <dl class="case-facts" data-reveal>${facts.map((f) => `<div><dt>${esc(f.label)}</dt><dd>${esc(f.value)}</dd></div>`).join("")}</dl>\n` : "";
+  const light = c.theme === "light";
+  const accent = /^#[0-9a-fA-F]{3,8}$/.test(String(c.accent || "")) ? c.accent : "";
+  const designed = c.designed && (c.designed.text || (c.designed.tags || []).length)
+    ? `      <section class="case-designed" data-reveal>
+        <h2 class="cs-eyebrow">${esc(c.designed.label || "What I designed")}</h2>
+        <div class="case-designed-in">
+          ${(c.designed.tags || []).length ? `<ul class="case-designed-tags">${c.designed.tags.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>` : ""}
+          ${c.designed.text ? `<p>${esc(c.designed.text)}</p>` : ""}
+        </div>
+      </section>` : "";
   const result = c.result
     ? `      <section class="case-result" data-reveal>
         <h2 class="case-section-title">Result</h2>
@@ -136,7 +169,7 @@ function page(c, i) {
   <link rel="stylesheet" href="../css/style.css">
   <script src="../js/scale.js"></script>
 </head>
-<body class="case-page" id="top">
+<body class="case-page${light ? " case-page--light" : ""}" id="top"${accent ? ` style="--case-accent:${accent}"` : ""}>
   <header class="site-header" data-header>
     <a class="logo" href="../index.html#top" aria-label="V. Bogdel — home"><span>V</span><span class="logo-dot">.</span><span> BOGDEL</span><span class="logo-dot">.</span></a>
     <nav class="tabs" aria-label="Main">
@@ -165,7 +198,7 @@ function page(c, i) {
       <p class="case-eyebrow" data-reveal>${esc(c.category)}</p>
       <h1 class="case-title${c.title.length > 22 ? " case-title--long" : ""}" data-reveal>${esc(c.title)}</h1>
       <p class="case-sub" data-reveal>${esc(c.sub)}</p>
-      <div class="case-chips" data-reveal>${chips}</div>
+${factsHtml}      <div class="case-chips${facts.length ? " case-chips--after-facts" : ""}" data-reveal>${chips}</div>
       <figure class="case-cover" data-reveal><img src="${esc(rel(c.cover.image))}" alt="${esc(c.cover.alt || c.title)}" fetchpriority="high"></figure>
     </section>
 
@@ -173,6 +206,7 @@ function page(c, i) {
 ${(c.sections || []).map((s) => section(s, c)).join("\n")}
 ${gallery(c)}
 ${result}
+${designed}
     </div>
 
     <section class="case-next">

@@ -93,9 +93,10 @@ const xpChapters = jobs.map((j, i) => {
         </article>`;
 }).join("\n");
 const xpTimeline = jobs.map((j, i) => `            <li><a class="xp-tl${i === 0 ? " is-active" : ""}" href="#xp-ch-${i + 1}" data-xp-tl><span class="xp-tl-name">${esc(j.company)}</span><span class="xp-tl-year">${esc(String(j.start || "").slice(0, 4))}</span></a></li>`).join("\n");
+const xpLight = (site.experienceTheme || "light") !== "dark";
 const experienceSection = jobs.length ? `    <!-- Experience -->
-    <section class="xp" id="experience" aria-labelledby="xp-title">
-      <div class="head-grid head-grid--dark">
+    <section class="xp${xpLight ? " xp--light" : ""}" id="experience" aria-labelledby="xp-title">
+      <div class="head-grid${xpLight ? "" : " head-grid--dark"}">
         <h2 class="display" id="xp-title" data-reveal>${esc(site.experienceHeading)} <span class="grad">${esc(site.experienceHeadingAccent)}</span></h2>
         <p class="head-note" data-reveal data-delay="0.1">${esc(site.experienceNote)}</p>
       </div>
