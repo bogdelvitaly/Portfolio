@@ -1,6 +1,6 @@
 /* Generates work/<slug>.html from content/cases/*.json.
    Run after changing a case:  node build-cases.js
-   (No dependencies — plain Node.) */
+   (No dependencies – plain Node.) */
 const fs = require("fs");
 const path = require("path");
 
@@ -85,7 +85,7 @@ function shots(s, c) {
       n++;
       const d = imgSize(src);
       const dims = d ? ` width="${d.w}" height="${d.h}"` : "";
-      return `<figure class="case-screen" style="flex:${ratios[i].toFixed(4)} 1 0"><img src="${esc(rel(src))}" alt="${esc(c.title)} — ${esc(s.heading)}, ${ui.screen} ${n}"${dims} loading="lazy"></figure>`;
+      return `<figure class="case-screen" style="flex:${ratios[i].toFixed(4)} 1 0"><img src="${esc(rel(src))}" alt="${esc(c.title)} – ${esc(s.heading)}, ${ui.screen} ${n}"${dims} loading="lazy"></figure>`;
     }).join("");
     return `\n        <div class="case-shots" style="--shots-max: calc(${sum.toFixed(4)} * ${h} * var(--u) + ${imgs.length - 1} * var(--shots-gap))">${figs}</div>`;
   }).join("");
@@ -129,7 +129,7 @@ function gallery(c) {
   const items = imgs.map((src, i) => {
     // an odd last image spans the full width
     const full = imgs.length % 2 === 1 && i === imgs.length - 1;
-    return `        <figure class="case-shot${full ? " case-shot--full" : ""}" data-reveal><img src="${esc(rel(src))}" alt="${esc(c.title)} — ${ui.screen} ${i + 1}"></figure>`;
+    return `        <figure class="case-shot${full ? " case-shot--full" : ""}" data-reveal><img src="${esc(rel(src))}" alt="${esc(c.title)} – ${ui.screen} ${i + 1}"></figure>`;
   }).join("\n");
   return `      <div class="case-gallery">\n${items}\n      </div>`;
 }
@@ -169,14 +169,14 @@ function page(c, i) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${esc(c.title)} — ${ui.siteName}</title>
+  <title>${esc(c.title)} – ${ui.siteName}</title>
   <meta name="description" content="${esc(c.sub)}">
   <link rel="canonical" href="${SITE_URL}${RU ? "/ru" : ""}/work/${esc(c.slug)}.html">
   ${ruSlugs.has(c.slug) ? `<link rel="alternate" hreflang="en" href="${SITE_URL}/work/${esc(c.slug)}.html">\n  <link rel="alternate" hreflang="ru" href="${SITE_URL}/ru/work/${esc(c.slug)}.html">\n  <link rel="alternate" hreflang="x-default" href="${SITE_URL}/work/${esc(c.slug)}.html">` : ""}
   <meta property="og:type" content="article">
   <meta property="og:locale" content="${RU ? "ru_RU" : "en_US"}">
   <meta property="og:site_name" content="${ui.siteName}">
-  <meta property="og:title" content="${esc(c.title)} — ${ui.siteName}">
+  <meta property="og:title" content="${esc(c.title)} – ${ui.siteName}">
   <meta property="og:description" content="${esc(c.sub)}">
   <meta property="og:url" content="${SITE_URL}${RU ? "/ru" : ""}/work/${esc(c.slug)}.html">
   <meta property="og:image" content="${SITE_URL}/assets/og/${esc(c.slug)}.jpg">

@@ -99,6 +99,6 @@
     );
   });
 
-  // Images shift the layout once they decode — recompute trigger points
+  // Images shift the layout once they decode – recompute trigger points
   window.addEventListener("load", function () { ScrollTrigger.refresh(); });
 })();

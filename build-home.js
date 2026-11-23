@@ -1,5 +1,5 @@
 /* Generates index.html from content/site.json (edited in the /admin panel).
-   Run after changing the file by hand:  node build-home.js     (no dependencies — plain Node.)
+   Run after changing the file by hand:  node build-home.js     (no dependencies – plain Node.)
    Everything that is not text (hero pictures, menu, header, scripts) lives here in the template. */
 const fs = require("fs");
 const path = require("path");
@@ -82,7 +82,7 @@ const xpChapters = jobs.map((j, i) => {
   const present = !j.end;
   const n = String(i + 1).padStart(2, "0");
   const word = jobWord(j, i);
-  const dates = fmtMonth(j.start) + " — " + (present ? ui.present : fmtMonth(j.end));
+  const dates = fmtMonth(j.start) + " – " + (present ? ui.present : fmtMonth(j.end));
   const dur = durText(j.start, j.end);
   const meta = [
     `<span>${esc(dates)}</span>`,
@@ -203,7 +203,7 @@ const html = `<!doctype html>
     <section class="hero" id="top">
       <div class="hero-bg" role="img" aria-label="${ui.heroAlt}"></div>
       <div class="hero-bottom">
-        <h1 class="hero-title"><img class="wordmark-std" src="${P}assets/hero/product-designer.svg" alt="Vitaly Bogdel — Product Designer" width="1880" height="310"><img class="wordmark-wide" src="${P}assets/hero/product-designer-wide.svg" alt="Vitaly Bogdel — Product Designer" width="3400" height="128"></h1>
+        <h1 class="hero-title"><img class="wordmark-std" src="${P}assets/hero/product-designer.svg" alt="Vitaly Bogdel – Product Designer" width="1880" height="310"><img class="wordmark-wide" src="${P}assets/hero/product-designer-wide.svg" alt="Vitaly Bogdel – Product Designer" width="3400" height="128"></h1>
         <div class="hero-meta">
           <p class="hero-desc">${esc(site.heroDescription)}</p>
           <p class="hero-role">${esc(site.heroRole)}</p>

@@ -3,8 +3,8 @@
   "slug": "risk-calculation",
   "category": "Insurance · UX/UI Design",
   "title": "Risk Calculation",
-  "cardSummary": "An application that calculates insurance risk from a handful of inputs, built for the managers who help people get insured — not for actuaries.",
-  "sub": "A web application that turns insurance risk assessment into a handful of inputs — built for the managers who help people get insured, not for actuaries.",
+  "cardSummary": "An application that calculates insurance risk from a handful of inputs, built for the managers who help people get insured – not for actuaries.",
+  "sub": "A web application that turns insurance risk assessment into a handful of inputs – built for the managers who help people get insured, not for actuaries.",
   "meta": [
     "UI/UX Design",
     "Visual Direction",
@@ -24,7 +24,7 @@
       "list": []
     },
     {
-      "heading": "01 — Wireframes",
+      "heading": "01 – Wireframes",
       "headline": "From requirements to a first risk map",
       "paragraphs": [
         "We collected the requirements and developed prototypes on top of them. Visual interactions and a UI kit followed."
@@ -52,10 +52,10 @@
       ]
     },
     {
-      "heading": "02 — Prototype",
+      "heading": "02 – Prototype",
       "headline": "From a structural outline to realistic components",
       "paragraphs": [
-        "The prototype started as a structural outline. Once the client approved it, I moved to detailed prototypes built from realistic components — some elements were simplified, others rethought completely."
+        "The prototype started as a structural outline. Once the client approved it, I moved to detailed prototypes built from realistic components – some elements were simplified, others rethought completely."
       ],
       "list": [],
       "shots": [
@@ -68,11 +68,11 @@
       ]
     },
     {
-      "heading": "03 — Visual design",
+      "heading": "03 – Visual design",
       "headline": "Colour that carries meaning",
       "paragraphs": [
         "Risk needed to be readable at a glance, so colour carries meaning throughout: you can tell which risk group something belongs to without reading a label.",
-        "A UI kit followed — colours, type, components and their states, documented for reuse."
+        "A UI kit followed – colours, type, components and their states, documented for reuse."
       ],
       "list": [],
       "shots": [
@@ -86,7 +86,7 @@
     }
   ],
   "gallery": [],
-  "result": "Managers can now process a client's risk profile in under 2 minutes — down from around 10. That difference shows up directly in how many contracts they can close in a day.",
+  "result": "Managers can now process a client's risk profile in under 2 minutes – down from around 10. That difference shows up directly in how many contracts they can close in a day.",
   "theme": "light",
   "accent": "#c2301f",
   "facts": [

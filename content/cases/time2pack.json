@@ -4,7 +4,7 @@
   "category": "Product Design · UX/UI Design",
   "title": "Time2pack",
   "cardSummary": "From one travel-prep app to two products with a clear focus each: Time2Pack for organising a trip and OnlyFlights for following flights.",
-  "sub": "Two connected travel apps. Time2Pack helps people organise a trip, and OnlyFlights grew out of it into a standalone app for flights — I shaped the product decisions, flows and interfaces as both grew.",
+  "sub": "Two connected travel apps. Time2Pack helps people organise a trip, and OnlyFlights grew out of it into a standalone app for flights – I shaped the product decisions, flows and interfaces as both grew.",
   "meta": [
     "Product Design",
     "UX/UI Design",
@@ -35,7 +35,7 @@
       "list": []
     },
     {
-      "heading": "01 — The key decision",
+      "heading": "01 – The key decision",
       "headline": "Flights got an app of their own",
       "paragraphs": [
         "Flights needed a focus of their own, so we moved them out into a separate app. Each product got a clear job."
@@ -63,7 +63,7 @@
       ]
     },
     {
-      "heading": "02 — Time2Pack",
+      "heading": "02 – Time2Pack",
       "headline": "A shorter path to the main task",
       "paragraphs": [
         "We dropped the complex onboarding and shortened the creation flows, so people take fewer actions before they can start using the app."
@@ -96,7 +96,7 @@
       ]
     },
     {
-      "heading": "03 — OnlyFlights",
+      "heading": "03 – OnlyFlights",
       "headline": "Making a flight readable",
       "paragraphs": [
         "Flight screens carry a lot of data: route, times, status, flight number, terminal, gate. I reworked how it is grouped and how the hierarchy reads, and the flight card became the main element of the overview."
@@ -128,7 +128,7 @@
       ]
     },
     {
-      "heading": "04 — Visual system",
+      "heading": "04 – Visual system",
       "headline": "One system, two products",
       "paragraphs": [
         "Time2Pack uses a purple accent and OnlyFlights a blue one, built on shared principles: cards, rounded surfaces, repeatable information blocks and clear primary actions.",
@@ -153,7 +153,7 @@
       ]
     },
     {
-      "heading": "05 — Beyond the app screens",
+      "heading": "05 – Beyond the app screens",
       "headline": "Widgets, watch and the App Store",
       "paragraphs": [
         "I designed home-screen widgets for the phone, where space is tight and the choice of content matters most."
@@ -205,7 +205,7 @@
       ]
     },
     {
-      "heading": "06 — Trade-offs",
+      "heading": "06 – Trade-offs",
       "headline": "Feasibility is part of the design",
       "paragraphs": [
         "I studied A/B test data and joined product discussions, but development effort shaped the decisions too. Some ideas turned out far more complex to build than they looked in design, and we dropped several of them."
@@ -236,7 +236,7 @@
     },
     {
       "label": "Period",
-      "value": "Jun 2023 — Present"
+      "value": "Jun 2023 – Present"
     },
     {
       "label": "Domain",

@@ -68,7 +68,7 @@
       ]
     },
     {
-      "heading": "01 — Loadboard",
+      "heading": "01 – Loadboard",
       "headline": "Dense on purpose, manageable by design",
       "paragraphs": [
         "The Loadboard is the central module for reviewing and managing freight loads. People compare many records without opening each one, so the density is deliberate. Structure, filters and customisation make it manageable."
@@ -104,7 +104,7 @@
       ]
     },
     {
-      "heading": "02 — Status and risk",
+      "heading": "02 – Status and risk",
       "headline": "Progress and urgency are different signals",
       "paragraphs": [
         "Status labels show where a load is. Priority markers, flags and risk indicators show what needs attention.",
@@ -121,7 +121,7 @@
       ]
     },
     {
-      "heading": "03 — Load details",
+      "heading": "03 – Load details",
       "headline": "From comparison to investigation",
       "paragraphs": [
         "The Loadboard is for scanning; the preview is for looking into one shipment, from a compact overview to operational detail. A route map gives a spatial view and the stop sequence a timeline of the same journey. An explicit edit action separates reviewing a record from changing it."
@@ -164,7 +164,7 @@
       ]
     },
     {
-      "heading": "04 — Customer profiles",
+      "heading": "04 – Customer profiles",
       "headline": "A relationship that grows over time",
       "paragraphs": [
         "Contacts, billing, preferences, credit limits and account ownership live in one profile. Sales teams start with a small set of data and complete it as the relationship develops, so an early start does not need every account detail."
@@ -180,7 +180,7 @@
       ]
     },
     {
-      "heading": "05 — Carrier profiles",
+      "heading": "05 – Carrier profiles",
       "headline": "A clear hierarchy instead of one long form",
       "paragraphs": [
         "Compliance, billing and relationship details are split into meaningful areas. That gives consistent access to carrier data across brokerage workflows and a reusable structure for carrier records."
@@ -197,7 +197,7 @@
       ]
     },
     {
-      "heading": "06 — Beyond the Loadboard",
+      "heading": "06 – Beyond the Loadboard",
       "headline": "The work around a load",
       "paragraphs": [
         "Load management lists give a filtered view of open and active loads with status, equipment and rates. The tender area collects the requests that need action, and the bid view puts rate details next to the actions to book or bid. An adjustments screen brings the financial side of a load into the same system."
@@ -222,7 +222,7 @@
       ]
     },
     {
-      "heading": "07 — User management",
+      "heading": "07 – User management",
       "headline": "Access and responsibility, made readable",
       "paragraphs": [
         "Users, roles and permissions get a dedicated area. Structured role definitions and activity information give context for administrative decisions. The work is about the clarity of these interactions; enforcing security belongs to the underlying system."
@@ -240,7 +240,7 @@
       ]
     },
     {
-      "heading": "08 — Design system",
+      "heading": "08 – Design system",
       "headline": "One set of patterns for every module",
       "paragraphs": [
         "Forms, tables, menus, dialogs, navigation and status information share patterns, with variants, variable-based styling and theme support. Familiar controls make the modules feel like one product, so design effort goes to the domain questions: which information matters, how to group it and what action follows."
@@ -276,7 +276,7 @@
     },
     {
       "label": "Period",
-      "value": "Jun 2024 — Apr 2025"
+      "value": "Jun 2024 – Apr 2025"
     },
     {
       "label": "Domain",

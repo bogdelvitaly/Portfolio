@@ -4,7 +4,7 @@
   "experienceTheme": "light",
   "experienceHeading": "Where I've",
   "experienceHeadingAccent": "worked.",
-  "experienceNote": "2018 — now",
+  "experienceNote": "2018 – now",
   "experience": [
     {
       "company": "Atomatiq",
@@ -25,7 +25,7 @@
       ],
       "bullets": [
         "Designed and shipped Revit plugin features that improve BIM model quality and validation, reducing manual QA effort for engineering teams",
-        "Created UI concepts for Revit add-ins — modeless side panels, dock-style panels, schedule-style data views — now the standard pattern for new plugin modules",
+        "Created UI concepts for Revit add-ins – modeless side panels, dock-style panels, schedule-style data views – now the standard pattern for new plugin modules",
         "Designed detect-and-fix logic for common model issues, with bulk selection, visualisation and fixes so several problems are resolved in one action",
         "Redesigned the Electrical data model, separating Wire Families from Wire Types and protecting key parameters, to prevent data corruption in complex projects",
         "Work with the Revit Families architecture (parent and nested families, parameters, constraints) and use Claude and ChatGPT to structure feature logic and write technical specifications"
@@ -137,7 +137,7 @@
       ],
       "bullets": [
         "Designed web and mobile applications across enterprise and HR, cryptocurrency trading and telecommunications",
-        "Produced wireframes, prototypes and visual assets — illustrations, logos, graphics — for client web and mobile products",
+        "Produced wireframes, prototypes and visual assets – illustrations, logos, graphics – for client web and mobile products",
         "Delivered design work for sports applications, corporate websites and promotional landing pages across multiple concurrent projects"
       ],
       "tags": [
@@ -147,7 +147,7 @@
       ]
     }
   ],
-  "experienceEducationLabel": "Before all this · 2010 — 2015",
+  "experienceEducationLabel": "Before all this · 2010 – 2015",
   "experienceEducation": "Electronics Engineer at Yanka Kupala State University of Grodno. UX/UI course at the Educational Center of High-Tech Park Belarus, 2018.",
   "faqTitle": "Frequently Asked Questions",
   "works": [
@@ -227,9 +227,9 @@
       ]
     }
   ],
-  "ogImageAlt": "Vitaly Bogdel — Product Designer",
+  "ogImageAlt": "Vitaly Bogdel – Product Designer",
   "trustHeading": "that earns trust at first use",
-  "trustNote": "I design interfaces for insurance, fintech, logistics and e-commerce products — the kind of complexity most people never see, made simple to use. I blend strategy, research and craft to take a product from a messy problem to something people rely on every day.",
+  "trustNote": "I design interfaces for insurance, fintech, logistics and e-commerce products – the kind of complexity most people never see, made simple to use. I blend strategy, research and craft to take a product from a messy problem to something people rely on every day.",
   "footerButton": "Get in Touch",
   "heroRole": "UX/UI & PRODUCT DESIGN",
   "instagram": "https://www.instagram.com/vitaly_bogdel/",
@@ -238,7 +238,7 @@
   "faq": [
     {
       "question": "Who is Vitaly and what kind of projects do you take?",
-      "answer": "I'm a UX/UI and product designer with 7+ years of experience. I work on complex products — insurance, fintech, logistics, e-commerce and internal enterprise tools — and take them from a messy problem to an interface people trust on the first try."
+      "answer": "I'm a UX/UI and product designer with 7+ years of experience. I work on complex products – insurance, fintech, logistics, e-commerce and internal enterprise tools – and take them from a messy problem to an interface people trust on the first try."
     },
     {
       "question": "What does your process look like?",
@@ -250,7 +250,7 @@
     },
     {
       "question": "Which platforms do you design for?",
-      "answer": "Web applications, responsive websites and mobile apps — including Android and cross-platform products — as well as dashboards and internal tools."
+      "answer": "Web applications, responsive websites and mobile apps – including Android and cross-platform products – as well as dashboards and internal tools."
     },
     {
       "question": "How can we start working together?",
@@ -277,10 +277,10 @@
     "iteration design"
   ],
   "heroFocusX": 52,
-  "seoTitle": "Vitaly Bogdel — UX/UI & Product Designer",
+  "seoTitle": "Vitaly Bogdel – UX/UI & Product Designer",
   "email": "bogdelvitaly@gmail.com",
   "introNote": [
-    "I design interfaces for insurance, fintech, logistics and e-commerce products — the kind of complexity most people never see, made simple to use."
+    "I design interfaces for insurance, fintech, logistics and e-commerce products – the kind of complexity most people never see, made simple to use."
   ],
   "linkedin": "https://www.linkedin.com/in/vitaly-bogdel-211036164/",
   "seoDescription": "UX/UI and product designer with 7+ years of experience in insurance, fintech, logistics and e-commerce products."

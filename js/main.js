@@ -212,7 +212,7 @@
 
   ScrollTrigger.sort();
 
-  // Fonts and images shift layout after the first measurement — recompute pin points.
+  // Fonts and images shift layout after the first measurement – recompute pin points.
   if (document.fonts && document.fonts.ready) {
     document.fonts.ready.then(function () { ScrollTrigger.refresh(); });
   }
