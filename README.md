@@ -33,6 +33,15 @@ Page structure, menu, header, footer layout and the hero pictures live in `build
 Other files: `build-hero.js` (cuts the hero photo), `css/style.css`, `js/main.js` (home), `js/case.js` (case pages), `js/scale.js` (display-scaling
 correction), `assets/images`, `assets/hero`, `assets/og` (link-preview covers).
 
+## Russian version (/ru/)
+
+- Russian texts live in `content/ru/site.json` (home) and `content/ru/cases/<slug>.json` (cases). In /admin they are the collections **Главная (RU)** and **Кейсы (RU)**.
+- A Russian case must use **the same URL slug** as the English one. Cases that are not translated yet are linked to their English page.
+- Interface labels (menu, buttons, "Chapter", months…) are in `content/ui.json` (`en` and `ru`).
+- `node build.js` builds both languages: `index.html` + `work/*.html` and `ru/index.html` + `ru/work/*.html`.
+- Russian pages use Tektur (headings) and Onest (case texts) for Cyrillic letters; Latin letters keep the site fonts.
+- The EN / RU switch is in the header (and in the mobile menu); on a case page it leads to the same case if it has a Russian version, otherwise to the Russian home page.
+
 ## Editing from the code
 
 1. Change `content/site.json` or `content/cases/<slug>.json`.

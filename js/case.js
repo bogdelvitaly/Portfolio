@@ -1,6 +1,7 @@
 (function () {
   "use strict";
 
+  var RU = document.documentElement.lang === "ru";
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var $$ = function (s) { return Array.prototype.slice.call(document.querySelectorAll(s)); };
 
@@ -21,7 +22,7 @@
   if (navToggle && mobileNav) {
     var setNav = function (open) {
       navToggle.setAttribute("aria-expanded", open ? "true" : "false");
-      navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      navToggle.setAttribute("aria-label", open ? (RU ? "Закрыть меню" : "Close menu") : (RU ? "Открыть меню" : "Open menu"));
       mobileNav.classList.toggle("is-open", open);
       mobileNav.setAttribute("aria-hidden", open ? "false" : "true");
       document.body.style.overflow = open ? "hidden" : "";
@@ -42,9 +43,9 @@
     box.setAttribute("aria-hidden", "true");
     var arrow = function (d) { return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="' + d + '"/></svg>'; };
     box.innerHTML = '<img alt="">' +
-      '<button class="lightbox-btn lightbox-close" type="button" aria-label="Close">' + arrow("M6 6l12 12M18 6 6 18") + '</button>' +
-      '<button class="lightbox-btn lightbox-prev" type="button" aria-label="Previous">' + arrow("M15 5l-7 7 7 7") + '</button>' +
-      '<button class="lightbox-btn lightbox-next" type="button" aria-label="Next">' + arrow("M9 5l7 7-7 7") + '</button>';
+      '<button class="lightbox-btn lightbox-close" type="button" aria-label="' + (RU ? "Закрыть" : "Close") + '">' + arrow("M6 6l12 12M18 6 6 18") + '</button>' +
+      '<button class="lightbox-btn lightbox-prev" type="button" aria-label="' + (RU ? "Назад" : "Previous") + '">' + arrow("M15 5l-7 7 7 7") + '</button>' +
+      '<button class="lightbox-btn lightbox-next" type="button" aria-label="' + (RU ? "Вперёд" : "Next") + '">' + arrow("M9 5l7 7-7 7") + '</button>';
     document.body.appendChild(box);
     var big = box.querySelector("img");
     var cur = 0;

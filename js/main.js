@@ -1,6 +1,7 @@
 (function () {
   "use strict";
 
+  var RU = document.documentElement.lang === "ru";
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   // UI scale from the CSS (--ui: 1, 1.5 on screens wider than 1920px, lowered when Windows display scaling is cancelled): pixel constants below are multiplied by it
   var ui = function () { return parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--ui")) || 1; };
@@ -24,7 +25,7 @@
   if (navToggle && mobileNav) {
     var setNav = function (open) {
       navToggle.setAttribute("aria-expanded", open ? "true" : "false");
-      navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      navToggle.setAttribute("aria-label", open ? (RU ? "Закрыть меню" : "Close menu") : (RU ? "Открыть меню" : "Open menu"));
       mobileNav.classList.toggle("is-open", open);
       mobileNav.setAttribute("aria-hidden", open ? "false" : "true");
       document.body.style.overflow = open ? "hidden" : "";
@@ -80,8 +81,9 @@
       var n = (now.getFullYear() - +m[1]) * 12 + (now.getMonth() + 1 - +m[2]) + 1;
       if (n < 1) return;
       var y = Math.floor(n / 12), mo = n % 12, p = [];
-      if (y) p.push(y + (y === 1 ? " yr" : " yrs"));
-      if (mo) p.push(mo + (mo === 1 ? " mo" : " mos"));
+      var plural = function (n, f) { var a = n % 10, b = n % 100; return n + " " + (a === 1 && b !== 11 ? f[0] : a >= 2 && a <= 4 && (b < 12 || b > 14) ? f[1] : f[2]); };
+      if (y) p.push(plural(y, RU ? ["год", "года", "лет"] : ["yr", "yrs", "yrs"]));
+      if (mo) p.push(plural(mo, RU ? ["мес.", "мес.", "мес."] : ["mo", "mos", "mos"]));
       el.textContent = p.join(" ");
     });
   }

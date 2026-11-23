@@ -18,7 +18,7 @@ collections:
       - file: "content/site.json"
         label: "Home page texts"
         name: "site"
-        fields:
+        fields: &siteFields
           - label: "Browser tab title & link preview title"
             name: "seoTitle"
             widget: "string"
@@ -152,7 +152,7 @@ collections:
     slug: "{{fields.slug}}"
     summary: "{{title}}"
     identifier_field: "title"
-    fields:
+    fields: &caseFields
       - { label: "URL slug (letters, numbers, dashes only — e.g. risk-calculation)", name: "slug", widget: "string", pattern: ["^[a-z0-9-]+$", "Lowercase letters, numbers and dashes only"] }
       - { label: "Category tag (e.g. Insurance · UX/UI Design)", name: "category", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
@@ -231,3 +231,28 @@ collections:
             required: false
             field: { label: "Tag", name: "tag", widget: "string" }
           - { label: "Text", name: "text", widget: "text", required: false }
+
+  # Russian version of the site (/ru/): same fields, separate texts. Cases are matched by the URL slug,
+  # so a Russian case must use the same slug as the English one.
+  - name: "site_ru"
+    label: "Главная (RU)"
+    editor:
+      preview: false
+    files:
+      - file: "content/ru/site.json"
+        label: "Тексты главной (русская версия)"
+        name: "site_ru"
+        fields: *siteFields
+
+  - name: "cases_ru"
+    label: "Кейсы (RU)"
+    editor:
+      preview: false
+    folder: "content/ru/cases"
+    extension: "json"
+    format: "json"
+    create: true
+    slug: "{{fields.slug}}"
+    summary: "{{title}}"
+    identifier_field: "title"
+    fields: *caseFields

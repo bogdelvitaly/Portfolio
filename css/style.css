@@ -525,3 +525,15 @@ ul, ol { list-style: none; }
 /* the accent is tuned for the light body; on the dark hero the small label gets a lighter tone */
 .case-page--light .case-hero .case-eyebrow { color: var(--case-accent); color: color-mix(in srgb, var(--case-accent) 55%, #fff); }
 .case-result { color: var(--text); }
+
+/* ---------- Language switch + Russian fonts ---------- */
+.head-right { display: flex; align-items: center; gap: calc(14 * var(--u)); }
+.lang { display: inline-flex; align-items: center; gap: calc(2 * var(--u)); font-family: var(--font-mono); font-weight: 500; font-size: calc(11 * var(--u)); letter-spacing: 0.08em; }
+.lang a { padding: calc(6 * var(--u)) calc(7 * var(--u)); color: #a1a1a1; transition: color 0.3s ease; }
+.lang a:hover { color: var(--ember); }
+.lang a[aria-current="true"] { color: #fff; }
+.mobile-nav-foot { display: flex; align-items: center; justify-content: space-between; gap: calc(16 * var(--u)); }
+.mobile-nav .lang { font-size: calc(14 * var(--u)); }
+@media (max-width: 1023px) { .head-right { display: none; } }
+/* Latin letters keep the site fonts; Cyrillic falls back to fonts that have it */
+html[lang="ru"] { --font-display: "Bruno Ace SC", "Tektur", "IBM Plex Sans", system-ui, sans-serif; --font-case: "Host Grotesk", "Onest", "Hanken Grotesk", Inter, system-ui, -apple-system, "Segoe UI", sans-serif; }
