@@ -165,7 +165,7 @@
     },
     {
       "title": "Employee Relations Manager",
-      "category": "Данные и HR • UX/UI",
+      "category": "Менеджер данных • UX/UI",
       "caseSlug": "employee-relations",
       "image": "/assets/images/project-employee.webp"
     },
@@ -176,7 +176,7 @@
       "image": "/assets/images/project-wizart.webp"
     },
     {
-      "title": "Risk Calculator",
+      "title": "Калькулятор рисков",
       "category": "Страхование • UX/UI дизайн",
       "caseSlug": "risk-calculation",
       "image": "/assets/images/project-insurance.webp"
